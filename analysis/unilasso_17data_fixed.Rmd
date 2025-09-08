@@ -1,0 +1,515 @@
+## Run unilasso (CV, ESCV) on 17 datasets compared with Lasso (CV, ESCV)
+## Also for unilasso, can do the beta_j from the full dataset instead of the LOO estimation  
+```{r setup}
+if (R.home() != "/scratch/users/aqwang/conda/envs/r_package/lib/R") {
+  system("/scratch/users/aqwang/conda/envs/r_package/bin/Rscript -e 'rmarkdown::render(\"unilasso_17data_fixed.Rmd\")'")
+  quit("no")
+}
+
+# check the R environment is r_package
+R.home()
+
+# set working directory
+setwd("/accounts/grad/aqwang/unilasso/analysis")
+
+# load packages 
+library(uniLasso)
+library(glmnet)
+```
+
+
+```{r load_data}
+X <- read.csv("/accounts/grad/aqwang/unilasso/datasets_22/airfoil_self-noise/X.csv")
+# convert to matrix
+X <- as.matrix(X)
+y <- read.csv("/accounts/grad/aqwang/unilasso/datasets_22/airfoil_self-noise/y.csv")
+
+# convert to numeric
+y <- as.numeric(unlist(y))
+
+# split the X and y into training and test sets
+set.seed(1)
+train_indices <- sample(1:nrow(X), size = 0.5 * nrow(X))
+Xtr <- X[train_indices, ]
+ytr <- y[train_indices]
+Xte <- X[-train_indices, ]
+yte <- y[-train_indices]
+
+# for anything escv: centering the data first ; the original paper uses intercept=FALSE for escv so they assume centered data
+# training set
+Xtr_c <- scale(Xtr, center = TRUE, scale = FALSE)
+ytr_c <- ytr - mean(ytr)
+
+# test set for X: center test set using training mean 
+# the test set must be processed with the same transformation learned from training, otherwise you’re leaking information from test into training.
+Xte_c <- scale(Xte, center = attr(Xtr_c, "scaled:center"), scale = FALSE)
+# centered y test:
+yte_c <- yte - mean(ytr)  # center test y using training mean
+```
+
+# Version 1: running unilasso_cv (loo=TRUE vs loo=FALSE) and lasso_cv 
+```{r}
+# ensuring the same CV folds for unilasso and lasso 
+set.seed(42)
+K <- 10
+n <- nrow(Xtr)
+foldid <- sample(rep(1:K, length.out = n))  # length n; same object reused below
+
+# obtain leave one out coefficients from uniReg
+uni_loo_coefs <- uniInfo(Xtr, ytr,
+                     family = "gaussian",
+                     loo = TRUE)$beta  # p × n matrix, each column is the beta_j from leaving out j-th sample
+uni_loo_coefs <- as.numeric(uni_loo_coefs)
+print(uni_loo_coefs)  # p × n
+
+
+# unilasso with loo=TRUE
+unilasso_cv_loo_true <- cv.uniLasso(
+  Xtr, ytr,
+  family = "gaussian",    # or "binomial", "cox"
+  loo = TRUE,             # use LOO pseudo-features (default; helps avoid overfit)
+  lower.limits = 0,       # sign-preserving nonnegative lasso on stage 2 (default)
+  standardize = FALSE,    # recommended for uniLasso; leave FALSE unless you pre-scale
+  foldid = foldid,        # ensure the same CV folds for unilasso and lasso (this parameter from cv.glmnet)
+  nlambda=100     # use the same lambda sequence for unilasso and lasso (this parameter from cv.glmnet)
+)
+# compute the MSE and the support size on test set
+yte_pred_CV <- predict(unilasso_cv_loo_true, newx = Xte, s = "lambda.min")
+mse_te_CV <- mean((yte_pred_CV - yte)^2)
+mse_te_CV
+# support size
+sum(coef(unilasso_cv_loo_true, s = "lambda.min")[-1] != 0)  # exclude intercept
+#calculate the number of sign difference in coefficicents between loo stored in uni_loo_coefs and the beta coefficients (exclude intercept) from unilasso_cv_loo_true
+beta_coef<- as.numeric(coef(unilasso_cv_loo_true, s = "lambda.min")[-1])  # p × 1 vector, exclude intercept
+
+#commpare when both uni_loo_coefs and beta_unilasso are nonzero 
+active_index <- which(beta_coef != 0 & uni_loo_coefs != 0)
+sign_beta_coef <- sign(beta_coef[active_index])
+sign_uni_loo_coefs <- sign(uni_loo_coefs[active_index])
+#number of sign differences
+sign_diff=sum(sign_beta_unilasso != sign_uni_loo_coefs)  # number of sign differences
+
+
+
+# unilasso with loo=FALSE
+unilasso_cv_loo_false <- cv.uniLasso(
+  Xtr, ytr,
+  family = "gaussian",    # or "binomial", "cox"
+  loo = FALSE,            # use LOO pseudo-features (default; helps avoid overfit)
+  lower.limits = 0,       # sign-preserving nonnegative lasso on stage 2 (default)
+  standardize = FALSE,    # recommended for uniLasso; leave FALSE unless you pre-scale
+  foldid = foldid,        # ensure the same CV folds for unilasso and lasso (this parameter from cv.glmnet)
+  nlambda=100     # use the same lambda sequence for unilasso and lasso (this parameter from cv.glmnet)
+)
+# compute the MSE and the support size on test set
+yte_pred_CV <- predict(unilasso_cv_loo_false, newx = Xte, s = "lambda.min")
+mse_te_CV <- mean((yte_pred_CV - yte)^2)
+mse_te_CV
+# support size
+sum(coef(unilasso_cv_loo_false, s = "lambda.min")[-1] != 0)  # exclude intercept
+# make the sign difference here 0 
+sign_diff=0
+
+
+# lasso with CV
+lasso_cv <- cv.glmnet(
+  Xtr, ytr,
+  family = "gaussian",    # or "binomial", "cox"
+  alpha = 1,              # lasso
+  standardize = FALSE,    # recommended for uniLasso; leave FALSE unless you pre-scale
+  foldid = foldid,        # ensure the same CV folds for unilasso and lasso (this parameter from cv.glmnet)
+  nlambda=100     # use the same lambda sequence for unilasso and lasso (this parameter from cv.glmnet)   
+)
+# compute the MSE and the support size on test set
+yte_pred_CV <- predict(lasso_cv, newx = Xte, s = "lambda.min")
+mse_te_CV <- mean((yte_pred_CV - yte)^2)
+mse_te_CV
+# support size
+sum(coef(lasso_cv, s = "lambda.min")[-1] != 0)  # exclude intercept
+# calculate univariate sign differene between lasso and uni_loo_coefs
+beta_coef <- as.numeric(coef(lasso_cv, s = "lambda.min")[-1])  # p × 1 vector, exclude intercept
+#commpare when both uni_loo_coefs and beta_coef are nonzero
+active_index <- which(beta_coef != 0 & uni_loo_coefs != 0)
+sign_beta_coef <- sign(beta_coef[active_index])
+sign_uni_loo_coefs <- sign(uni_loo_coefs[active_index])
+sign_diff=sum(sign_beta_coef != sign_uni_loo_coefs)  # number of sign differences
+
+
+# polish unilasso 
+pol <- polish.uniLasso(Xtr, ytr,
+                       family = "gaussian",
+                       foldid = foldid,          # SAME folds as before
+                       nlambda=100, 
+                       standardize = FALSE,
+                       intercept = TRUE,
+                       loo = TRUE)
+# calculate the MSE and the support size on test set
+yte_pred_pol <- predict(pol, newx = Xte, s = "lambda.min")
+mse_te_pol <- mean((yte_pred_pol - yte)^2)
+mse_te_pol
+# support size
+sum(coef(pol, s = "lambda.min")[-1] != 0)  # exclude intercept
+# calculate univariate sign differene between polish unilasso and uni_loo_coefs
+beta_coef <- as.numeric(coef(pol, s = "lambda.min")[-1])  # p × 1 vector, exclude intercept
+#commpare when both uni_loo_coefs and beta_coef are nonzero
+active_index <- which(beta_coef != 0 & uni_loo_coefs != 0)
+sign_beta_coef <- sign(beta_coef[active_index])
+sign_uni_loo_coefs <- sign(uni_loo_coefs[active_index])
+sign_diff=sum(sign_beta_coef != sign_uni_loo_coefs)  # number of sign differences
+
+
+# unireg (cv)
+uniReg_cv <- cv.uniReg(
+  Xtr, ytr,
+  family = "gaussian",    # or "binomial", "cox"
+  standardize = FALSE,    # recommended for uniLasso; leave FALSE unless you pre-scale
+  foldid = foldid,        # ensure the same CV folds for unilasso and lasso (this parameter from cv.glmnet)
+  nlambda=100,     # use the same lambda sequence for unilasso and lasso (this parameter from cv.glmnet)
+  loo=TRUE)
+# compute the MSE and support size on test set 
+yte_pred_CV <- predict(uniReg_cv, newx = Xte, s = "lambda.min")
+mse_te_CV <- mean((yte_pred_CV - yte)^2)
+mse_te_CV
+# support size
+sum(coef(uniReg_cv, s = "lambda.min")[-1] != 0)  # exclude intercept 
+# calculate univariate sign differene between unireg and uni_loo_coefs
+beta_coef <- as.numeric(coef(uniReg_cv, s = "lambda.min")[-1])  # p × 1 vector, exclude intercept
+#commpare when both uni_loo_coefs and beta_coef are nonzero
+active_index <- which(beta_coef != 0 & uni_loo_coefs != 0)
+sign_beta_coef <- sign(beta_coef[active_index])
+sign_uni_loo_coefs <- sign(uni_loo_coefs[active_index])
+sign_diff=sum(sign_beta_coef != sign_uni_loo_coefs)  # number of sign differences
+
+
+# least square regression (no regularization) and calculate mse and support size on test set
+ls_fit <- lm(ytr ~ Xtr)  # glm also works
+yte_pred_lm <- predict(ls_fit, newdata = as.data.frame(Xte))
+mse_te_lm <- mean((yte_pred_lm - yte)^2)
+mse_te_lm
+# support size
+sum(coef(ls_fit)[-1] != 0)  # exclude intercept
+# calculate univariate sign differene between lm and uni_loo_coefs
+beta_coef <- as.numeric(coef(ls_fit)[-1])  # p × 1 vector, exclude intercept
+#commpare when both uni_loo_coefs and beta_coef are nonzero
+active_index <- which(beta_coef != 0 & uni_loo_coefs != 0)
+sign_beta_coef <- sign(beta_coef[active_index])
+sign_uni_loo_coefs <- sign(uni_loo_coefs[active_index])
+sign_diff=sum(sign_beta_coef != sign_uni_loo_coefs)  # number of sign differences
+
+
+```
+
+```{r}
+
+```
+
+
+```{r unilasso_cv_loo_true}
+# don't need to center the data for cv.uniLasso; it has intercept = TRUE by default
+# default is 10 fold cv 
+set.seed(1)
+unilasso_cv_loo_true <- cv.uniLasso(
+  Xtr, ytr,
+  family = "gaussian",    # or "binomial", "cox"
+  loo = TRUE,             # use LOO pseudo-features (default; helps avoid overfit)
+  lower.limits = 0,       # sign-preserving nonnegative lasso on stage 2 (default)
+  standardize = FALSE     # recommended for uniLasso; leave FALSE unless you pre-scale
+)
+
+# calculate the test MSE for CV
+plot(unilasso_cv_loo_true)
+predict(unilasso_cv_loo_true,Xte, s="lambda.min") # predict at some test data points
+
+# calculate the test MSE for CV
+yte_pred_CV <- predict(unilasso_cv_loo_true, newx = Xte, s = "lambda.min")
+mse_te_CV <- mean((yte_pred_CV - yte)^2)
+mse_te_CV
+```
+
+```{r unilasso_cv_loo_false}
+# default is 10 fold cv 
+set.seed(1)
+unilasso_cv_loo_false <- cv.uniLasso(
+  Xtr, ytr,
+  family = "gaussian",    # or "binomial", "cox"
+  loo = FALSE,             # use LOO pseudo-features (default; helps avoid overfit)
+  lower.limits = 0,       # sign-preserving nonnegative lasso on stage 2 (default)
+  standardize = FALSE     # recommended for uniLasso; leave FALSE unless you pre-scale
+)
+# calculate the test MSE for CV
+plot(unilasso_cv_loo_false)
+predict(unilasso_cv_loo_false,Xte, s="lambda.min") # predict at some test data points
+# calculate the test MSE for CV
+yte_pred_CV <- predict(unilasso_cv_loo_false, newx = Xte, s = "lambda.min")
+mse_te_CV <- mean((yte_pred_CV - yte)^2)
+mse_te_CV
+
+```
+
+# ignore below 
+```{r unilasso_escv_loo_true-wrong code}
+# since escv assumes centered data and intercept=FALSE, we use the centered data Xtr_c and ytr_c here
+# import escv.unilasso function from escv_unilasso_new.R file 
+source("escv_unilasso_new.R")
+# default is 10 fold cv 
+set.seed(1)
+unilasso_escv_loo_true <- escv.uniLasso(
+  Xtr_c, ytr_c,
+  family = "gaussian",    # or "binomial", "cox"
+  loo = TRUE,             # use LOO pseudo-features (default; helps avoid overfit)
+  lower.limits = 0,       # sign-preserving nonnegative lasso on stage 2 (default)
+  standardize = FALSE     # recommended for uniLasso; leave FALSE unless you pre-scale
+)
+
+# When predicting on new data Xnew, center it with the same x_mu from training, build features the same way, predict yhat_c, and then add back y_mu:
+
+# Get the ESCV coefficients (for the centered problem)
+idx_unilasso_ESCV  <- unilasso_escv_loo_true$selindex["ESCV"]
+#all the betas at different lambda values
+beta_path <- as.matrix(unilasso_escv_loo_true$glmnet$beta)           # p × n_lambda, this is the original beta values from the full lasso fit at different lambda values; the pseudo solutions are just for picking the optimal lambda 
+beta_ESCV <- beta_path[, idx_unilasso_ESCV, drop = FALSE]  # p × 1
+lambda_ESCV <- unilasso_escv_loo_true$glmnet$lambda[idx_unilasso_ESCV]
+lambda_ESCV
+
+# calculate the test MSE for ESCV
+yte_pred_ESCV <- Xte_c %*% beta_ESCV + mean(ytr)  # add back the training mean
+mse_te_ESCV <- mean((yte_pred_ESCV - yte)^2)
+mse_te_ESCV
+
+# Get the CV coefficients (for the centered problem)
+idx_unilasso_CV  <- unilasso_escv_loo_true$selindex["CV"]
+beta_CV <- beta_path[, idx_unilasso_CV, drop = FALSE]  # p × 1
+lambda_CV <- unilasso_escv_loo_true$glmnet$lambda[idx_unilasso_CV]
+lambda_CV 
+# calculate the test MSE for CV
+yte_pred_CV <- Xte_c %*% beta_CV + mean(ytr)  # add back the training mean
+mse_te_CV <- mean((yte_pred_CV - yte)^2)
+mse_te_CV 
+
+```
+
+# updated code below
+```{r unilasso_escv_loo_true}
+# since escv assumes centered data and intercept=FALSE, we use the centered data Xtr_c and ytr_c here
+# import escv.unilasso function from escv_unilasso_new.R file 
+source("cv.uniLasso_escv.R")
+# default is 10 fold cv 
+set.seed(1)
+unilasso_escv_loo_true <- cv.uniLasso_escv(
+  Xtr_c, ytr_c,
+  family = "gaussian",    # or "binomial", "cox"
+  loo = TRUE,             # use LOO pseudo-features (default; helps avoid overfit)
+  lower.limits = 0,       # sign-preserving nonnegative lasso on stage 2 (default)
+  standardize = FALSE     # recommended for uniLasso; leave FALSE unless you pre-scale
+)
+
+# from fitted object
+fit       <- unilasso_escv_loo_true
+lam_idx   <- fit$selindex["CV"]
+lambda    <- fit$glmnet.fit$lambda[lam_idx]
+mu_xp_tr  <- fit$xp_colmeans   # training column means
+beta_tr   <- fit$info$beta
+beta0_tr  <- fit$info$beta0
+ones_te   <- rep(1, nrow(Xte_c))
+
+# predict and compute test MSE for CV
+yhat <- predict(fit$glmnet.fit, newx = Xte_c, s = lambda)
+mse  <- mean((yte_c - yhat)^2)
+print(mse)
+
+# predict and compute test MSE for ESCV
+lam_idx   <- fit$selindex["ESCV"]
+lambda    <- fit$glmnet.fit$lambda[lam_idx]
+yhat <- predict(fit$glmnet.fit, newx = Xte_c, s = lambda)
+mse  <- mean((yte_c - yhat)^2)
+print(mse)
+
+```
+
+# update--correct code 
+```{r unilasso_escv_loo_false}
+# since escv assumes centered data and intercept=FALSE, we use the centered data Xtr_c and ytr_c here
+# import escv.unilasso function from escv_unilasso_new.R file 
+source("cv.uniLasso_escv.R")
+# default is 10 fold cv 
+set.seed(1)
+unilasso_escv_loo_false <- cv.uniLasso_escv(
+  Xtr_c, ytr_c,
+  family = "gaussian",    # or "binomial", "cox"
+  loo = FALSE,             # use LOO pseudo-features (default; helps avoid overfit)
+  lower.limits = 0,       # sign-preserving nonnegative lasso on stage 2 (default)
+  standardize = FALSE     # recommended for uniLasso; leave FALSE unless you pre-scale
+)
+
+# from fitted object
+fit       <- unilasso_escv_loo_false
+lam_idx   <- fit$selindex["CV"]
+lambda    <- fit$glmnet.fit$lambda[lam_idx]
+mu_xp_tr  <- fit$xp_colmeans   # training column means
+beta_tr   <- fit$info$beta
+beta0_tr  <- fit$info$beta0
+ones_te   <- rep(1, nrow(Xte_c))
+
+# predict and compute test MSE for CV
+yhat <- predict(fit$glmnet.fit, newx = Xte_c, s = lambda)
+mse  <- mean((yte_c - yhat)^2)
+print(mse)
+
+# predict and compute test MSE for ESCV
+lam_idx   <- fit$selindex["ESCV"]
+lambda    <- fit$glmnet.fit$lambda[lam_idx]
+yhat <- predict(fit$glmnet.fit, newx = Xte_c, s = lambda)
+mse  <- mean((yte_c - yhat)^2)
+print(mse)
+
+```
+
+
+# ignore below 
+```{r unilasso_escv_loo_false-wrong code}
+# since escv assumes centered data and intercept=FALSE, we use the centered data Xtr_c and ytr_c here
+# import escv.unilasso function from escv_unilasso_new.R file 
+source("escv_unilasso_new.R")
+# default is 10 fold cv 
+set.seed(1)
+unilasso_escv_loo_false <- escv.uniLasso(
+  Xtr_c, ytr_c,
+  family = "gaussian",    # or "binomial", "cox"
+  loo = FALSE,             # use LOO pseudo-features (default; helps avoid overfit)
+  lower.limits = 0,       # sign-preserving nonnegative lasso on stage 2 (default)
+  standardize = FALSE     # recommended for uniLasso; leave FALSE unless you pre-scale
+)
+
+# When predicting on new data Xnew, center it with the same x_mu from training, build features the same way, predict yhat_c, and then add back y_mu:
+
+# Get the ESCV coefficients (for the centered problem)
+idx_unilasso_ESCV  <- unilasso_escv_loo_false$selindex["ESCV"]
+#all the betas at different lambda values
+beta_path <- as.matrix(unilasso_escv_loo_false$glmnet$beta)           # p × n_lambda, this is the original beta values from the full lasso fit at different lambda values; the pseudo solutions are just for picking the optimal lambda 
+beta_ESCV <- beta_path[, idx_unilasso_ESCV, drop = FALSE]  # p × 1
+lambda_ESCV <- unilasso_escv_loo_false$glmnet$lambda[idx_unilasso_ESCV]
+lambda_ESCV
+
+# calculate the test MSE for ESCV
+yte_pred_ESCV <- Xte_c %*% beta_ESCV + mean(ytr)  # add back the training mean
+mse_te_ESCV <- mean((yte_pred_ESCV - yte)^2)
+mse_te_ESCV
+
+# Get the CV coefficients (for the centered problem)
+idx_unilasso_CV  <- unilasso_escv_loo_false$selindex["CV"]
+beta_CV <- beta_path[, idx_unilasso_CV, drop = FALSE]  # p × 1
+lambda_CV <- unilasso_escv_loo_false$glmnet$lambda[idx_unilasso_CV]
+lambda_CV 
+# calculate the test MSE for CV
+yte_pred_CV <- Xte_c %*% beta_CV + mean(ytr)  # add back the training mean
+mse_te_CV <- mean((yte_pred_CV - yte)^2)
+mse_te_CV 
+
+```
+
+
+# correct code 
+```{r lasso_ESCV_and_CV}
+# need to center the data first (mean=0); the original paper uses intercept=FALSE so they assume centered data
+# training set
+Xtr_c <- scale(Xtr, center = TRUE, scale = FALSE)
+ytr_c <- ytr - mean(ytr)
+
+# test set for X: center test set using training mean 
+Xte_c <- scale(Xte, center = attr(Xtr_c, "scaled:center"), scale = FALSE)
+# y test set does not need to be centered, just use yte as is
+
+# import escv function from the ESCV file.
+source("ESCV_code2/ESCV_glmnet_vf.R")
+
+set.seed(1)
+#escv function also contains CV for comparison to ESCV
+lasso_escv <- escv.glmnet(Xtr_c, ytr_c, k = 10, nlambda = 100) #validation folds=10, 100 lambda values
+
+# Get the ESCV coefficients (for the centered problem)
+idx_ESCV  <- lasso_escv$selindex["ESCV"]
+beta_path <- as.matrix(lasso_escv$glmnet$beta)           # p × n_lambda, this is the original beta values from the full lasso fit at different lambda values; the pseudo solutions are just for picking the optimal lambda 
+beta_ESCV <- beta_path[, idx_ESCV, drop = FALSE]  # p × 1
+lambda_ESCV <- lasso_escv$glmnet$lambda[idx_ESCV]
+lambda_ESCV
+
+# calculate the test MSE for ESCV
+yte_pred_ESCV <- Xte_c %*% beta_ESCV + mean(ytr)  # add back the training mean
+mse_te_ESCV <- mean((yte_pred_ESCV - yte)^2)
+mse_te_ESCV
+
+# Get the CV coefficients (for the centered problem)
+idx_CV  <- lasso_escv$selindex["CV"]
+beta_CV <- beta_path[, idx_CV, drop = FALSE]  # p × 1
+lambda_CV <- lasso_escv$glmnet$lambda[idx_CV]
+lambda_CV
+
+# calculate the test MSE for CV
+yte_pred_CV <- Xte_c %*% beta_CV + mean(ytr)  # add back the training mean
+mse_te_CV <- mean((yte_pred_CV - yte)^2)
+mse_te_CV 
+```
+
+
+# bootstrap analysis
+```{r bootstrap}
+
+# Overall prediction interval summary
+if (nrow(all_prediction_intervals) > 0) {
+  overall_interval_summary <- all_prediction_intervals %>%
+    group_by(method) %>%
+    summarise(
+      n_datasets = n(),
+      mean_coverage = mean(coverage, na.rm = TRUE),
+      sd_coverage = sd(coverage, na.rm = TRUE),
+      mean_avg_width = mean(avg_interval_width, na.rm = TRUE),
+      mean_median_width = mean(median_interval_width, na.rm = TRUE),
+      .groups = 'drop'
+    )
+  
+  write.csv(overall_interval_summary, "unilasso_17datasets_bootstrap_intervals_overall_summary.csv", row.names = FALSE)
+  
+  cat("\nOVERALL PREDICTION INTERVAL SUMMARY:\n")
+  cat(sprintf("%-20s %10s %15s %15s\n", "Method", "Coverage", "Avg Width", "Med Width"))
+  cat(strrep("-", 65), "\n")
+  
+  for (j in 1:nrow(overall_interval_summary)) {
+    row <- overall_interval_summary[j, ]
+    cat(sprintf("%-20s %10.3f %15.4f %15.4f\n",
+                row$method, row$mean_coverage, row$mean_avg_width, row$mean_median_width))
+  }
+  
+  cat("\nNote: Nominal coverage for 95% intervals should be 0.95\n")
+}
+
+print(summary_by_dataset)
+
+
+
+summary_by_dataset <- results_all_bootstrap %>%
+  group_by(dataset) %>%
+  summarise(
+    # MSE statistics
+    unilasso_loo_true_mean_mse = mean(unilasso_loo_true_mse, na.rm = TRUE),
+    unilasso_loo_true_sd_mse = sd(unilasso_loo_true_mse, na.rm = TRUE),
+    unilasso_loo_false_mean_mse = mean(unilasso_loo_false_mse, na.rm = TRUE),
+    unilasso_loo_false_sd_mse = sd(unilasso_loo_false_mse, na.rm = TRUE),
+    polish_unilasso_mean_mse = mean(polish_unilasso_mse, na.rm = TRUE),
+    polish_unilasso_sd_mse = sd(polish_unilasso_mse, na.rm = TRUE),
+    lasso_cv_mean_mse = mean(lasso_cv_mse, na.rm = TRUE),
+    lasso_cv_sd_mse = sd(lasso_cv_mse, na.rm = TRUE),
+    
+    # Support size statistics
+    unilasso_loo_true_mean_support = mean(unilasso_loo_true_support, na.rm = TRUE),
+    unilasso_loo_true_sd_support = sd(unilasso_loo_true_support, na.rm = TRUE),
+    unilasso_loo_false_mean_support = mean(unilasso_loo_false_support, na.rm = TRUE),
+    unilasso_loo_false_sd_support = sd(unilasso_loo_false_support, na.rm = TRUE),
+    polish_unilasso_mean_support = mean(polish_unilasso_support, na.rm = TRUE),
+    polish_unilasso_sd_support = sd(polish_unilasso_support, na.rm = TRUE),
+    lasso_cv_mean_support = mean(lasso_cv_support, na.rm = TRUE),
+    lasso_cv_sd_support = sd(lasso_cv_support, na.rm = TRUE),
+    
+    .groups = 'drop'
+  )
+```
+
