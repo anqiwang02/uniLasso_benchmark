@@ -1,0 +1,1482 @@
+[1] "/scratch/users/aqwang/conda/envs/r_package/lib/R"
+Setting up parallel processing with 32 cores
+[[1]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[2]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[3]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[4]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[5]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[6]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[7]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[8]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[9]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[10]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[11]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[12]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[13]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[14]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[15]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[16]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[17]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[18]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[19]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[20]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[21]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[22]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[23]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[24]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[25]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[26]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[27]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[28]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[29]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[30]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[31]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[32]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+
+ ================================================================================ 
+Processing dataset: airfoil_self-noise ( 1 / 48 )
+Running 100 random train/test splits in parallel...
+Training ratio: 0.5 
+================================================================================ 
+Data dimensions: X = 1503 5 , y = 1503 
+Dataset completed in: 3.531984 secs 
+
+Summary statistics for airfoil_self-noise ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 23.109228  (SD = 1.002567 )
+                        Mean Support = 5.00  (SD = 0.00 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 23.062544  (SD = 0.994696 )
+                        Mean Support = 5.00  (SD = 0.00 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 23.109160  (SD = 1.002668 )
+                        Mean Support = 5.00  (SD = 0.00 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Lasso CV:             Mean MSE = 40.467461  (SD = 1.406243 )
+                        Mean Support = 1.00  (SD = 0.00 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  UniReg:               Mean MSE = 23.109189  (SD = 1.002884 )
+                        Mean Support = 5.00  (SD = 0.00 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Least Squares:        Mean MSE = 23.060452  (SD = 0.994899 )
+                        Mean Support = 5.00  (SD = 0.00 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+
+ ================================================================================ 
+Processing dataset: appliances_energy_prediction ( 2 / 48 )
+Running 100 random train/test splits in parallel...
+Training ratio: 0.5 
+================================================================================ 
+Data dimensions: X = 19735 28 , y = 19735 
+Dataset completed in: 19.74392 secs 
+
+Summary statistics for appliances_energy_prediction ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 9160.337524  (SD = 270.183549 )
+                        Mean Support = 10.67  (SD = 1.11 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 9113.001149  (SD = 273.524003 )
+                        Mean Support = 13.44  (SD = 1.70 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 9151.964635  (SD = 266.649062 )
+                        Mean Support = 10.94  (SD = 0.92 )
+                        Mean Sign Diff = 0.08  (SD = 0.27 )
+  Lasso CV:             Mean MSE = 8832.881219  (SD = 253.396039 )
+                        Mean Support = 24.91  (SD = 1.56 )
+                        Mean Sign Diff = 8.43  (SD = 1.83 )
+  UniReg:               Mean MSE = 9159.965758  (SD = 270.209427 )
+                        Mean Support = 10.68  (SD = 1.11 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Least Squares:        Mean MSE = 8812.168170  (SD = 252.010863 )
+                        Mean Support = 27.00  (SD = 0.00 )
+                        Mean Sign Diff = 8.57  (SD = 1.30 )
+
+ ================================================================================ 
+Processing dataset: auto_mpg ( 3 / 48 )
+Running 100 random train/test splits in parallel...
+Training ratio: 0.5 
+================================================================================ 
+Data dimensions: X = 398 7 , y = 398 
+Dataset completed in: 2.476085 secs 
+
+Summary statistics for auto_mpg ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 11.486902  (SD = 0.989278 )
+                        Mean Support = 4.16  (SD = 0.68 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 11.496238  (SD = 0.989110 )
+                        Mean Support = 4.16  (SD = 0.68 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 11.485562  (SD = 1.006713 )
+                        Mean Support = 4.40  (SD = 0.78 )
+                        Mean Sign Diff = 0.24  (SD = 0.43 )
+  Lasso CV:             Mean MSE = 17.811850  (SD = 2.985134 )
+                        Mean Support = 1.55  (SD = 1.31 )
+                        Mean Sign Diff = 0.08  (SD = 0.31 )
+  UniReg:               Mean MSE = 11.487655  (SD = 0.989290 )
+                        Mean Support = 4.16  (SD = 0.68 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Least Squares:        Mean MSE = 11.567869  (SD = 1.006978 )
+                        Mean Support = 7.00  (SD = 0.00 )
+                        Mean Sign Diff = 1.54  (SD = 0.64 )
+
+ ================================================================================ 
+Processing dataset: automobile ( 4 / 48 )
+Running 100 random train/test splits in parallel...
+Training ratio: 0.5 
+================================================================================ 
+Data dimensions: X = 205 25 , y = 205 
+Dataset completed in: 2.81095 secs 
+
+Summary statistics for automobile ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 0.656132  (SD = 0.068623 )
+                        Mean Support = 5.34  (SD = 1.43 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 0.665367  (SD = 0.089753 )
+                        Mean Support = 8.44  (SD = 2.69 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 0.668786  (SD = 0.075460 )
+                        Mean Support = 7.54  (SD = 3.69 )
+                        Mean Sign Diff = 1.38  (SD = 2.37 )
+  Lasso CV:             Mean MSE = 0.694657  (SD = 0.103364 )
+                        Mean Support = 14.20  (SD = 2.66 )
+                        Mean Sign Diff = 6.17  (SD = 1.59 )
+  UniReg:               Mean MSE = 0.656224  (SD = 0.068706 )
+                        Mean Support = 5.30  (SD = 1.41 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Least Squares:        Mean MSE = 0.749532  (SD = 0.141883 )
+                        Mean Support = 24.93  (SD = 0.26 )
+                        Mean Sign Diff = 9.92  (SD = 1.66 )
+
+ ================================================================================ 
+Processing dataset: beijing_pm2.5 ( 5 / 48 )
+Running 100 random train/test splits in parallel...
+Training ratio: 0.5 
+================================================================================ 
+Data dimensions: X = 41757 11 , y = 41757 
+Dataset completed in: 2.73775 mins 
+
+Summary statistics for beijing_pm2.5 ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 6399.017733  (SD = 77.788621 )
+                        Mean Support = 7.00  (SD = 0.00 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 6398.548040  (SD = 77.496903 )
+                        Mean Support = 7.00  (SD = 0.00 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 6278.693450  (SD = 76.391258 )
+                        Mean Support = 10.59  (SD = 0.62 )
+                        Mean Sign Diff = 3.54  (SD = 0.63 )
+  Lasso CV:             Mean MSE = 6278.358834  (SD = 76.372022 )
+                        Mean Support = 10.76  (SD = 0.43 )
+                        Mean Sign Diff = 3.70  (SD = 0.46 )
+  UniReg:               Mean MSE = 6398.983725  (SD = 77.786951 )
+                        Mean Support = 7.00  (SD = 0.00 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Least Squares:        Mean MSE = 6278.399440  (SD = 76.222967 )
+                        Mean Support = 11.00  (SD = 0.00 )
+                        Mean Sign Diff = 3.83  (SD = 0.38 )
+
+ ================================================================================ 
+Processing dataset: bike_sharing ( 6 / 48 )
+Running 100 random train/test splits in parallel...
+Training ratio: 0.5 
+================================================================================ 
+Data dimensions: X = 17379 13 , y = 17379 
+Dataset completed in: 13.32229 secs 
+
+Summary statistics for bike_sharing ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 20148.919234  (SD = 323.065928 )
+                        Mean Support = 10.90  (SD = 0.95 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 20142.671666  (SD = 322.087177 )
+                        Mean Support = 11.38  (SD = 0.85 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 20148.419879  (SD = 323.158015 )
+                        Mean Support = 10.94  (SD = 0.91 )
+                        Mean Sign Diff = 0.01  (SD = 0.10 )
+  Lasso CV:             Mean MSE = 20270.502732  (SD = 326.878415 )
+                        Mean Support = 9.05  (SD = 0.61 )
+                        Mean Sign Diff = 1.00  (SD = 0.00 )
+  UniReg:               Mean MSE = 20148.876044  (SD = 323.022803 )
+                        Mean Support = 10.90  (SD = 0.95 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Least Squares:        Mean MSE = 20143.575335  (SD = 321.845798 )
+                        Mean Support = 13.00  (SD = 0.00 )
+                        Mean Sign Diff = 1.11  (SD = 0.37 )
+
+ ================================================================================ 
+Processing dataset: combined_cycle_power_plant ( 7 / 48 )
+Running 100 random train/test splits in parallel...
+Training ratio: 0.5 
+================================================================================ 
+Data dimensions: X = 9568 4 , y = 9568 
+Dataset completed in: 6.075116 secs 
+
+Summary statistics for combined_cycle_power_plant ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 23.907548  (SD = 0.504306 )
+                        Mean Support = 3.00  (SD = 0.00 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 23.907510  (SD = 0.504268 )
+                        Mean Support = 3.00  (SD = 0.00 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 20.798025  (SD = 0.504750 )
+                        Mean Support = 4.00  (SD = 0.00 )
+                        Mean Sign Diff = 1.00  (SD = 0.00 )
+  Lasso CV:             Mean MSE = 20.810365  (SD = 0.501092 )
+                        Mean Support = 4.00  (SD = 0.00 )
+                        Mean Sign Diff = 1.00  (SD = 0.00 )
+  UniReg:               Mean MSE = 23.907418  (SD = 0.504365 )
+                        Mean Support = 3.00  (SD = 0.00 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Least Squares:        Mean MSE = 20.798228  (SD = 0.505615 )
+                        Mean Support = 4.00  (SD = 0.00 )
+                        Mean Sign Diff = 1.00  (SD = 0.00 )
+
+ ================================================================================ 
+Processing dataset: communities_and_crime ( 8 / 48 )
+Running 100 random train/test splits in parallel...
+Training ratio: 0.5 
+================================================================================ 
+Data dimensions: X = 1994 127 , y = 1994 
+Dataset completed in: 7.84161 secs 
+
+Summary statistics for communities_and_crime ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 0.018869  (SD = 0.001087 )
+                        Mean Support = 25.06  (SD = 3.65 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 0.018863  (SD = 0.001064 )
+                        Mean Support = 28.48  (SD = 4.61 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 0.018881  (SD = 0.001077 )
+                        Mean Support = 25.60  (SD = 3.81 )
+                        Mean Sign Diff = 0.44  (SD = 0.87 )
+  Lasso CV:             Mean MSE = 0.019575  (SD = 0.001103 )
+                        Mean Support = 38.40  (SD = 2.33 )
+                        Mean Sign Diff = 9.81  (SD = 1.77 )
+  UniReg:               Mean MSE = 0.018869  (SD = 0.001087 )
+                        Mean Support = 25.09  (SD = 3.69 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Least Squares:        Mean MSE = 0.020513  (SD = 0.001183 )
+                        Mean Support = 126.49  (SD = 0.50 )
+                        Mean Sign Diff = 57.33  (SD = 2.90 )
+
+ ================================================================================ 
+Processing dataset: communities_and_crime_unnormalized ( 9 / 48 )
+Running 100 random train/test splits in parallel...
+Training ratio: 0.5 
+================================================================================ 
+Data dimensions: X = 2215 125 , y = 2215 
+Dataset completed in: 6.439551 secs 
+
+Summary statistics for communities_and_crime_unnormalized ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 303.933165  (SD = 238.627253 )
+                        Mean Support = 6.36  (SD = 2.81 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 282.322769  (SD = 205.455206 )
+                        Mean Support = 7.08  (SD = 3.35 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 298.766290  (SD = 203.897072 )
+                        Mean Support = 6.96  (SD = 2.82 )
+                        Mean Sign Diff = 0.15  (SD = 0.58 )
+  Lasso CV:             Mean MSE = 926.133031  (SD = 533.089430 )
+                        Mean Support = 1.35  (SD = 1.45 )
+                        Mean Sign Diff = 0.13  (SD = 0.54 )
+  UniReg:               Mean MSE = 303.722154  (SD = 238.898634 )
+                        Mean Support = 6.83  (SD = 3.96 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Least Squares:        Mean MSE = 509.944179  (SD = 382.695047 )
+                        Mean Support = 123.00  (SD = 0.00 )
+                        Mean Sign Diff = 61.07  (SD = 3.99 )
+
+ ================================================================================ 
+Processing dataset: communities_and_crime_unnormalized_(target_2) ( 10 / 48 )
+Running 100 random train/test splits in parallel...
+Training ratio: 0.5 
+================================================================================ 
+Data dimensions: X = 2215 125 , y = 2215 
+Dataset completed in: 7.134073 secs 
+
+Summary statistics for communities_and_crime_unnormalized_(target_2) ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 39.696527  (SD = 12.025576 )
+                        Mean Support = 14.91  (SD = 4.34 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 40.025190  (SD = 12.565676 )
+                        Mean Support = 19.46  (SD = 6.08 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 40.655737  (SD = 15.180419 )
+                        Mean Support = 16.41  (SD = 4.46 )
+                        Mean Sign Diff = 0.57  (SD = 1.24 )
+  Lasso CV:             Mean MSE = 93.042039  (SD = 35.167181 )
+                        Mean Support = 4.50  (SD = 6.08 )
+                        Mean Sign Diff = 2.00  (SD = 3.40 )
+  UniReg:               Mean MSE = 39.693994  (SD = 12.032690 )
+                        Mean Support = 15.13  (SD = 4.40 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Least Squares:        Mean MSE = 54.247859  (SD = 18.236251 )
+                        Mean Support = 123.00  (SD = 0.00 )
+                        Mean Sign Diff = 57.66  (SD = 4.01 )
+
+ ================================================================================ 
+Processing dataset: communities_and_crime_unnormalized_(target_3) ( 11 / 48 )
+Running 100 random train/test splits in parallel...
+Training ratio: 0.5 
+================================================================================ 
+Data dimensions: X = 2007 125 , y = 2007 
+Dataset completed in: 6.816791 secs 
+
+Summary statistics for communities_and_crime_unnormalized_(target_3) ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 2540.473290  (SD = 2269.736558 )
+                        Mean Support = 3.82  (SD = 1.05 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 2738.629768  (SD = 2601.251952 )
+                        Mean Support = 4.42  (SD = 3.78 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 2916.810024  (SD = 2279.163842 )
+                        Mean Support = 6.04  (SD = 2.77 )
+                        Mean Sign Diff = 0.55  (SD = 1.11 )
+  Lasso CV:             Mean MSE = 6404.111481  (SD = 2566.875088 )
+                        Mean Support = 2.13  (SD = 2.53 )
+                        Mean Sign Diff = 0.34  (SD = 0.88 )
+  UniReg:               Mean MSE = 2539.310095  (SD = 2268.504538 )
+                        Mean Support = 3.81  (SD = 1.05 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Least Squares:        Mean MSE = 3992.011127  (SD = 4006.927981 )
+                        Mean Support = 123.00  (SD = 0.00 )
+                        Mean Sign Diff = 58.23  (SD = 4.29 )
+
+ ================================================================================ 
+Processing dataset: communities_and_crime_unnormalized_(target_4) ( 12 / 48 )
+Running 100 random train/test splits in parallel...
+Training ratio: 0.5 
+================================================================================ 
+Data dimensions: X = 2007 125 , y = 2007 
+Dataset completed in: 7.304979 secs 
+
+Summary statistics for communities_and_crime_unnormalized_(target_4) ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 719.990446  (SD = 78.369617 )
+                        Mean Support = 18.86  (SD = 5.04 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 717.876831  (SD = 80.244873 )
+                        Mean Support = 30.75  (SD = 7.74 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 719.333225  (SD = 72.161886 )
+                        Mean Support = 21.85  (SD = 4.70 )
+                        Mean Sign Diff = 1.39  (SD = 1.62 )
+  Lasso CV:             Mean MSE = 923.093248  (SD = 138.163864 )
+                        Mean Support = 15.22  (SD = 4.71 )
+                        Mean Sign Diff = 5.80  (SD = 2.39 )
+  UniReg:               Mean MSE = 720.014308  (SD = 78.346688 )
+                        Mean Support = 18.87  (SD = 5.03 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Least Squares:        Mean MSE = 886.784893  (SD = 269.861645 )
+                        Mean Support = 123.00  (SD = 0.00 )
+                        Mean Sign Diff = 55.55  (SD = 3.78 )
+
+ ================================================================================ 
+Processing dataset: communities_and_crime_unnormalized_(target_5) ( 13 / 48 )
+Running 100 random train/test splits in parallel...
+Training ratio: 0.5 
+================================================================================ 
+Data dimensions: X = 2214 125 , y = 2214 
+Dataset completed in: 7.159989 secs 
+
+Summary statistics for communities_and_crime_unnormalized_(target_5) ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 190381.637867  (SD = 221996.480352 )
+                        Mean Support = 9.80  (SD = 4.48 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 154034.566944  (SD = 176547.024678 )
+                        Mean Support = 9.23  (SD = 4.48 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 204003.048316  (SD = 200516.704794 )
+                        Mean Support = 9.97  (SD = 4.45 )
+                        Mean Sign Diff = 0.18  (SD = 0.41 )
+  Lasso CV:             Mean MSE = 908591.001587  (SD = 471502.761635 )
+                        Mean Support = 1.12  (SD = 0.74 )
+                        Mean Sign Diff = 0.01  (SD = 0.10 )
+  UniReg:               Mean MSE = 189435.731801  (SD = 219207.661428 )
+                        Mean Support = 13.52  (SD = 8.33 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Least Squares:        Mean MSE = 306238.426872  (SD = 381666.101956 )
+                        Mean Support = 123.00  (SD = 0.00 )
+                        Mean Sign Diff = 60.72  (SD = 4.33 )
+
+ ================================================================================ 
+Processing dataset: communities_and_crime_unnormalized_(target_6) ( 14 / 48 )
+Running 100 random train/test splits in parallel...
+Training ratio: 0.5 
+================================================================================ 
+Data dimensions: X = 2214 125 , y = 2214 
+Dataset completed in: 7.195811 secs 
+
+Summary statistics for communities_and_crime_unnormalized_(target_6) ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 19643.115820  (SD = 9002.026318 )
+                        Mean Support = 17.02  (SD = 4.50 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 20398.129770  (SD = 10117.498470 )
+                        Mean Support = 19.61  (SD = 4.42 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 21049.296758  (SD = 10507.133098 )
+                        Mean Support = 18.16  (SD = 4.44 )
+                        Mean Sign Diff = 0.45  (SD = 1.58 )
+  Lasso CV:             Mean MSE = 65773.718332  (SD = 34847.474224 )
+                        Mean Support = 3.93  (SD = 5.49 )
+                        Mean Sign Diff = 1.37  (SD = 2.65 )
+  UniReg:               Mean MSE = 19638.307390  (SD = 9003.319269 )
+                        Mean Support = 17.05  (SD = 4.52 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Least Squares:        Mean MSE = 21733.530260  (SD = 10336.927887 )
+                        Mean Support = 123.00  (SD = 0.00 )
+                        Mean Sign Diff = 56.29  (SD = 3.74 )
+
+ ================================================================================ 
+Processing dataset: communities_and_crime_unnormalized_(target_7) ( 15 / 48 )
+Running 100 random train/test splits in parallel...
+Training ratio: 0.5 
+================================================================================ 
+Data dimensions: X = 2202 125 , y = 2202 
+Dataset completed in: 6.866479 secs 
+
+Summary statistics for communities_and_crime_unnormalized_(target_7) ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 759101.985937  (SD = 617955.993240 )
+                        Mean Support = 8.25  (SD = 5.35 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 691313.521807  (SD = 485161.772654 )
+                        Mean Support = 10.16  (SD = 6.46 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 687172.217622  (SD = 464927.051081 )
+                        Mean Support = 9.20  (SD = 5.73 )
+                        Mean Sign Diff = 0.41  (SD = 1.20 )
+  Lasso CV:             Mean MSE = 958465.505218  (SD = 504586.537216 )
+                        Mean Support = 1.19  (SD = 1.23 )
+                        Mean Sign Diff = 0.05  (SD = 0.41 )
+  UniReg:               Mean MSE = 760093.716227  (SD = 618102.628944 )
+                        Mean Support = 9.11  (SD = 7.22 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Least Squares:        Mean MSE = 834951.924566  (SD = 929962.850593 )
+                        Mean Support = 123.00  (SD = 0.00 )
+                        Mean Sign Diff = 60.58  (SD = 4.42 )
+
+ ================================================================================ 
+Processing dataset: communities_and_crime_unnormalized_(target_8) ( 16 / 48 )
+Running 100 random train/test splits in parallel...
+Training ratio: 0.5 
+================================================================================ 
+Data dimensions: X = 2202 125 , y = 2202 
+Dataset completed in: 7.359658 secs 
+
+Summary statistics for communities_and_crime_unnormalized_(target_8) ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 102510.990147  (SD = 8791.585407 )
+                        Mean Support = 16.17  (SD = 2.76 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 103453.480901  (SD = 9473.146835 )
+                        Mean Support = 19.73  (SD = 6.13 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 102822.337652  (SD = 8784.960585 )
+                        Mean Support = 17.53  (SD = 4.82 )
+                        Mean Sign Diff = 0.70  (SD = 2.30 )
+  Lasso CV:             Mean MSE = 164314.919262  (SD = 30490.245517 )
+                        Mean Support = 9.90  (SD = 7.78 )
+                        Mean Sign Diff = 5.18  (SD = 4.49 )
+  UniReg:               Mean MSE = 102508.474913  (SD = 8786.908690 )
+                        Mean Support = 16.19  (SD = 2.76 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Least Squares:        Mean MSE = 155167.533694  (SD = 66946.849868 )
+                        Mean Support = 123.00  (SD = 0.00 )
+                        Mean Sign Diff = 57.52  (SD = 3.39 )
+
+ ================================================================================ 
+Processing dataset: communities_and_crime_unnormalized_(target_9) ( 17 / 48 )
+Running 100 random train/test splits in parallel...
+Training ratio: 0.5 
+================================================================================ 
+Data dimensions: X = 2212 125 , y = 2212 
+Dataset completed in: 6.808436 secs 
+
+Summary statistics for communities_and_crime_unnormalized_(target_9) ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 661316.701596  (SD = 455305.425404 )
+                        Mean Support = 6.09  (SD = 2.51 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 739787.816576  (SD = 775111.265536 )
+                        Mean Support = 7.80  (SD = 4.34 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 800869.457833  (SD = 797047.472107 )
+                        Mean Support = 7.06  (SD = 2.70 )
+                        Mean Sign Diff = 0.26  (SD = 0.71 )
+  Lasso CV:             Mean MSE = 3017170.053945  (SD = 844104.562028 )
+                        Mean Support = 1.31  (SD = 1.20 )
+                        Mean Sign Diff = 0.04  (SD = 0.24 )
+  UniReg:               Mean MSE = 661267.840098  (SD = 455269.502270 )
+                        Mean Support = 6.07  (SD = 2.47 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Least Squares:        Mean MSE = 1313395.603168  (SD = 1057767.775423 )
+                        Mean Support = 123.00  (SD = 0.00 )
+                        Mean Sign Diff = 58.56  (SD = 4.33 )
+
+ ================================================================================ 
+Processing dataset: communities_and_crime_unnormalized_(target_10) ( 18 / 48 )
+Running 100 random train/test splits in parallel...
+Training ratio: 0.5 
+================================================================================ 
+Data dimensions: X = 2212 125 , y = 2212 
+Dataset completed in: 7.703553 secs 
+
+Summary statistics for communities_and_crime_unnormalized_(target_10) ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 285147.082060  (SD = 54274.215400 )
+                        Mean Support = 19.41  (SD = 5.70 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 284279.965290  (SD = 57254.348422 )
+                        Mean Support = 30.89  (SD = 5.63 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 286224.746063  (SD = 55804.371656 )
+                        Mean Support = 21.22  (SD = 5.62 )
+                        Mean Sign Diff = 1.24  (SD = 1.53 )
+  Lasso CV:             Mean MSE = 375548.988481  (SD = 59776.111106 )
+                        Mean Support = 17.81  (SD = 3.28 )
+                        Mean Sign Diff = 9.43  (SD = 1.46 )
+  UniReg:               Mean MSE = 285151.181337  (SD = 54279.737778 )
+                        Mean Support = 19.44  (SD = 5.72 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Least Squares:        Mean MSE = 331218.803570  (SD = 82919.614142 )
+                        Mean Support = 123.00  (SD = 0.00 )
+                        Mean Sign Diff = 54.23  (SD = 3.07 )
+
+ ================================================================================ 
+Processing dataset: communities_and_crime_unnormalized_(target_11) ( 19 / 48 )
+Running 100 random train/test splits in parallel...
+Training ratio: 0.5 
+================================================================================ 
+Data dimensions: X = 2212 125 , y = 2212 
+Dataset completed in: 6.876281 secs 
+
+Summary statistics for communities_and_crime_unnormalized_(target_11) ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 5590050.173794  (SD = 3118922.448937 )
+                        Mean Support = 5.17  (SD = 2.55 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 5895267.582599  (SD = 3574390.875520 )
+                        Mean Support = 7.38  (SD = 6.21 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 6020238.546909  (SD = 3357629.952660 )
+                        Mean Support = 6.78  (SD = 3.83 )
+                        Mean Sign Diff = 0.46  (SD = 1.23 )
+  Lasso CV:             Mean MSE = 17247437.903809  (SD = 5085381.317709 )
+                        Mean Support = 1.40  (SD = 1.21 )
+                        Mean Sign Diff = 0.08  (SD = 0.34 )
+  UniReg:               Mean MSE = 5593101.072317  (SD = 3128542.042901 )
+                        Mean Support = 5.26  (SD = 2.69 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Least Squares:        Mean MSE = 7436360.981923  (SD = 5188357.775278 )
+                        Mean Support = 123.00  (SD = 0.00 )
+                        Mean Sign Diff = 62.18  (SD = 3.89 )
+
+ ================================================================================ 
+Processing dataset: communities_and_crime_unnormalized_(target_12) ( 20 / 48 )
+Running 100 random train/test splits in parallel...
+Training ratio: 0.5 
+================================================================================ 
+Data dimensions: X = 2212 125 , y = 2212 
+Dataset completed in: 7.582355 secs 
+
+Summary statistics for communities_and_crime_unnormalized_(target_12) ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 2241424.619772  (SD = 325368.376568 )
+                        Mean Support = 22.45  (SD = 3.41 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 2196362.006239  (SD = 326230.654069 )
+                        Mean Support = 36.76  (SD = 4.45 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 2241440.587118  (SD = 312918.024643 )
+                        Mean Support = 23.32  (SD = 3.55 )
+                        Mean Sign Diff = 0.35  (SD = 0.98 )
+  Lasso CV:             Mean MSE = 2474292.190915  (SD = 317542.401262 )
+                        Mean Support = 17.29  (SD = 2.93 )
+                        Mean Sign Diff = 5.57  (SD = 1.86 )
+  UniReg:               Mean MSE = 2242283.186759  (SD = 323859.109712 )
+                        Mean Support = 22.36  (SD = 3.76 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Least Squares:        Mean MSE = 2511662.722934  (SD = 496841.086426 )
+                        Mean Support = 123.00  (SD = 0.00 )
+                        Mean Sign Diff = 56.45  (SD = 3.67 )
+
+ ================================================================================ 
+Processing dataset: communities_and_crime_unnormalized_(target_13) ( 21 / 48 )
+Running 100 random train/test splits in parallel...
+Training ratio: 0.5 
+================================================================================ 
+Data dimensions: X = 2212 125 , y = 2212 
+Dataset completed in: 7.108827 secs 
+
+Summary statistics for communities_and_crime_unnormalized_(target_13) ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 730914.590940  (SD = 623971.181388 )
+                        Mean Support = 8.40  (SD = 3.81 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 712369.350208  (SD = 526302.845504 )
+                        Mean Support = 8.44  (SD = 4.20 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 746979.712895  (SD = 652593.276971 )
+                        Mean Support = 8.74  (SD = 3.70 )
+                        Mean Sign Diff = 0.06  (SD = 0.28 )
+  Lasso CV:             Mean MSE = 3363529.548354  (SD = 1806312.343011 )
+                        Mean Support = 1.13  (SD = 0.81 )
+                        Mean Sign Diff = 0.03  (SD = 0.30 )
+  UniReg:               Mean MSE = 731412.252875  (SD = 625376.580324 )
+                        Mean Support = 8.41  (SD = 3.91 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Least Squares:        Mean MSE = 1236359.162201  (SD = 1024426.515477 )
+                        Mean Support = 123.00  (SD = 0.00 )
+                        Mean Sign Diff = 61.58  (SD = 3.47 )
+
+ ================================================================================ 
+Processing dataset: communities_and_crime_unnormalized_(target_14) ( 22 / 48 )
+Running 100 random train/test splits in parallel...
+Training ratio: 0.5 
+================================================================================ 
+Data dimensions: X = 2212 125 , y = 2212 
+Dataset completed in: 7.532199 secs 
+
+Summary statistics for communities_and_crime_unnormalized_(target_14) ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 136798.370201  (SD = 28950.922235 )
+                        Mean Support = 17.72  (SD = 6.10 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 139564.515555  (SD = 41450.905822 )
+                        Mean Support = 24.80  (SD = 7.26 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 137347.440806  (SD = 28647.575802 )
+                        Mean Support = 19.22  (SD = 6.12 )
+                        Mean Sign Diff = 0.86  (SD = 1.61 )
+  Lasso CV:             Mean MSE = 281332.498738  (SD = 118949.579637 )
+                        Mean Support = 6.14  (SD = 5.86 )
+                        Mean Sign Diff = 1.88  (SD = 2.21 )
+  UniReg:               Mean MSE = 136786.112327  (SD = 28955.509199 )
+                        Mean Support = 17.69  (SD = 6.07 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Least Squares:        Mean MSE = 177629.521498  (SD = 78910.735894 )
+                        Mean Support = 123.00  (SD = 0.00 )
+                        Mean Sign Diff = 59.31  (SD = 3.38 )
+
+ ================================================================================ 
+Processing dataset: communities_and_crime_unnormalized_(target_15) ( 23 / 48 )
+Running 100 random train/test splits in parallel...
+Training ratio: 0.5 
+================================================================================ 
+Data dimensions: X = 2124 125 , y = 2124 
+Dataset completed in: 6.655457 secs 
+
+Summary statistics for communities_and_crime_unnormalized_(target_15) ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 17165.133718  (SD = 14701.180304 )
+                        Mean Support = 4.82  (SD = 3.47 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 15214.959794  (SD = 12286.882190 )
+                        Mean Support = 5.24  (SD = 3.10 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 13883.293021  (SD = 10720.259294 )
+                        Mean Support = 6.07  (SD = 3.80 )
+                        Mean Sign Diff = 0.58  (SD = 1.16 )
+  Lasso CV:             Mean MSE = 26576.060292  (SD = 24820.180077 )
+                        Mean Support = 1.10  (SD = 0.72 )
+                        Mean Sign Diff = 0.04  (SD = 0.32 )
+  UniReg:               Mean MSE = 17286.559989  (SD = 14781.243045 )
+                        Mean Support = 4.91  (SD = 3.86 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Least Squares:        Mean MSE = 15455.708327  (SD = 11526.022203 )
+                        Mean Support = 123.00  (SD = 0.00 )
+                        Mean Sign Diff = 60.64  (SD = 3.84 )
+
+ ================================================================================ 
+Processing dataset: communities_and_crime_unnormalized_(target_16) ( 24 / 48 )
+Running 100 random train/test splits in parallel...
+Training ratio: 0.5 
+================================================================================ 
+Data dimensions: X = 2124 125 , y = 2124 
+Dataset completed in: 7.731428 secs 
+
+Summary statistics for communities_and_crime_unnormalized_(target_16) ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 1199.632382  (SD = 144.721908 )
+                        Mean Support = 9.36  (SD = 2.56 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 1203.394907  (SD = 144.421908 )
+                        Mean Support = 12.09  (SD = 3.92 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 1183.357382  (SD = 121.348762 )
+                        Mean Support = 13.93  (SD = 4.78 )
+                        Mean Sign Diff = 1.97  (SD = 1.75 )
+  Lasso CV:             Mean MSE = 1421.724001  (SD = 160.748607 )
+                        Mean Support = 8.45  (SD = 4.17 )
+                        Mean Sign Diff = 3.18  (SD = 1.91 )
+  UniReg:               Mean MSE = 1199.651207  (SD = 144.709619 )
+                        Mean Support = 9.36  (SD = 2.55 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Least Squares:        Mean MSE = 1754.102421  (SD = 590.785858 )
+                        Mean Support = 123.00  (SD = 0.00 )
+                        Mean Sign Diff = 56.96  (SD = 3.27 )
+
+ ================================================================================ 
+Processing dataset: communities_and_crime_unnormalized_(target_17) ( 25 / 48 )
+Running 100 random train/test splits in parallel...
+Training ratio: 0.5 
+================================================================================ 
+Data dimensions: X = 1994 125 , y = 1994 
+Dataset completed in: 6.66639 secs 
+
+Summary statistics for communities_and_crime_unnormalized_(target_17) ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 160067.651518  (SD = 56953.675915 )
+                        Mean Support = 15.75  (SD = 6.14 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 161141.117209  (SD = 60049.716675 )
+                        Mean Support = 21.69  (SD = 5.92 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 159554.733872  (SD = 53818.155408 )
+                        Mean Support = 16.45  (SD = 5.86 )
+                        Mean Sign Diff = 0.19  (SD = 0.66 )
+  Lasso CV:             Mean MSE = 368872.790656  (SD = 139977.143320 )
+                        Mean Support = 7.77  (SD = 7.92 )
+                        Mean Sign Diff = 3.79  (SD = 4.33 )
+  UniReg:               Mean MSE = 160096.566853  (SD = 56976.782896 )
+                        Mean Support = 15.77  (SD = 6.14 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Least Squares:        Mean MSE = 201273.981742  (SD = 83088.000046 )
+                        Mean Support = 123.00  (SD = 0.00 )
+                        Mean Sign Diff = 56.51  (SD = 3.10 )
+
+ ================================================================================ 
+Processing dataset: communities_and_crime_unnormalized_(target_18) ( 26 / 48 )
+Running 100 random train/test splits in parallel...
+Training ratio: 0.5 
+================================================================================ 
+Data dimensions: X = 2118 125 , y = 2118 
+Dataset completed in: 7.503404 secs 
+
+Summary statistics for communities_and_crime_unnormalized_(target_18) ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 3812847.461970  (SD = 376945.162623 )
+                        Mean Support = 20.90  (SD = 5.62 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 3770943.470771  (SD = 396294.363210 )
+                        Mean Support = 32.00  (SD = 4.68 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 3822168.911415  (SD = 391408.763869 )
+                        Mean Support = 23.57  (SD = 5.73 )
+                        Mean Sign Diff = 1.57  (SD = 2.42 )
+  Lasso CV:             Mean MSE = 4773879.171641  (SD = 562999.182455 )
+                        Mean Support = 15.66  (SD = 3.14 )
+                        Mean Sign Diff = 7.72  (SD = 1.69 )
+  UniReg:               Mean MSE = 3812622.029841  (SD = 376956.021713 )
+                        Mean Support = 20.86  (SD = 5.59 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Least Squares:        Mean MSE = 4366734.832037  (SD = 1309921.984650 )
+                        Mean Support = 123.00  (SD = 0.00 )
+                        Mean Sign Diff = 55.35  (SD = 3.49 )
+
+ ================================================================================ 
+Processing dataset: concrete_compressive_strength ( 27 / 48 )
+Running 100 random train/test splits in parallel...
+Training ratio: 0.5 
+================================================================================ 
+Data dimensions: X = 1030 8 , y = 1030 
+Dataset completed in: 2.903425 secs 
+
+Summary statistics for concrete_compressive_strength ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 117.019980  (SD = 5.044775 )
+                        Mean Support = 6.81  (SD = 0.39 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 116.400893  (SD = 4.847548 )
+                        Mean Support = 6.95  (SD = 0.22 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 113.199765  (SD = 5.292004 )
+                        Mean Support = 7.74  (SD = 0.46 )
+                        Mean Sign Diff = 2.06  (SD = 1.30 )
+  Lasso CV:             Mean MSE = 111.272886  (SD = 4.642528 )
+                        Mean Support = 7.47  (SD = 0.88 )
+                        Mean Sign Diff = 2.61  (SD = 0.67 )
+  UniReg:               Mean MSE = 117.019996  (SD = 5.046968 )
+                        Mean Support = 6.81  (SD = 0.39 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Least Squares:        Mean MSE = 110.983004  (SD = 4.626369 )
+                        Mean Support = 8.00  (SD = 0.00 )
+                        Mean Sign Diff = 2.88  (SD = 0.43 )
+
+ ================================================================================ 
+Processing dataset: daily_demand_forecasting_orders ( 28 / 48 )
+Running 100 random train/test splits in parallel...
+Training ratio: 0.5 
+================================================================================ 
+Data dimensions: X = 60 12 , y = 60 
+Dataset completed in: 2.375119 secs 
+
+Summary statistics for daily_demand_forecasting_orders ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 68.432893  (SD = 99.729175 )
+                        Mean Support = 6.16  (SD = 1.52 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 51.606809  (SD = 66.296148 )
+                        Mean Support = 5.03  (SD = 0.33 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 45.299965  (SD = 98.864180 )
+                        Mean Support = 8.40  (SD = 1.55 )
+                        Mean Sign Diff = 2.30  (SD = 1.15 )
+  Lasso CV:             Mean MSE = 1498.707142  (SD = 484.405369 )
+                        Mean Support = 3.58  (SD = 0.57 )
+                        Mean Sign Diff = 0.19  (SD = 0.39 )
+  UniReg:               Mean MSE = 67.563958  (SD = 101.383480 )
+                        Mean Support = 7.01  (SD = 1.92 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Least Squares:        Mean MSE = 0.000000  (SD = 0.000000 )
+                        Mean Support = 12.00  (SD = 0.00 )
+                        Mean Sign Diff = 4.50  (SD = 1.38 )
+
+ ================================================================================ 
+Processing dataset: facebook_metrics ( 29 / 48 )
+Running 100 random train/test splits in parallel...
+Training ratio: 0.5 
+================================================================================ 
+Data dimensions: X = 500 18 , y = 500 
+Dataset completed in: 2.806611 secs 
+
+Summary statistics for facebook_metrics ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 182.127533  (SD = 182.613505 )
+                        Mean Support = 3.67  (SD = 1.04 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 165.425094  (SD = 196.713444 )
+                        Mean Support = 3.39  (SD = 0.69 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 99.991830  (SD = 89.514345 )
+                        Mean Support = 9.40  (SD = 3.05 )
+                        Mean Sign Diff = 2.66  (SD = 1.90 )
+  Lasso CV:             Mean MSE = 1373.536615  (SD = 866.211203 )
+                        Mean Support = 7.66  (SD = 0.67 )
+                        Mean Sign Diff = 3.38  (SD = 0.94 )
+  UniReg:               Mean MSE = 124.925567  (SD = 108.681493 )
+                        Mean Support = 7.16  (SD = 2.59 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Least Squares:        Mean MSE = 118.281649  (SD = 60.781690 )
+                        Mean Support = 18.00  (SD = 0.00 )
+                        Mean Sign Diff = 5.48  (SD = 1.18 )
+
+ ================================================================================ 
+Processing dataset: forest_fires ( 30 / 48 )
+Running 100 random train/test splits in parallel...
+Training ratio: 0.5 
+================================================================================ 
+Data dimensions: X = 517 12 , y = 517 
+Dataset completed in: 2.684386 secs 
+
+Summary statistics for forest_fires ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 4126.559917  (SD = 2473.845636 )
+                        Mean Support = 0.59  (SD = 0.91 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 4150.711278  (SD = 2438.819227 )
+                        Mean Support = 1.89  (SD = 1.87 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 4126.793367  (SD = 2467.986896 )
+                        Mean Support = 1.28  (SD = 1.32 )
+                        Mean Sign Diff = 0.07  (SD = 0.36 )
+  Lasso CV:             Mean MSE = 4139.471972  (SD = 2455.851358 )
+                        Mean Support = 1.66  (SD = 2.36 )
+                        Mean Sign Diff = 0.30  (SD = 0.77 )
+  UniReg:               Mean MSE = 4126.523235  (SD = 2473.856530 )
+                        Mean Support = 0.59  (SD = 0.91 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Least Squares:        Mean MSE = 4293.080905  (SD = 2457.761225 )
+                        Mean Support = 12.00  (SD = 0.00 )
+                        Mean Sign Diff = 3.33  (SD = 1.16 )
+
+ ================================================================================ 
+Processing dataset: infrared_thermography_temperature ( 31 / 48 )
+Running 100 random train/test splits in parallel...
+Training ratio: 0.5 
+================================================================================ 
+Data dimensions: X = 1020 33 , y = 1020 
+Dataset completed in: 4.131129 secs 
+
+Summary statistics for infrared_thermography_temperature ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 0.063714  (SD = 0.004900 )
+                        Mean Support = 3.76  (SD = 1.03 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 0.063718  (SD = 0.004802 )
+                        Mean Support = 4.03  (SD = 1.18 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 0.062578  (SD = 0.011374 )
+                        Mean Support = 9.81  (SD = 4.63 )
+                        Mean Sign Diff = 3.60  (SD = 2.16 )
+  Lasso CV:             Mean MSE = 0.068120  (SD = 0.062123 )
+                        Mean Support = 15.60  (SD = 4.69 )
+                        Mean Sign Diff = 6.21  (SD = 2.66 )
+  UniReg:               Mean MSE = 0.063722  (SD = 0.004914 )
+                        Mean Support = 3.75  (SD = 1.04 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Least Squares:        Mean MSE = 0.244697  (SD = 0.307977 )
+                        Mean Support = 33.00  (SD = 0.00 )
+                        Mean Sign Diff = 15.95  (SD = 1.68 )
+
+ ================================================================================ 
+Processing dataset: infrared_thermography_temperature_(target_2) ( 32 / 48 )
+Running 100 random train/test splits in parallel...
+Training ratio: 0.5 
+================================================================================ 
+Data dimensions: X = 1020 33 , y = 1020 
+Dataset completed in: 4.16577 secs 
+
+Summary statistics for infrared_thermography_temperature_(target_2) ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 0.072641  (SD = 0.004281 )
+                        Mean Support = 3.75  (SD = 1.45 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 0.081093  (SD = 0.059670 )
+                        Mean Support = 4.14  (SD = 1.50 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 0.069670  (SD = 0.008645 )
+                        Mean Support = 13.42  (SD = 5.33 )
+                        Mean Sign Diff = 5.30  (SD = 2.94 )
+  Lasso CV:             Mean MSE = 0.068679  (SD = 0.006796 )
+                        Mean Support = 16.80  (SD = 4.92 )
+                        Mean Sign Diff = 6.64  (SD = 2.71 )
+  UniReg:               Mean MSE = 0.072639  (SD = 0.004276 )
+                        Mean Support = 3.75  (SD = 1.47 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Least Squares:        Mean MSE = 0.222342  (SD = 0.314503 )
+                        Mean Support = 33.00  (SD = 0.00 )
+                        Mean Sign Diff = 17.17  (SD = 1.50 )
+
+ ================================================================================ 
+Processing dataset: liver_disorders ( 33 / 48 )
+Running 100 random train/test splits in parallel...
+Training ratio: 0.5 
+================================================================================ 
+Data dimensions: X = 345 5 , y = 345 
+Dataset completed in: 2.415553 secs 
+
+Summary statistics for liver_disorders ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 9.762636  (SD = 1.327253 )
+                        Mean Support = 2.54  (SD = 0.72 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 9.611278  (SD = 1.253727 )
+                        Mean Support = 2.86  (SD = 0.70 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 9.656297  (SD = 1.248682 )
+                        Mean Support = 2.66  (SD = 0.71 )
+                        Mean Sign Diff = 0.01  (SD = 0.10 )
+  Lasso CV:             Mean MSE = 9.852470  (SD = 1.231519 )
+                        Mean Support = 3.84  (SD = 1.43 )
+                        Mean Sign Diff = 0.48  (SD = 0.63 )
+  UniReg:               Mean MSE = 9.762935  (SD = 1.327753 )
+                        Mean Support = 2.54  (SD = 0.72 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Least Squares:        Mean MSE = 9.771360  (SD = 1.206178 )
+                        Mean Support = 5.00  (SD = 0.00 )
+                        Mean Sign Diff = 1.04  (SD = 0.63 )
+
+ ================================================================================ 
+Processing dataset: metro_interstate_traffic_volume ( 34 / 48 )
+Running 100 random train/test splits in parallel...
+Training ratio: 0.5 
+================================================================================ 
+Data dimensions: X = 48204 8 , y = 48204 
+Dataset completed in: 1.899878 mins 
+
+Summary statistics for metro_interstate_traffic_volume ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 7154435.513929  (SD = 4913619.229892 )
+                        Mean Support = 5.20  (SD = 0.65 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 8122540.694215  (SD = 5987610.569693 )
+                        Mean Support = 6.28  (SD = 0.79 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 7154514.701525  (SD = 4913644.619453 )
+                        Mean Support = 5.34  (SD = 0.76 )
+                        Mean Sign Diff = 0.07  (SD = 0.26 )
+  Lasso CV:             Mean MSE = 6646090.374457  (SD = 4535394.437941 )
+                        Mean Support = 6.05  (SD = 0.22 )
+                        Mean Sign Diff = 0.66  (SD = 0.48 )
+  UniReg:               Mean MSE = 7164356.810928  (SD = 4925363.699514 )
+                        Mean Support = 5.20  (SD = 0.65 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Least Squares:        Mean MSE = 8552423.659515  (SD = 6357513.216772 )
+                        Mean Support = 8.00  (SD = 0.00 )
+                        Mean Sign Diff = 0.84  (SD = 0.69 )
+
+ ================================================================================ 
+Processing dataset: parkinsons_telemonitoring ( 35 / 48 )
+Running 100 random train/test splits in parallel...
+Training ratio: 0.5 
+================================================================================ 
+Data dimensions: X = 5875 19 , y = 5875 
+Dataset completed in: 6.242311 secs 
+
+Summary statistics for parkinsons_telemonitoring ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 57.931944  (SD = 0.784163 )
+                        Mean Support = 6.15  (SD = 0.70 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 57.866038  (SD = 0.793741 )
+                        Mean Support = 6.64  (SD = 0.56 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 56.731946  (SD = 0.789780 )
+                        Mean Support = 12.58  (SD = 0.98 )
+                        Mean Sign Diff = 3.86  (SD = 0.79 )
+  Lasso CV:             Mean MSE = 57.204304  (SD = 1.002465 )
+                        Mean Support = 9.53  (SD = 1.84 )
+                        Mean Sign Diff = 2.55  (SD = 0.98 )
+  UniReg:               Mean MSE = 57.931931  (SD = 0.783940 )
+                        Mean Support = 6.15  (SD = 0.70 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Least Squares:        Mean MSE = 56.487148  (SD = 1.075828 )
+                        Mean Support = 19.00  (SD = 0.00 )
+                        Mean Sign Diff = 7.35  (SD = 0.63 )
+
+ ================================================================================ 
+Processing dataset: parkinsons_telemonitoring_(target_2) ( 36 / 48 )
+Running 100 random train/test splits in parallel...
+Training ratio: 0.5 
+================================================================================ 
+Data dimensions: X = 5875 19 , y = 5875 
+Dataset completed in: 5.875471 secs 
+
+Summary statistics for parkinsons_telemonitoring_(target_2) ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 96.971824  (SD = 1.692842 )
+                        Mean Support = 6.99  (SD = 0.10 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 96.926905  (SD = 1.707221 )
+                        Mean Support = 6.99  (SD = 0.10 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 95.275577  (SD = 1.695029 )
+                        Mean Support = 12.52  (SD = 0.76 )
+                        Mean Sign Diff = 3.20  (SD = 0.70 )
+  Lasso CV:             Mean MSE = 95.736616  (SD = 1.699779 )
+                        Mean Support = 9.79  (SD = 0.67 )
+                        Mean Sign Diff = 2.69  (SD = 0.46 )
+  UniReg:               Mean MSE = 96.971353  (SD = 1.692785 )
+                        Mean Support = 6.99  (SD = 0.10 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Least Squares:        Mean MSE = 95.045394  (SD = 1.719826 )
+                        Mean Support = 19.00  (SD = 0.00 )
+                        Mean Sign Diff = 7.26  (SD = 0.52 )
+
+ ================================================================================ 
+Processing dataset: power_consumption_of_tetouan_city ( 37 / 48 )
+Running 100 random train/test splits in parallel...
+Training ratio: 0.5 
+================================================================================ 
+Data dimensions: X = 52416 6 , y = 52416 
+Dataset completed in: 1.446146 mins 
+
+Summary statistics for power_consumption_of_tetouan_city ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 40548832.376076  (SD = 215432.412313 )
+                        Mean Support = 2.00  (SD = 0.00 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 40548838.497735  (SD = 215428.961605 )
+                        Mean Support = 2.00  (SD = 0.00 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 40323825.897961  (SD = 210388.829146 )
+                        Mean Support = 5.97  (SD = 0.17 )
+                        Mean Sign Diff = 3.66  (SD = 0.48 )
+  Lasso CV:             Mean MSE = 40757378.649608  (SD = 219700.752590 )
+                        Mean Support = 4.64  (SD = 0.48 )
+                        Mean Sign Diff = 1.64  (SD = 0.48 )
+  UniReg:               Mean MSE = 40548832.914185  (SD = 215430.339216 )
+                        Mean Support = 2.00  (SD = 0.00 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Least Squares:        Mean MSE = 40304908.310673  (SD = 212271.286205 )
+                        Mean Support = 6.00  (SD = 0.00 )
+                        Mean Sign Diff = 3.72  (SD = 0.45 )
+
+ ================================================================================ 
+Processing dataset: power_consumption_of_tetouan_city_(target_2) ( 38 / 48 )
+Running 100 random train/test splits in parallel...
+Training ratio: 0.5 
+================================================================================ 
+Data dimensions: X = 52416 6 , y = 52416 
+Dataset completed in: 1.383726 mins 
+
+Summary statistics for power_consumption_of_tetouan_city_(target_2) ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 22610830.881719  (SD = 151276.193093 )
+                        Mean Support = 2.00  (SD = 0.00 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 22610831.944551  (SD = 151291.221918 )
+                        Mean Support = 2.00  (SD = 0.00 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 22143744.225601  (SD = 141988.401589 )
+                        Mean Support = 3.00  (SD = 0.00 )
+                        Mean Sign Diff = 1.00  (SD = 0.00 )
+  Lasso CV:             Mean MSE = 21654533.277023  (SD = 138460.036346 )
+                        Mean Support = 5.00  (SD = 0.00 )
+                        Mean Sign Diff = 3.00  (SD = 0.00 )
+  UniReg:               Mean MSE = 22610830.468981  (SD = 151276.730374 )
+                        Mean Support = 2.00  (SD = 0.00 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Least Squares:        Mean MSE = 21626095.268739  (SD = 137866.313301 )
+                        Mean Support = 6.00  (SD = 0.00 )
+                        Mean Sign Diff = 4.00  (SD = 0.00 )
+
+ ================================================================================ 
+Processing dataset: power_consumption_of_tetouan_city_(target_3) ( 39 / 48 )
+Running 100 random train/test splits in parallel...
+Training ratio: 0.5 
+================================================================================ 
+Data dimensions: X = 52416 6 , y = 52416 
+Dataset completed in: 1.454445 mins 
+
+Summary statistics for power_consumption_of_tetouan_city_(target_3) ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 31551914.155837  (SD = 222974.326766 )
+                        Mean Support = 5.00  (SD = 0.00 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 31551740.623819  (SD = 222822.989141 )
+                        Mean Support = 5.00  (SD = 0.00 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 30669014.512298  (SD = 203710.031228 )
+                        Mean Support = 6.00  (SD = 0.00 )
+                        Mean Sign Diff = 1.00  (SD = 0.00 )
+  Lasso CV:             Mean MSE = 36308727.460501  (SD = 283854.398280 )
+                        Mean Support = 1.00  (SD = 0.00 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  UniReg:               Mean MSE = 31551801.788875  (SD = 222865.883410 )
+                        Mean Support = 5.00  (SD = 0.00 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Least Squares:        Mean MSE = 30667896.192836  (SD = 203453.119839 )
+                        Mean Support = 6.00  (SD = 0.00 )
+                        Mean Sign Diff = 1.00  (SD = 0.00 )
+
+ ================================================================================ 
+Processing dataset: real_estate_valuation ( 40 / 48 )
+Running 100 random train/test splits in parallel...
+Training ratio: 0.5 
+================================================================================ 
+Data dimensions: X = 414 6 , y = 414 
+Dataset completed in: 2.809927 secs 
+
+Summary statistics for real_estate_valuation ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 83.583501  (SD = 16.627466 )
+                        Mean Support = 4.93  (SD = 0.69 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 82.204168  (SD = 16.739499 )
+                        Mean Support = 5.34  (SD = 0.55 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 83.380523  (SD = 16.661019 )
+                        Mean Support = 4.98  (SD = 0.70 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Lasso CV:             Mean MSE = 103.776750  (SD = 16.937786 )
+                        Mean Support = 1.00  (SD = 0.00 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  UniReg:               Mean MSE = 83.582810  (SD = 16.626975 )
+                        Mean Support = 4.93  (SD = 0.69 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Least Squares:        Mean MSE = 82.315847  (SD = 16.309884 )
+                        Mean Support = 6.00  (SD = 0.00 )
+                        Mean Sign Diff = 0.61  (SD = 0.51 )
+
+ ================================================================================ 
+Processing dataset: servo ( 41 / 48 )
+Running 100 random train/test splits in parallel...
+Training ratio: 0.5 
+================================================================================ 
+Data dimensions: X = 167 4 , y = 167 
+Dataset completed in: 2.330256 secs 
+
+Summary statistics for servo ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 1.608473  (SD = 0.255386 )
+                        Mean Support = 1.78  (SD = 0.68 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 1.530957  (SD = 0.233023 )
+                        Mean Support = 2.69  (SD = 0.58 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 1.399485  (SD = 0.241126 )
+                        Mean Support = 3.80  (SD = 0.59 )
+                        Mean Sign Diff = 0.92  (SD = 0.37 )
+  Lasso CV:             Mean MSE = 1.371375  (SD = 0.211486 )
+                        Mean Support = 4.00  (SD = 0.00 )
+                        Mean Sign Diff = 1.08  (SD = 0.27 )
+  UniReg:               Mean MSE = 1.608339  (SD = 0.255348 )
+                        Mean Support = 1.78  (SD = 0.68 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Least Squares:        Mean MSE = 1.365706  (SD = 0.205316 )
+                        Mean Support = 4.00  (SD = 0.00 )
+                        Mean Sign Diff = 1.08  (SD = 0.27 )
+
+ ================================================================================ 
+Processing dataset: stock_portfolio_performance ( 42 / 48 )
+Running 100 random train/test splits in parallel...
+Training ratio: 0.5 
+================================================================================ 
+Data dimensions: X = 315 12 , y = 315 
+Dataset completed in: 2.620505 secs 
+
+Summary statistics for stock_portfolio_performance ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 0.001568  (SD = 0.000164 )
+                        Mean Support = 5.35  (SD = 1.14 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 0.001564  (SD = 0.000150 )
+                        Mean Support = 6.25  (SD = 1.34 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 0.001573  (SD = 0.000160 )
+                        Mean Support = 5.75  (SD = 1.34 )
+                        Mean Sign Diff = 0.26  (SD = 0.58 )
+  Lasso CV:             Mean MSE = 0.001617  (SD = 0.000170 )
+                        Mean Support = 9.27  (SD = 2.17 )
+                        Mean Sign Diff = 2.88  (SD = 1.31 )
+  UniReg:               Mean MSE = 0.001567  (SD = 0.000163 )
+                        Mean Support = 5.35  (SD = 1.14 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Least Squares:        Mean MSE = 0.001608  (SD = 0.000152 )
+                        Mean Support = 12.00  (SD = 0.00 )
+                        Mean Sign Diff = 5.37  (SD = 0.95 )
+
+ ================================================================================ 
+Processing dataset: stock_portfolio_performance_(target_2) ( 43 / 48 )
+Running 100 random train/test splits in parallel...
+Training ratio: 0.5 
+================================================================================ 
+Data dimensions: X = 315 12 , y = 315 
+Dataset completed in: 2.553516 secs 
+
+Summary statistics for stock_portfolio_performance_(target_2) ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 0.000085  (SD = 0.000007 )
+                        Mean Support = 3.33  (SD = 0.83 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 0.000085  (SD = 0.000007 )
+                        Mean Support = 3.84  (SD = 1.24 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 0.000085  (SD = 0.000007 )
+                        Mean Support = 3.63  (SD = 1.18 )
+                        Mean Sign Diff = 0.27  (SD = 0.57 )
+  Lasso CV:             Mean MSE = 0.000084  (SD = 0.000007 )
+                        Mean Support = 4.96  (SD = 0.20 )
+                        Mean Sign Diff = 1.21  (SD = 0.56 )
+  UniReg:               Mean MSE = 0.000085  (SD = 0.000007 )
+                        Mean Support = 3.33  (SD = 0.83 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Least Squares:        Mean MSE = 0.000088  (SD = 0.000007 )
+                        Mean Support = 12.00  (SD = 0.00 )
+                        Mean Sign Diff = 4.23  (SD = 0.76 )
+
+ ================================================================================ 
+Processing dataset: stock_portfolio_performance_(target_3) ( 44 / 48 )
+Running 100 random train/test splits in parallel...
+Training ratio: 0.5 
+================================================================================ 
+Data dimensions: X = 315 12 , y = 315 
+Dataset completed in: 2.297806 secs 
+
+Summary statistics for stock_portfolio_performance_(target_3) ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 0.000033  (SD = 0.000004 )
+                        Mean Support = 1.00  (SD = 0.00 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 0.000033  (SD = 0.000004 )
+                        Mean Support = 1.00  (SD = 0.00 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 0.000000  (SD = 0.000000 )
+                        Mean Support = 5.66  (SD = 0.48 )
+                        Mean Sign Diff = 0.33  (SD = 0.47 )
+  Lasso CV:             Mean MSE = 0.000038  (SD = 0.000006 )
+                        Mean Support = 5.66  (SD = 0.48 )
+                        Mean Sign Diff = 0.33  (SD = 0.47 )
+  UniReg:               Mean MSE = 0.000000  (SD = 0.000000 )
+                        Mean Support = 6.14  (SD = 1.71 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Least Squares:        Mean MSE = 0.000000  (SD = 0.000000 )
+                        Mean Support = 10.66  (SD = 2.88 )
+                        Mean Sign Diff = 4.76  (SD = 1.81 )
+
+ ================================================================================ 
+Processing dataset: stock_portfolio_performance_(target_4) ( 45 / 48 )
+Running 100 random train/test splits in parallel...
+Training ratio: 0.5 
+================================================================================ 
+Data dimensions: X = 315 12 , y = 315 
+Dataset completed in: 2.592171 secs 
+
+Summary statistics for stock_portfolio_performance_(target_4) ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 0.000201  (SD = 0.000022 )
+                        Mean Support = 7.61  (SD = 1.13 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 0.000189  (SD = 0.000024 )
+                        Mean Support = 8.94  (SD = 1.05 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 0.000175  (SD = 0.000017 )
+                        Mean Support = 9.62  (SD = 1.04 )
+                        Mean Sign Diff = 1.62  (SD = 0.60 )
+  Lasso CV:             Mean MSE = 0.000166  (SD = 0.000016 )
+                        Mean Support = 10.35  (SD = 1.27 )
+                        Mean Sign Diff = 2.04  (SD = 0.94 )
+  UniReg:               Mean MSE = 0.000201  (SD = 0.000022 )
+                        Mean Support = 7.61  (SD = 1.13 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Least Squares:        Mean MSE = 0.000167  (SD = 0.000015 )
+                        Mean Support = 12.00  (SD = 0.00 )
+                        Mean Sign Diff = 4.59  (SD = 0.59 )
+
+ ================================================================================ 
+Processing dataset: stock_portfolio_performance_(target_5) ( 46 / 48 )
+Running 100 random train/test splits in parallel...
+Training ratio: 0.5 
+================================================================================ 
+Data dimensions: X = 315 12 , y = 315 
+Dataset completed in: 2.532424 secs 
+
+Summary statistics for stock_portfolio_performance_(target_5) ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 0.000318  (SD = 0.000061 )
+                        Mean Support = 3.99  (SD = 1.95 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 0.000317  (SD = 0.000062 )
+                        Mean Support = 5.05  (SD = 2.12 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 0.000312  (SD = 0.000057 )
+                        Mean Support = 4.51  (SD = 1.67 )
+                        Mean Sign Diff = 0.24  (SD = 0.47 )
+  Lasso CV:             Mean MSE = 0.000310  (SD = 0.000060 )
+                        Mean Support = 4.22  (SD = 0.56 )
+                        Mean Sign Diff = 0.88  (SD = 0.73 )
+  UniReg:               Mean MSE = 0.000318  (SD = 0.000061 )
+                        Mean Support = 3.97  (SD = 1.95 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Least Squares:        Mean MSE = 0.000326  (SD = 0.000057 )
+                        Mean Support = 12.00  (SD = 0.00 )
+                        Mean Sign Diff = 4.65  (SD = 0.93 )
+
+ ================================================================================ 
+Processing dataset: stock_portfolio_performance_(target_6) ( 47 / 48 )
+Running 100 random train/test splits in parallel...
+Training ratio: 0.5 
+================================================================================ 
+Data dimensions: X = 315 12 , y = 315 
+Dataset completed in: 2.497935 secs 
+
+Summary statistics for stock_portfolio_performance_(target_6) ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 0.001376  (SD = 0.000110 )
+                        Mean Support = 2.54  (SD = 1.33 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 0.001387  (SD = 0.000114 )
+                        Mean Support = 3.18  (SD = 1.90 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 0.001380  (SD = 0.000113 )
+                        Mean Support = 2.82  (SD = 1.81 )
+                        Mean Sign Diff = 0.11  (SD = 0.55 )
+  Lasso CV:             Mean MSE = 0.001393  (SD = 0.000107 )
+                        Mean Support = 4.26  (SD = 0.58 )
+                        Mean Sign Diff = 0.89  (SD = 0.74 )
+  UniReg:               Mean MSE = 0.001376  (SD = 0.000110 )
+                        Mean Support = 2.54  (SD = 1.33 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Least Squares:        Mean MSE = 0.001427  (SD = 0.000121 )
+                        Mean Support = 12.00  (SD = 0.00 )
+                        Mean Sign Diff = 3.95  (SD = 1.28 )
+
+ ================================================================================ 
+Processing dataset: superconductivity_data ( 48 / 48 )
+Running 100 random train/test splits in parallel...
+Training ratio: 0.5 
+================================================================================ 
+Data dimensions: X = 21263 81 , y = 21263 
+Dataset completed in: 1.245852 hours 
+
+Summary statistics for superconductivity_data ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 392.003198  (SD = 4.151892 )
+                        Mean Support = 16.62  (SD = 0.49 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 391.945069  (SD = 4.146570 )
+                        Mean Support = 16.54  (SD = 0.59 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 326.405511  (SD = 3.878736 )
+                        Mean Support = 57.35  (SD = 1.16 )
+                        Mean Sign Diff = 24.45  (SD = 0.67 )
+  Lasso CV:             Mean MSE = 377.606538  (SD = 4.056186 )
+                        Mean Support = 32.54  (SD = 0.90 )
+                        Mean Sign Diff = 12.38  (SD = 0.76 )
+  UniReg:               Mean MSE = 391.951508  (SD = 4.158441 )
+                        Mean Support = 16.64  (SD = 0.67 )
+                        Mean Sign Diff = 0.00  (SD = 0.00 )
+  Least Squares:        Mean MSE = 311.338660  (SD = 3.732595 )
+                        Mean Support = 81.00  (SD = 0.00 )
+                        Mean Sign Diff = 40.15  (SD = 1.22 )
+
+ ================================================================================ 
+ANALYSIS COMPLETE FOR ALL 48 DATASETS!
+Total number of experiments: 4800 
+Total time elapsed: 1.462064 hours 
+Average time per dataset: 0.03045967 hours 
+================================================================================ 
+All individual results saved to: unilasso_22datasets_100splits_train50percent_results.csv 

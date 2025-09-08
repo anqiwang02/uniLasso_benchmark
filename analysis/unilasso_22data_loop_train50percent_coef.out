@@ -1,0 +1,640 @@
+[1] "/scratch/users/aqwang/conda/envs/r_package/lib/R"
+Setting up parallel processing with 32 cores
+[[1]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[2]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[3]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[4]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[5]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[6]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[7]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[8]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[9]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[10]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[11]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[12]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[13]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[14]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[15]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[16]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[17]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[18]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[19]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[20]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[21]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[22]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[23]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[24]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[25]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[26]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[27]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[28]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[29]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[30]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[31]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[32]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+
+ ================================================================================ 
+Extracting coefficients for dataset: airfoil_self-noise ( 1 / 48 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 1503x5 , y = 1503 
+Dataset completed in: 3.356339 secs 
+Saved per-dataset coefficients to: coef_csv_22datasets/coefficients_airfoil_self-noise.csv 
+Coefficients stored - Shape: 700 8 
+
+ ================================================================================ 
+Extracting coefficients for dataset: appliances_energy_prediction ( 2 / 48 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 19735x28 , y = 19735 
+Dataset completed in: 29.86896 secs 
+Saved per-dataset coefficients to: coef_csv_22datasets/coefficients_appliances_energy_prediction.csv 
+Coefficients stored - Shape: 700 31 
+
+ ================================================================================ 
+Extracting coefficients for dataset: auto_mpg ( 3 / 48 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 398x7 , y = 398 
+Dataset completed in: 2.515081 secs 
+Saved per-dataset coefficients to: coef_csv_22datasets/coefficients_auto_mpg.csv 
+Coefficients stored - Shape: 700 10 
+
+ ================================================================================ 
+Extracting coefficients for dataset: automobile ( 4 / 48 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 205x25 , y = 205 
+Dataset completed in: 2.530593 secs 
+Saved per-dataset coefficients to: coef_csv_22datasets/coefficients_automobile.csv 
+Coefficients stored - Shape: 700 28 
+
+ ================================================================================ 
+Extracting coefficients for dataset: beijing_pm2.5 ( 5 / 48 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 41757x11 , y = 41757 
+Dataset completed in: 2.496178 mins 
+Saved per-dataset coefficients to: coef_csv_22datasets/coefficients_beijing_pm2.5.csv 
+Coefficients stored - Shape: 700 14 
+
+ ================================================================================ 
+Extracting coefficients for dataset: bike_sharing ( 6 / 48 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 17379x13 , y = 17379 
+Dataset completed in: 17.74719 secs 
+Saved per-dataset coefficients to: coef_csv_22datasets/coefficients_bike_sharing.csv 
+Coefficients stored - Shape: 700 16 
+
+ ================================================================================ 
+Extracting coefficients for dataset: combined_cycle_power_plant ( 7 / 48 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 9568x4 , y = 9568 
+Dataset completed in: 7.986113 secs 
+Saved per-dataset coefficients to: coef_csv_22datasets/coefficients_combined_cycle_power_plant.csv 
+Coefficients stored - Shape: 700 7 
+
+ ================================================================================ 
+Extracting coefficients for dataset: communities_and_crime ( 8 / 48 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 1994x127 , y = 1994 
+Dataset completed in: 8.775438 secs 
+Saved per-dataset coefficients to: coef_csv_22datasets/coefficients_communities_and_crime.csv 
+Coefficients stored - Shape: 700 130 
+
+ ================================================================================ 
+Extracting coefficients for dataset: communities_and_crime_unnormalized ( 9 / 48 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 2215x125 , y = 2215 
+Dataset completed in: 7.945543 secs 
+Saved per-dataset coefficients to: coef_csv_22datasets/coefficients_communities_and_crime_unnormalized.csv 
+Coefficients stored - Shape: 700 128 
+
+ ================================================================================ 
+Extracting coefficients for dataset: communities_and_crime_unnormalized_(target_2) ( 10 / 48 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 2215x125 , y = 2215 
+Dataset completed in: 8.493975 secs 
+Saved per-dataset coefficients to: coef_csv_22datasets/coefficients_communities_and_crime_unnormalized_(target_2).csv 
+Coefficients stored - Shape: 700 128 
+
+ ================================================================================ 
+Extracting coefficients for dataset: communities_and_crime_unnormalized_(target_3) ( 11 / 48 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 2007x125 , y = 2007 
+Dataset completed in: 7.606289 secs 
+Saved per-dataset coefficients to: coef_csv_22datasets/coefficients_communities_and_crime_unnormalized_(target_3).csv 
+Coefficients stored - Shape: 700 128 
+
+ ================================================================================ 
+Extracting coefficients for dataset: communities_and_crime_unnormalized_(target_4) ( 12 / 48 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 2007x125 , y = 2007 
+Dataset completed in: 8.095199 secs 
+Saved per-dataset coefficients to: coef_csv_22datasets/coefficients_communities_and_crime_unnormalized_(target_4).csv 
+Coefficients stored - Shape: 700 128 
+
+ ================================================================================ 
+Extracting coefficients for dataset: communities_and_crime_unnormalized_(target_5) ( 13 / 48 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 2214x125 , y = 2214 
+Dataset completed in: 8.074424 secs 
+Saved per-dataset coefficients to: coef_csv_22datasets/coefficients_communities_and_crime_unnormalized_(target_5).csv 
+Coefficients stored - Shape: 700 128 
+
+ ================================================================================ 
+Extracting coefficients for dataset: communities_and_crime_unnormalized_(target_6) ( 14 / 48 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 2214x125 , y = 2214 
+Dataset completed in: 8.468462 secs 
+Saved per-dataset coefficients to: coef_csv_22datasets/coefficients_communities_and_crime_unnormalized_(target_6).csv 
+Coefficients stored - Shape: 700 128 
+
+ ================================================================================ 
+Extracting coefficients for dataset: communities_and_crime_unnormalized_(target_7) ( 15 / 48 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 2202x125 , y = 2202 
+Dataset completed in: 8.09103 secs 
+Saved per-dataset coefficients to: coef_csv_22datasets/coefficients_communities_and_crime_unnormalized_(target_7).csv 
+Coefficients stored - Shape: 700 128 
+
+ ================================================================================ 
+Extracting coefficients for dataset: communities_and_crime_unnormalized_(target_8) ( 16 / 48 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 2202x125 , y = 2202 
+Dataset completed in: 8.570251 secs 
+Saved per-dataset coefficients to: coef_csv_22datasets/coefficients_communities_and_crime_unnormalized_(target_8).csv 
+Coefficients stored - Shape: 700 128 
+
+ ================================================================================ 
+Extracting coefficients for dataset: communities_and_crime_unnormalized_(target_9) ( 17 / 48 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 2212x125 , y = 2212 
+Dataset completed in: 8.216245 secs 
+Saved per-dataset coefficients to: coef_csv_22datasets/coefficients_communities_and_crime_unnormalized_(target_9).csv 
+Coefficients stored - Shape: 700 128 
+
+ ================================================================================ 
+Extracting coefficients for dataset: communities_and_crime_unnormalized_(target_10) ( 18 / 48 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 2212x125 , y = 2212 
+Dataset completed in: 8.64235 secs 
+Saved per-dataset coefficients to: coef_csv_22datasets/coefficients_communities_and_crime_unnormalized_(target_10).csv 
+Coefficients stored - Shape: 700 128 
+
+ ================================================================================ 
+Extracting coefficients for dataset: communities_and_crime_unnormalized_(target_11) ( 19 / 48 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 2212x125 , y = 2212 
+Dataset completed in: 8.288804 secs 
+Saved per-dataset coefficients to: coef_csv_22datasets/coefficients_communities_and_crime_unnormalized_(target_11).csv 
+Coefficients stored - Shape: 700 128 
+
+ ================================================================================ 
+Extracting coefficients for dataset: communities_and_crime_unnormalized_(target_12) ( 20 / 48 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 2212x125 , y = 2212 
+Dataset completed in: 8.536049 secs 
+Saved per-dataset coefficients to: coef_csv_22datasets/coefficients_communities_and_crime_unnormalized_(target_12).csv 
+Coefficients stored - Shape: 700 128 
+
+ ================================================================================ 
+Extracting coefficients for dataset: communities_and_crime_unnormalized_(target_13) ( 21 / 48 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 2212x125 , y = 2212 
+Dataset completed in: 8.199381 secs 
+Saved per-dataset coefficients to: coef_csv_22datasets/coefficients_communities_and_crime_unnormalized_(target_13).csv 
+Coefficients stored - Shape: 700 128 
+
+ ================================================================================ 
+Extracting coefficients for dataset: communities_and_crime_unnormalized_(target_14) ( 22 / 48 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 2212x125 , y = 2212 
+Dataset completed in: 8.727658 secs 
+Saved per-dataset coefficients to: coef_csv_22datasets/coefficients_communities_and_crime_unnormalized_(target_14).csv 
+Coefficients stored - Shape: 700 128 
+
+ ================================================================================ 
+Extracting coefficients for dataset: communities_and_crime_unnormalized_(target_15) ( 23 / 48 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 2124x125 , y = 2124 
+Dataset completed in: 7.859636 secs 
+Saved per-dataset coefficients to: coef_csv_22datasets/coefficients_communities_and_crime_unnormalized_(target_15).csv 
+Coefficients stored - Shape: 700 128 
+
+ ================================================================================ 
+Extracting coefficients for dataset: communities_and_crime_unnormalized_(target_16) ( 24 / 48 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 2124x125 , y = 2124 
+Dataset completed in: 8.41961 secs 
+Saved per-dataset coefficients to: coef_csv_22datasets/coefficients_communities_and_crime_unnormalized_(target_16).csv 
+Coefficients stored - Shape: 700 128 
+
+ ================================================================================ 
+Extracting coefficients for dataset: communities_and_crime_unnormalized_(target_17) ( 25 / 48 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 1994x125 , y = 1994 
+Dataset completed in: 7.692627 secs 
+Saved per-dataset coefficients to: coef_csv_22datasets/coefficients_communities_and_crime_unnormalized_(target_17).csv 
+Coefficients stored - Shape: 700 128 
+
+ ================================================================================ 
+Extracting coefficients for dataset: communities_and_crime_unnormalized_(target_18) ( 26 / 48 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 2118x125 , y = 2118 
+Dataset completed in: 8.427476 secs 
+Saved per-dataset coefficients to: coef_csv_22datasets/coefficients_communities_and_crime_unnormalized_(target_18).csv 
+Coefficients stored - Shape: 700 128 
+
+ ================================================================================ 
+Extracting coefficients for dataset: concrete_compressive_strength ( 27 / 48 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 1030x8 , y = 1030 
+Dataset completed in: 2.770852 secs 
+Saved per-dataset coefficients to: coef_csv_22datasets/coefficients_concrete_compressive_strength.csv 
+Coefficients stored - Shape: 700 11 
+
+ ================================================================================ 
+Extracting coefficients for dataset: daily_demand_forecasting_orders ( 28 / 48 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 60x12 , y = 60 
+Dataset completed in: 2.205559 secs 
+Saved per-dataset coefficients to: coef_csv_22datasets/coefficients_daily_demand_forecasting_orders.csv 
+Coefficients stored - Shape: 700 15 
+
+ ================================================================================ 
+Extracting coefficients for dataset: facebook_metrics ( 29 / 48 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 500x18 , y = 500 
+Dataset completed in: 2.513365 secs 
+Saved per-dataset coefficients to: coef_csv_22datasets/coefficients_facebook_metrics.csv 
+Coefficients stored - Shape: 700 21 
+
+ ================================================================================ 
+Extracting coefficients for dataset: forest_fires ( 30 / 48 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 517x12 , y = 517 
+Dataset completed in: 2.596739 secs 
+Saved per-dataset coefficients to: coef_csv_22datasets/coefficients_forest_fires.csv 
+Coefficients stored - Shape: 700 15 
+
+ ================================================================================ 
+Extracting coefficients for dataset: infrared_thermography_temperature ( 31 / 48 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 1020x33 , y = 1020 
+Dataset completed in: 4.026915 secs 
+Saved per-dataset coefficients to: coef_csv_22datasets/coefficients_infrared_thermography_temperature.csv 
+Coefficients stored - Shape: 700 36 
+
+ ================================================================================ 
+Extracting coefficients for dataset: infrared_thermography_temperature_(target_2) ( 32 / 48 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 1020x33 , y = 1020 
+Dataset completed in: 4.086728 secs 
+Saved per-dataset coefficients to: coef_csv_22datasets/coefficients_infrared_thermography_temperature_(target_2).csv 
+Coefficients stored - Shape: 700 36 
+
+ ================================================================================ 
+Extracting coefficients for dataset: liver_disorders ( 33 / 48 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 345x5 , y = 345 
+Dataset completed in: 2.424753 secs 
+Saved per-dataset coefficients to: coef_csv_22datasets/coefficients_liver_disorders.csv 
+Coefficients stored - Shape: 700 8 
+
+ ================================================================================ 
+Extracting coefficients for dataset: metro_interstate_traffic_volume ( 34 / 48 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 48204x8 , y = 48204 
+Dataset completed in: 1.78929 mins 
+Saved per-dataset coefficients to: coef_csv_22datasets/coefficients_metro_interstate_traffic_volume.csv 
+Coefficients stored - Shape: 700 11 
+
+ ================================================================================ 
+Extracting coefficients for dataset: parkinsons_telemonitoring ( 35 / 48 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 5875x19 , y = 5875 
+Dataset completed in: 7.342608 secs 
+Saved per-dataset coefficients to: coef_csv_22datasets/coefficients_parkinsons_telemonitoring.csv 
+Coefficients stored - Shape: 700 22 
+
+ ================================================================================ 
+Extracting coefficients for dataset: parkinsons_telemonitoring_(target_2) ( 36 / 48 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 5875x19 , y = 5875 
+Dataset completed in: 7.011347 secs 
+Saved per-dataset coefficients to: coef_csv_22datasets/coefficients_parkinsons_telemonitoring_(target_2).csv 
+Coefficients stored - Shape: 700 22 
+
+ ================================================================================ 
+Extracting coefficients for dataset: power_consumption_of_tetouan_city ( 37 / 48 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 52416x6 , y = 52416 
+Dataset completed in: 1.458163 mins 
+Saved per-dataset coefficients to: coef_csv_22datasets/coefficients_power_consumption_of_tetouan_city.csv 
+Coefficients stored - Shape: 700 9 
+
+ ================================================================================ 
+Extracting coefficients for dataset: power_consumption_of_tetouan_city_(target_2) ( 38 / 48 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 52416x6 , y = 52416 
+Dataset completed in: 1.354461 mins 
+Saved per-dataset coefficients to: coef_csv_22datasets/coefficients_power_consumption_of_tetouan_city_(target_2).csv 
+Coefficients stored - Shape: 700 9 
+
+ ================================================================================ 
+Extracting coefficients for dataset: power_consumption_of_tetouan_city_(target_3) ( 39 / 48 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 52416x6 , y = 52416 
+Dataset completed in: 1.397119 mins 
+Saved per-dataset coefficients to: coef_csv_22datasets/coefficients_power_consumption_of_tetouan_city_(target_3).csv 
+Coefficients stored - Shape: 700 9 
+
+ ================================================================================ 
+Extracting coefficients for dataset: real_estate_valuation ( 40 / 48 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 414x6 , y = 414 
+Dataset completed in: 2.38948 secs 
+Saved per-dataset coefficients to: coef_csv_22datasets/coefficients_real_estate_valuation.csv 
+Coefficients stored - Shape: 700 9 
+
+ ================================================================================ 
+Extracting coefficients for dataset: servo ( 41 / 48 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 167x4 , y = 167 
+Dataset completed in: 2.236897 secs 
+Saved per-dataset coefficients to: coef_csv_22datasets/coefficients_servo.csv 
+Coefficients stored - Shape: 700 7 
+
+ ================================================================================ 
+Extracting coefficients for dataset: stock_portfolio_performance ( 42 / 48 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 315x12 , y = 315 
+Dataset completed in: 2.423352 secs 
+Saved per-dataset coefficients to: coef_csv_22datasets/coefficients_stock_portfolio_performance.csv 
+Coefficients stored - Shape: 700 15 
+
+ ================================================================================ 
+Extracting coefficients for dataset: stock_portfolio_performance_(target_2) ( 43 / 48 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 315x12 , y = 315 
+Dataset completed in: 2.408918 secs 
+Saved per-dataset coefficients to: coef_csv_22datasets/coefficients_stock_portfolio_performance_(target_2).csv 
+Coefficients stored - Shape: 700 15 
+
+ ================================================================================ 
+Extracting coefficients for dataset: stock_portfolio_performance_(target_3) ( 44 / 48 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 315x12 , y = 315 
+Dataset completed in: 2.075569 secs 
+Saved per-dataset coefficients to: coef_csv_22datasets/coefficients_stock_portfolio_performance_(target_3).csv 
+Coefficients stored - Shape: 700 15 
+
+ ================================================================================ 
+Extracting coefficients for dataset: stock_portfolio_performance_(target_4) ( 45 / 48 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 315x12 , y = 315 
+Dataset completed in: 2.526515 secs 
+Saved per-dataset coefficients to: coef_csv_22datasets/coefficients_stock_portfolio_performance_(target_4).csv 
+Coefficients stored - Shape: 700 15 
+
+ ================================================================================ 
+Extracting coefficients for dataset: stock_portfolio_performance_(target_5) ( 46 / 48 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 315x12 , y = 315 
+Dataset completed in: 2.364428 secs 
+Saved per-dataset coefficients to: coef_csv_22datasets/coefficients_stock_portfolio_performance_(target_5).csv 
+Coefficients stored - Shape: 700 15 
+
+ ================================================================================ 
+Extracting coefficients for dataset: stock_portfolio_performance_(target_6) ( 47 / 48 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 315x12 , y = 315 
+Dataset completed in: 2.44983 secs 
+Saved per-dataset coefficients to: coef_csv_22datasets/coefficients_stock_portfolio_performance_(target_6).csv 
+Coefficients stored - Shape: 700 15 
+
+ ================================================================================ 
+Extracting coefficients for dataset: superconductivity_data ( 48 / 48 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 21263x81 , y = 21263 
+Dataset completed in: 1.030862 hours 
+Saved per-dataset coefficients to: coef_csv_22datasets/coefficients_superconductivity_data.csv 
+Coefficients stored - Shape: 700 84 
+
+ ================================================================================ 
+Creating summary of coefficient data...
+COEFFICIENT EXTRACTION COMPLETE!
+Per-dataset CSVs in: /accounts/grad/aqwang/unilasso/analysis/coef_csv_22datasets 
+Dataset summary saved to: dataset_coefficient_summary.csv
+RData saved to: /accounts/grad/aqwang/unilasso/analysis/unilasso_22datasets_coefficients_only.RData 
+
+Dataset Summary:
+                                          dataset n_features n_rows
+1                              airfoil_self-noise          0    700
+2                    appliances_energy_prediction          0    700
+3                                        auto_mpg          0    700
+4                                      automobile          0    700
+5                                   beijing_pm2.5          0    700
+6                                    bike_sharing          0    700
+7                      combined_cycle_power_plant          0    700
+8                           communities_and_crime          0    700
+9              communities_and_crime_unnormalized          0    700
+10  communities_and_crime_unnormalized_(target_2)          0    700
+11  communities_and_crime_unnormalized_(target_3)          0    700
+12  communities_and_crime_unnormalized_(target_4)          0    700
+13  communities_and_crime_unnormalized_(target_5)          0    700
+14  communities_and_crime_unnormalized_(target_6)          0    700
+15  communities_and_crime_unnormalized_(target_7)          0    700
+16  communities_and_crime_unnormalized_(target_8)          0    700
+17  communities_and_crime_unnormalized_(target_9)          0    700
+18 communities_and_crime_unnormalized_(target_10)          0    700
+19 communities_and_crime_unnormalized_(target_11)          0    700
+20 communities_and_crime_unnormalized_(target_12)          0    700
+21 communities_and_crime_unnormalized_(target_13)          0    700
+22 communities_and_crime_unnormalized_(target_14)          0    700
+23 communities_and_crime_unnormalized_(target_15)          0    700
+24 communities_and_crime_unnormalized_(target_16)          0    700
+25 communities_and_crime_unnormalized_(target_17)          0    700
+26 communities_and_crime_unnormalized_(target_18)          0    700
+27                  concrete_compressive_strength          0    700
+28                daily_demand_forecasting_orders          0    700
+29                               facebook_metrics          0    700
+30                                   forest_fires          0    700
+31              infrared_thermography_temperature          0    700
+32   infrared_thermography_temperature_(target_2)          0    700
+33                                liver_disorders          0    700
+34                metro_interstate_traffic_volume          0    700
+35                      parkinsons_telemonitoring          0    700
+36           parkinsons_telemonitoring_(target_2)          0    700
+37              power_consumption_of_tetouan_city          0    700
+38   power_consumption_of_tetouan_city_(target_2)          0    700
+39   power_consumption_of_tetouan_city_(target_3)          0    700
+40                          real_estate_valuation          0    700
+41                                          servo          0    700
+42                    stock_portfolio_performance          0    700
+43         stock_portfolio_performance_(target_2)          0    700
+44         stock_portfolio_performance_(target_3)          0    700
+45         stock_portfolio_performance_(target_4)          0    700
+46         stock_portfolio_performance_(target_5)          0    700
+47         stock_portfolio_performance_(target_6)          0    700
+48                         superconductivity_data          0    700
+Total datasets processed: 48 
+Total time elapsed: 1.250923 hours 
+Average time per dataset: 0.0260609 hours 
+
+ ================================================================================ 
+USAGE EXAMPLES:
+# Load all coefficients:
+load("unilasso_22datasets_coefficients_only.RData")
+
+# Access coefficients for a specific dataset:
+airfoil_coeffs <- all_datasets_coefficients[["airfoil"]]
+
+# Get all UniLasso LOO=TRUE coefficients for airfoil:
+unilasso_coeffs <- airfoil_coeffs[airfoil_coeffs$method == "unilasso_loo_true", ]
+
+# Extract just the coefficient values (excluding metadata):
+coeff_cols <- !names(unilasso_coeffs) %in% c("dataset", "method", "split_id")
+coeff_matrix <- as.matrix(unilasso_coeffs[, coeff_cols])
+# Dimensions: 100 splits x p features
+================================================================================ 

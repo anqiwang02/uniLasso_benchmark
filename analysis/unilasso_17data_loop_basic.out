@@ -1,0 +1,427 @@
+[1] "/scratch/users/aqwang/conda/envs/r_package/lib/R"
+Setting up parallel processing with 32 cores
+[[1]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[2]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[3]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[4]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[5]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[6]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[7]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[8]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[9]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[10]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[11]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[12]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[13]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[14]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[15]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[16]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[17]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[18]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[19]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[20]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[21]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[22]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[23]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[24]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[25]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[26]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[27]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[28]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[29]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[30]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[31]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[32]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+
+ ================================================================================ 
+Processing dataset: data_airfoil ( 1 / 17 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 1503 5 , y = 1503 
+Dataset completed in: 3.109225 secs 
+
+Summary statistics for data_airfoil ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 22.943654  (SD = 1.890692 )
+                        Mean Support = 5.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 22.933615  (SD = 1.886226 )
+                        Mean Support = 5.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 22.943733  (SD = 1.890772 )
+                        Mean Support = 5.00  (SD = 0.00 )
+  Lasso CV:             Mean MSE = 40.422288  (SD = 2.793451 )
+                        Mean Support = 1.00  (SD = 0.00 )
+
+ ================================================================================ 
+Processing dataset: data_ca_housing ( 2 / 17 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 20640 8 , y = 20640 
+Dataset completed in: 20.79672 secs 
+
+Summary statistics for data_ca_housing ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 4865172143.136294  (SD = 177133596.720810 )
+                        Mean Support = 7.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 4864577467.982847  (SD = 177879932.138604 )
+                        Mean Support = 7.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 4848141549.453628  (SD = 178028295.086681 )
+                        Mean Support = 8.00  (SD = 0.00 )
+  Lasso CV:             Mean MSE = 4921457800.884398  (SD = 186333569.172062 )
+                        Mean Support = 8.00  (SD = 0.00 )
+
+ ================================================================================ 
+Processing dataset: data_computer ( 3 / 17 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 8192 21 , y = 8192 
+Dataset completed in: 8.46958 secs 
+
+Summary statistics for data_computer ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 97.442140  (SD = 10.207620 )
+                        Mean Support = 9.94  (SD = 0.57 )
+  UniLasso (LOO=F):     Mean MSE = 97.407633  (SD = 10.697971 )
+                        Mean Support = 10.05  (SD = 0.61 )
+  Polish UniLasso:      Mean MSE = 94.417880  (SD = 10.116917 )
+                        Mean Support = 11.88  (SD = 1.65 )
+  Lasso CV:             Mean MSE = 170.930821  (SD = 8.829644 )
+                        Mean Support = 3.00  (SD = 0.00 )
+
+ ================================================================================ 
+Processing dataset: data_concrete ( 4 / 17 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 1030 8 , y = 1030 
+Dataset completed in: 2.492897 secs 
+
+Summary statistics for data_concrete ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 116.223805  (SD = 9.287890 )
+                        Mean Support = 7.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 116.105986  (SD = 9.323518 )
+                        Mean Support = 7.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 110.985393  (SD = 8.916717 )
+                        Mean Support = 8.00  (SD = 0.00 )
+  Lasso CV:             Mean MSE = 111.116789  (SD = 8.908081 )
+                        Mean Support = 7.91  (SD = 0.40 )
+
+ ================================================================================ 
+Processing dataset: data_debutanizer ( 5 / 17 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 2394 7 , y = 2394 
+Dataset completed in: 3.231882 secs 
+
+Summary statistics for data_debutanizer ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 0.020174  (SD = 0.002018 )
+                        Mean Support = 5.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 0.020151  (SD = 0.002028 )
+                        Mean Support = 5.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 0.020131  (SD = 0.002007 )
+                        Mean Support = 6.18  (SD = 0.70 )
+  Lasso CV:             Mean MSE = 0.019991  (SD = 0.002027 )
+                        Mean Support = 6.99  (SD = 0.10 )
+
+ ================================================================================ 
+Processing dataset: data_diamond ( 6 / 17 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 53940 23 , y = 53940 
+Dataset completed in: 59.23582 secs 
+
+Summary statistics for data_diamond ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 2369089.904490  (SD = 67949.296771 )
+                        Mean Support = 3.10  (SD = 0.30 )
+  UniLasso (LOO=F):     Mean MSE = 2368413.854917  (SD = 67904.092855 )
+                        Mean Support = 3.10  (SD = 0.30 )
+  Polish UniLasso:      Mean MSE = 1284339.219107  (SD = 48072.955827 )
+                        Mean Support = 22.73  (SD = 0.49 )
+  Lasso CV:             Mean MSE = 1283722.210987  (SD = 48135.078925 )
+                        Mean Support = 22.39  (SD = 0.51 )
+
+ ================================================================================ 
+Processing dataset: data_elevator ( 7 / 17 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 16599 18 , y = 16599 
+Dataset completed in: 14.99947 secs 
+
+Summary statistics for data_elevator ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 0.000020  (SD = 0.000001 )
+                        Mean Support = 10.39  (SD = 0.84 )
+  UniLasso (LOO=F):     Mean MSE = 0.000020  (SD = 0.000001 )
+                        Mean Support = 10.59  (SD = 0.85 )
+  Polish UniLasso:      Mean MSE = 0.000016  (SD = 0.000001 )
+                        Mean Support = 14.39  (SD = 0.84 )
+  Lasso CV:             Mean MSE = 0.000036  (SD = 0.000002 )
+                        Mean Support = 7.51  (SD = 0.50 )
+
+ ================================================================================ 
+Processing dataset: data_energy_efficiency ( 8 / 17 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 768 10 , y = 768 
+Dataset completed in: 2.257222 secs 
+
+Summary statistics for data_energy_efficiency ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 9.189816  (SD = 1.125299 )
+                        Mean Support = 3.95  (SD = 0.22 )
+  UniLasso (LOO=F):     Mean MSE = 9.181854  (SD = 1.124478 )
+                        Mean Support = 4.01  (SD = 0.17 )
+  Polish UniLasso:      Mean MSE = 8.782062  (SD = 1.086724 )
+                        Mean Support = 9.82  (SD = 0.39 )
+  Lasso CV:             Mean MSE = 21.437151  (SD = 2.929822 )
+                        Mean Support = 3.00  (SD = 0.00 )
+
+ ================================================================================ 
+Processing dataset: data_insurance ( 9 / 17 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 1338 8 , y = 1338 
+Dataset completed in: 2.638455 secs 
+
+Summary statistics for data_insurance ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 37203537.000829  (SD = 4845863.209785 )
+                        Mean Support = 4.17  (SD = 0.43 )
+  UniLasso (LOO=F):     Mean MSE = 37178714.302174  (SD = 4832303.010897 )
+                        Mean Support = 4.58  (SD = 0.52 )
+  Polish UniLasso:      Mean MSE = 37222280.605011  (SD = 4852253.987715 )
+                        Mean Support = 4.37  (SD = 0.73 )
+  Lasso CV:             Mean MSE = 37244156.174417  (SD = 4830185.536370 )
+                        Mean Support = 6.28  (SD = 1.33 )
+
+ ================================================================================ 
+Processing dataset: data_kin8nm ( 10 / 17 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 8192 8 , y = 8192 
+Dataset completed in: 6.501216 secs 
+
+Summary statistics for data_kin8nm ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 0.040699  (SD = 0.001253 )
+                        Mean Support = 8.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 0.040695  (SD = 0.001256 )
+                        Mean Support = 8.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 0.040699  (SD = 0.001253 )
+                        Mean Support = 8.00  (SD = 0.00 )
+  Lasso CV:             Mean MSE = 0.040696  (SD = 0.001252 )
+                        Mean Support = 8.00  (SD = 0.00 )
+
+ ================================================================================ 
+Processing dataset: data_miami_housing ( 11 / 17 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 13932 28 , y = 13932 
+Dataset completed in: 15.28592 secs 
+
+Summary statistics for data_miami_housing ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 28678633014.657673  (SD = 2133920388.639144 )
+                        Mean Support = 13.82  (SD = 0.90 )
+  UniLasso (LOO=F):     Mean MSE = 28678403996.446571  (SD = 2134925447.111208 )
+                        Mean Support = 15.07  (SD = 1.49 )
+  Polish UniLasso:      Mean MSE = 28074506109.104729  (SD = 2032974695.849745 )
+                        Mean Support = 15.82  (SD = 0.90 )
+  Lasso CV:             Mean MSE = 36484178286.875824  (SD = 2217446182.098140 )
+                        Mean Support = 8.97  (SD = 0.17 )
+
+ ================================================================================ 
+Processing dataset: data_naval_propulsion ( 12 / 17 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 11934 24 , y = 11934 
+Dataset completed in: 10.45323 secs 
+
+Summary statistics for data_naval_propulsion ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 0.000253  (SD = 0.000007 )
+                        Mean Support = 6.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 0.000254  (SD = 0.000007 )
+                        Mean Support = 6.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 0.000067  (SD = 0.000002 )
+                        Mean Support = 10.82  (SD = 0.39 )
+  Lasso CV:             Mean MSE = 0.002541  (SD = 0.000056 )
+                        Mean Support = 1.00  (SD = 0.00 )
+
+ ================================================================================ 
+Processing dataset: data_parkinsons ( 13 / 17 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 5875 18 , y = 5875 
+Dataset completed in: 6.449136 secs 
+
+Summary statistics for data_parkinsons ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 97.551460  (SD = 3.576973 )
+                        Mean Support = 6.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 97.540049  (SD = 3.585514 )
+                        Mean Support = 6.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 95.852520  (SD = 3.454640 )
+                        Mean Support = 13.41  (SD = 1.26 )
+  Lasso CV:             Mean MSE = 96.224483  (SD = 3.463766 )
+                        Mean Support = 9.39  (SD = 0.60 )
+
+ ================================================================================ 
+Processing dataset: data_powerplant ( 14 / 17 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 9568 4 , y = 9568 
+Dataset completed in: 7.112177 secs 
+
+Summary statistics for data_powerplant ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 23.994418  (SD = 0.966029 )
+                        Mean Support = 3.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 23.994400  (SD = 0.966009 )
+                        Mean Support = 3.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 20.888070  (SD = 0.939396 )
+                        Mean Support = 4.00  (SD = 0.00 )
+  Lasso CV:             Mean MSE = 20.900273  (SD = 0.933934 )
+                        Mean Support = 4.00  (SD = 0.00 )
+
+ ================================================================================ 
+Processing dataset: data_protein_structure ( 15 / 17 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 45730 9 , y = 45730 
+Dataset completed in: 36.69677 secs 
+
+Summary statistics for data_protein_structure ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 27.637191  (SD = 0.375112 )
+                        Mean Support = 4.41  (SD = 0.68 )
+  UniLasso (LOO=F):     Mean MSE = 27.585718  (SD = 0.391438 )
+                        Mean Support = 4.49  (SD = 0.59 )
+  Polish UniLasso:      Mean MSE = 27.462765  (SD = 0.362742 )
+                        Mean Support = 6.59  (SD = 1.13 )
+  Lasso CV:             Mean MSE = 27.312124  (SD = 0.284708 )
+                        Mean Support = 6.85  (SD = 0.36 )
+
+ ================================================================================ 
+Processing dataset: data_qsar ( 16 / 17 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 5742 500 , y = 5742 
+Dataset completed in: 9.684539 mins 
+
+Summary statistics for data_qsar ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 1.094233  (SD = 0.075514 )
+                        Mean Support = 211.87  (SD = 7.28 )
+  UniLasso (LOO=F):     Mean MSE = 1.054847  (SD = 0.073287 )
+                        Mean Support = 273.15  (SD = 7.35 )
+  Polish UniLasso:      Mean MSE = 1.001674  (SD = 0.071806 )
+                        Mean Support = 341.40  (SD = 29.65 )
+  Lasso CV:             Mean MSE = 0.973543  (SD = 0.070931 )
+                        Mean Support = 408.17  (SD = 11.95 )
+
+ ================================================================================ 
+Processing dataset: data_superconductor ( 17 / 17 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 21263 79 , y = 21263 
+Dataset completed in: 1.058541 mins 
+
+Summary statistics for data_superconductor ( 100 splits):
+  UniLasso (LOO=T):     Mean MSE = 390.863184  (SD = 8.703479 )
+                        Mean Support = 16.49  (SD = 0.50 )
+  UniLasso (LOO=F):     Mean MSE = 390.834573  (SD = 8.702506 )
+                        Mean Support = 16.32  (SD = 0.47 )
+  Polish UniLasso:      Mean MSE = 326.343910  (SD = 8.469516 )
+                        Mean Support = 57.30  (SD = 0.70 )
+  Lasso CV:             Mean MSE = 376.045874  (SD = 8.552008 )
+                        Mean Support = 32.87  (SD = 0.95 )
+
+ ================================================================================ 
+ANALYSIS COMPLETE FOR ALL 17 DATASETS!
+Total number of experiments: 1700 
+Total time elapsed: 14.14957 mins 
+Average time per dataset: 0.8323277 mins 
+================================================================================ 
+All individual results saved to: unilasso_17datasets_100splits_all_results_parallel.csv
