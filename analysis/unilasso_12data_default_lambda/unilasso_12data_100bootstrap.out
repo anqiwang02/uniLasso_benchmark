@@ -1,0 +1,523 @@
+[1] "/scratch/users/aqwang/conda/envs/r_package/lib/R"
+Setting up parallel processing with 32 cores
+[[1]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[2]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[3]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[4]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[5]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[6]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[7]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[8]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[9]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[10]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[11]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[12]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[13]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[14]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[15]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[16]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[17]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[18]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[19]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[20]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[21]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[22]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[23]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[24]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[25]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[26]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[27]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[28]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[29]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[30]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[31]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[32]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+
+ ================================================================================ 
+Processing dataset: ca_housing ( 1 / 12 )
+Running 100 bootstrap samples on training set in parallel...
+Training ratio: 0.5 
+Test set remains FIXED for all bootstrap samples
+================================================================================ 
+Data dimensions: X = 20640 8 , y = 20640 
+Dataset completed in: 1.395332 mins 
+Computing prediction intervals...
+
+Bootstrap summary statistics for ca_housing ( 100 bootstrap samples):
+  UniLasso (LOO=T):     Mean MSE = 4961485515.633327  (SD = 127559659.839534 )
+                        Mean Support = 6.80  (SD = 0.55 )
+  UniLasso (LOO=F):     Mean MSE = 4943968294.261893  (SD = 123775328.673652 )
+                        Mean Support = 6.80  (SD = 0.53 )
+  Polish UniLasso:      Mean MSE = 4889322141.486673  (SD = 36656972.599524 )
+                        Mean Support = 7.89  (SD = 0.31 )
+  Lasso CV:             Mean MSE = 4876155841.354441  (SD = 27192262.561551 )
+                        Mean Support = 7.96  (SD = 0.20 )
+  UniReg:               Mean MSE = 4942834632.518407  (SD = 124427944.760940 )
+                        Mean Support = 6.83  (SD = 0.53 )
+  Least Squares:        Mean MSE = 4875196920.663018  (SD = 26513976.167237 )
+                        Mean Support = 8.00  (SD = 0.00 )
+
+  Prediction Interval Summary (95% confidence):
+    uniLasso_loo_true   : Coverage = 0.935, Avg Width = 272461.3020 (SD = 37195.4730)
+    uniLasso_loo_false  : Coverage = 0.935, Avg Width = 272480.2234 (SD = 37035.8511)
+    polish_uniLasso     : Coverage = 0.937, Avg Width = 271022.4090 (SD = 36708.3377)
+    lasso_cv            : Coverage = 0.936, Avg Width = 270312.4247 (SD = 36429.7812)
+    uniReg              : Coverage = 0.937, Avg Width = 271984.4170 (SD = 37324.2054)
+    least_squares       : Coverage = 0.936, Avg Width = 270591.2350 (SD = 36609.7864)
+
+ ================================================================================ 
+Processing dataset: computer ( 2 / 12 )
+Running 100 bootstrap samples on training set in parallel...
+Training ratio: 0.5 
+Test set remains FIXED for all bootstrap samples
+================================================================================ 
+Data dimensions: X = 8192 21 , y = 8192 
+Dataset completed in: 10.72298 secs 
+Computing prediction intervals...
+
+Bootstrap summary statistics for computer ( 100 bootstrap samples):
+  UniLasso (LOO=T):     Mean MSE = 97.687722  (SD = 2.520262 )
+                        Mean Support = 10.04  (SD = 1.18 )
+  UniLasso (LOO=F):     Mean MSE = 98.379439  (SD = 3.369114 )
+                        Mean Support = 10.12  (SD = 1.19 )
+  Polish UniLasso:      Mean MSE = 95.190577  (SD = 3.134105 )
+                        Mean Support = 12.83  (SD = 2.92 )
+  Lasso CV:             Mean MSE = 95.445540  (SD = 3.745287 )
+                        Mean Support = 20.05  (SD = 1.51 )
+  UniReg:               Mean MSE = 97.664410  (SD = 2.576350 )
+                        Mean Support = 10.36  (SD = 1.09 )
+  Least Squares:        Mean MSE = 95.598754  (SD = 3.765514 )
+                        Mean Support = 21.00  (SD = 0.00 )
+
+  Prediction Interval Summary (95% confidence):
+    uniLasso_loo_true   : Coverage = 0.943, Avg Width = 34.7515 (SD = 11.7439)
+    uniLasso_loo_false  : Coverage = 0.940, Avg Width = 34.3511 (SD = 11.8504)
+    polish_uniLasso     : Coverage = 0.942, Avg Width = 33.8297 (SD = 10.6497)
+    lasso_cv            : Coverage = 0.940, Avg Width = 33.8932 (SD = 10.3593)
+    uniReg              : Coverage = 0.943, Avg Width = 34.6334 (SD = 11.6740)
+    least_squares       : Coverage = 0.944, Avg Width = 34.0646 (SD = 10.1936)
+
+ ================================================================================ 
+Processing dataset: debutanizer ( 3 / 12 )
+Running 100 bootstrap samples on training set in parallel...
+Training ratio: 0.5 
+Test set remains FIXED for all bootstrap samples
+================================================================================ 
+Data dimensions: X = 2394 7 , y = 2394 
+Dataset completed in: 3.879963 secs 
+Computing prediction intervals...
+
+Bootstrap summary statistics for debutanizer ( 100 bootstrap samples):
+  UniLasso (LOO=T):     Mean MSE = 0.020946  (SD = 0.000782 )
+                        Mean Support = 4.63  (SD = 0.61 )
+  UniLasso (LOO=F):     Mean MSE = 0.020569  (SD = 0.000664 )
+                        Mean Support = 4.88  (SD = 0.59 )
+  Polish UniLasso:      Mean MSE = 0.020435  (SD = 0.000306 )
+                        Mean Support = 5.96  (SD = 0.82 )
+  Lasso CV:             Mean MSE = 0.020292  (SD = 0.000310 )
+                        Mean Support = 6.55  (SD = 0.52 )
+  UniReg:               Mean MSE = 0.020917  (SD = 0.000762 )
+                        Mean Support = 4.72  (SD = 0.53 )
+  Least Squares:        Mean MSE = 0.020267  (SD = 0.000306 )
+                        Mean Support = 7.00  (SD = 0.00 )
+
+  Prediction Interval Summary (95% confidence):
+    uniLasso_loo_true   : Coverage = 0.937, Avg Width = 0.5669 (SD = 0.1119)
+    uniLasso_loo_false  : Coverage = 0.938, Avg Width = 0.5620 (SD = 0.1183)
+    polish_uniLasso     : Coverage = 0.925, Avg Width = 0.5699 (SD = 0.1205)
+    lasso_cv            : Coverage = 0.937, Avg Width = 0.5586 (SD = 0.1148)
+    uniReg              : Coverage = 0.925, Avg Width = 0.5694 (SD = 0.1113)
+    least_squares       : Coverage = 0.926, Avg Width = 0.5515 (SD = 0.1168)
+
+ ================================================================================ 
+Processing dataset: diamond ( 4 / 12 )
+Running 100 bootstrap samples on training set in parallel...
+Training ratio: 0.5 
+Test set remains FIXED for all bootstrap samples
+================================================================================ 
+Data dimensions: X = 53940 23 , y = 53940 
+Dataset completed in: 6.842405 mins 
+Computing prediction intervals...
+
+Bootstrap summary statistics for diamond ( 100 bootstrap samples):
+  UniLasso (LOO=T):     Mean MSE = 2387418.150201  (SD = 13208.118777 )
+                        Mean Support = 2.85  (SD = 0.80 )
+  UniLasso (LOO=F):     Mean MSE = 2385393.361486  (SD = 13275.011711 )
+                        Mean Support = 2.88  (SD = 0.81 )
+  Polish UniLasso:      Mean MSE = 1305886.210547  (SD = 27314.989428 )
+                        Mean Support = 22.91  (SD = 0.29 )
+  Lasso CV:             Mean MSE = 1308265.705173  (SD = 18043.015410 )
+                        Mean Support = 22.97  (SD = 0.17 )
+  UniReg:               Mean MSE = 2370024.977977  (SD = 14270.111541 )
+                        Mean Support = 3.50  (SD = 0.90 )
+  Least Squares:        Mean MSE = 1315081.789416  (SD = 56779.992896 )
+                        Mean Support = 23.00  (SD = 0.00 )
+
+  Prediction Interval Summary (95% confidence):
+    uniLasso_loo_true   : Coverage = 0.931, Avg Width = 6180.9670 (SD = 1074.7099)
+    uniLasso_loo_false  : Coverage = 0.931, Avg Width = 6170.1210 (SD = 1081.3359)
+    polish_uniLasso     : Coverage = 0.933, Avg Width = 4217.2037 (SD = 833.7231)
+    lasso_cv            : Coverage = 0.933, Avg Width = 4217.3860 (SD = 821.1061)
+    uniReg              : Coverage = 0.931, Avg Width = 6152.6146 (SD = 1069.7287)
+    least_squares       : Coverage = 0.934, Avg Width = 4215.6351 (SD = 838.0028)
+
+ ================================================================================ 
+Processing dataset: elevator ( 5 / 12 )
+Running 100 bootstrap samples on training set in parallel...
+Training ratio: 0.5 
+Test set remains FIXED for all bootstrap samples
+================================================================================ 
+Data dimensions: X = 16599 18 , y = 16599 
+Dataset completed in: 17.99942 secs 
+Computing prediction intervals...
+
+Bootstrap summary statistics for elevator ( 100 bootstrap samples):
+  UniLasso (LOO=T):     Mean MSE = 0.000020  (SD = 0.000000 )
+                        Mean Support = 9.93  (SD = 1.29 )
+  UniLasso (LOO=F):     Mean MSE = 0.000020  (SD = 0.000000 )
+                        Mean Support = 10.31  (SD = 1.38 )
+  Polish UniLasso:      Mean MSE = 0.000017  (SD = 0.000000 )
+                        Mean Support = 13.90  (SD = 1.23 )
+  Lasso CV:             Mean MSE = 0.000009  (SD = 0.000000 )
+                        Mean Support = 16.09  (SD = 1.26 )
+  UniReg:               Mean MSE = 0.000020  (SD = 0.000000 )
+                        Mean Support = 10.19  (SD = 1.29 )
+  Least Squares:        Mean MSE = 0.000009  (SD = 0.000000 )
+                        Mean Support = 16.15  (SD = 0.80 )
+
+  Prediction Interval Summary (95% confidence):
+    uniLasso_loo_true   : Coverage = 0.936, Avg Width = 0.0171 (SD = 0.0029)
+    uniLasso_loo_false  : Coverage = 0.933, Avg Width = 0.0171 (SD = 0.0029)
+    polish_uniLasso     : Coverage = 0.931, Avg Width = 0.0150 (SD = 0.0027)
+    lasso_cv            : Coverage = 0.932, Avg Width = 0.0106 (SD = 0.0019)
+    uniReg              : Coverage = 0.932, Avg Width = 0.0171 (SD = 0.0029)
+    least_squares       : Coverage = 0.932, Avg Width = 0.0106 (SD = 0.0019)
+
+ ================================================================================ 
+Processing dataset: energy_efficiency ( 6 / 12 )
+Running 100 bootstrap samples on training set in parallel...
+Training ratio: 0.5 
+Test set remains FIXED for all bootstrap samples
+================================================================================ 
+Data dimensions: X = 768 10 , y = 768 
+Dataset completed in: 3.068955 secs 
+Computing prediction intervals...
+
+Bootstrap summary statistics for energy_efficiency ( 100 bootstrap samples):
+  UniLasso (LOO=T):     Mean MSE = 9.271852  (SD = 0.339283 )
+                        Mean Support = 4.27  (SD = 0.78 )
+  UniLasso (LOO=F):     Mean MSE = 9.356559  (SD = 0.370164 )
+                        Mean Support = 4.87  (SD = 0.94 )
+  Polish UniLasso:      Mean MSE = 9.118983  (SD = 0.340111 )
+                        Mean Support = 9.24  (SD = 1.33 )
+  Lasso CV:             Mean MSE = 9.110456  (SD = 0.355103 )
+                        Mean Support = 8.93  (SD = 0.76 )
+  UniReg:               Mean MSE = 9.321777  (SD = 0.352848 )
+                        Mean Support = 4.81  (SD = 0.80 )
+  Least Squares:        Mean MSE = 9.104601  (SD = 0.364451 )
+                        Mean Support = 9.00  (SD = 0.00 )
+
+  Prediction Interval Summary (95% confidence):
+    uniLasso_loo_true   : Coverage = 0.919, Avg Width = 12.9416 (SD = 0.9703)
+    uniLasso_loo_false  : Coverage = 0.932, Avg Width = 12.9691 (SD = 0.9480)
+    polish_uniLasso     : Coverage = 0.927, Avg Width = 12.9864 (SD = 1.0867)
+    lasso_cv            : Coverage = 0.919, Avg Width = 12.9749 (SD = 0.9966)
+    uniReg              : Coverage = 0.924, Avg Width = 12.9718 (SD = 0.9635)
+    least_squares       : Coverage = 0.922, Avg Width = 12.9555 (SD = 1.0007)
+
+ ================================================================================ 
+Processing dataset: insurance ( 7 / 12 )
+Running 100 bootstrap samples on training set in parallel...
+Training ratio: 0.5 
+Test set remains FIXED for all bootstrap samples
+================================================================================ 
+Data dimensions: X = 1338 8 , y = 1338 
+Dataset completed in: 3.199068 secs 
+Computing prediction intervals...
+
+Bootstrap summary statistics for insurance ( 100 bootstrap samples):
+  UniLasso (LOO=T):     Mean MSE = 35890532.796158  (SD = 474479.126461 )
+                        Mean Support = 4.44  (SD = 0.77 )
+  UniLasso (LOO=F):     Mean MSE = 35966822.399872  (SD = 494424.645917 )
+                        Mean Support = 4.97  (SD = 0.90 )
+  Polish UniLasso:      Mean MSE = 35913922.626806  (SD = 478710.198237 )
+                        Mean Support = 4.82  (SD = 1.00 )
+  Lasso CV:             Mean MSE = 36047870.423551  (SD = 499238.108330 )
+                        Mean Support = 7.16  (SD = 1.01 )
+  UniReg:               Mean MSE = 35924046.243704  (SD = 483173.869765 )
+                        Mean Support = 4.85  (SD = 0.81 )
+  Least Squares:        Mean MSE = 36151582.911226  (SD = 510810.043476 )
+                        Mean Support = 8.00  (SD = 0.00 )
+
+  Prediction Interval Summary (95% confidence):
+    uniLasso_loo_true   : Coverage = 0.942, Avg Width = 26748.1096 (SD = 3598.0452)
+    uniLasso_loo_false  : Coverage = 0.930, Avg Width = 26348.9612 (SD = 3815.9158)
+    polish_uniLasso     : Coverage = 0.937, Avg Width = 26647.5857 (SD = 3645.1100)
+    lasso_cv            : Coverage = 0.946, Avg Width = 26606.1551 (SD = 3575.5942)
+    uniReg              : Coverage = 0.936, Avg Width = 26803.4890 (SD = 3757.6016)
+    least_squares       : Coverage = 0.934, Avg Width = 26455.1632 (SD = 3633.0492)
+
+ ================================================================================ 
+Processing dataset: kin8nm ( 8 / 12 )
+Running 100 bootstrap samples on training set in parallel...
+Training ratio: 0.5 
+Test set remains FIXED for all bootstrap samples
+================================================================================ 
+Data dimensions: X = 8192 8 , y = 8192 
+Dataset completed in: 7.464352 secs 
+Computing prediction intervals...
+
+Bootstrap summary statistics for kin8nm ( 100 bootstrap samples):
+  UniLasso (LOO=T):     Mean MSE = 0.040301  (SD = 0.000096 )
+                        Mean Support = 8.00  (SD = 0.00 )
+  UniLasso (LOO=F):     Mean MSE = 0.040258  (SD = 0.000083 )
+                        Mean Support = 8.00  (SD = 0.00 )
+  Polish UniLasso:      Mean MSE = 0.040301  (SD = 0.000096 )
+                        Mean Support = 8.00  (SD = 0.00 )
+  Lasso CV:             Mean MSE = 0.040266  (SD = 0.000086 )
+                        Mean Support = 8.00  (SD = 0.00 )
+  UniReg:               Mean MSE = 0.040296  (SD = 0.000094 )
+                        Mean Support = 8.00  (SD = 0.00 )
+  Least Squares:        Mean MSE = 0.040255  (SD = 0.000082 )
+                        Mean Support = 8.00  (SD = 0.00 )
+
+  Prediction Interval Summary (95% confidence):
+    uniLasso_loo_true   : Coverage = 0.934, Avg Width = 0.7561 (SD = 0.0685)
+    uniLasso_loo_false  : Coverage = 0.934, Avg Width = 0.7550 (SD = 0.0679)
+    polish_uniLasso     : Coverage = 0.935, Avg Width = 0.7578 (SD = 0.0679)
+    lasso_cv            : Coverage = 0.938, Avg Width = 0.7547 (SD = 0.0669)
+    uniReg              : Coverage = 0.935, Avg Width = 0.7540 (SD = 0.0686)
+    least_squares       : Coverage = 0.935, Avg Width = 0.7551 (SD = 0.0694)
+
+ ================================================================================ 
+Processing dataset: miami_housing ( 9 / 12 )
+Running 100 bootstrap samples on training set in parallel...
+Training ratio: 0.5 
+Test set remains FIXED for all bootstrap samples
+================================================================================ 
+Data dimensions: X = 13932 28 , y = 13932 
+Dataset completed in: 18.25886 secs 
+Computing prediction intervals...
+
+Bootstrap summary statistics for miami_housing ( 100 bootstrap samples):
+  UniLasso (LOO=T):     Mean MSE = 29953506617.730728  (SD = 161578492.557985 )
+                        Mean Support = 14.76  (SD = 1.46 )
+  UniLasso (LOO=F):     Mean MSE = 29970339831.732639  (SD = 164706277.204408 )
+                        Mean Support = 16.48  (SD = 1.93 )
+  Polish UniLasso:      Mean MSE = 29248132104.396305  (SD = 186498915.724118 )
+                        Mean Support = 16.59  (SD = 1.45 )
+  Lasso CV:             Mean MSE = 27927678888.429855  (SD = 180385305.739513 )
+                        Mean Support = 27.82  (SD = 0.44 )
+  UniReg:               Mean MSE = 29955137763.497353  (SD = 154290040.722971 )
+                        Mean Support = 16.52  (SD = 1.47 )
+  Least Squares:        Mean MSE = 27898116468.144836  (SD = 174364633.830729 )
+                        Mean Support = 28.00  (SD = 0.00 )
+
+  Prediction Interval Summary (95% confidence):
+    uniLasso_loo_true   : Coverage = 0.934, Avg Width = 586274.6426 (SD = 132689.0036)
+    uniLasso_loo_false  : Coverage = 0.934, Avg Width = 588411.9813 (SD = 135626.0992)
+    polish_uniLasso     : Coverage = 0.934, Avg Width = 589846.3931 (SD = 128029.2735)
+    lasso_cv            : Coverage = 0.934, Avg Width = 578298.6774 (SD = 131881.9145)
+    uniReg              : Coverage = 0.933, Avg Width = 589987.7146 (SD = 132602.3195)
+    least_squares       : Coverage = 0.934, Avg Width = 572463.9378 (SD = 127463.3862)
+
+ ================================================================================ 
+Processing dataset: naval_propulsion ( 10 / 12 )
+Running 100 bootstrap samples on training set in parallel...
+Training ratio: 0.5 
+Test set remains FIXED for all bootstrap samples
+================================================================================ 
+Data dimensions: X = 11934 24 , y = 11934 
+Dataset completed in: 12.53039 secs 
+Computing prediction intervals...
+
+Bootstrap summary statistics for naval_propulsion ( 100 bootstrap samples):
+  UniLasso (LOO=T):     Mean MSE = 0.000249  (SD = 0.000009 )
+                        Mean Support = 6.27  (SD = 0.45 )
+  UniLasso (LOO=F):     Mean MSE = 0.000249  (SD = 0.000009 )
+                        Mean Support = 6.29  (SD = 0.46 )
+  Polish UniLasso:      Mean MSE = 0.000066  (SD = 0.000002 )
+                        Mean Support = 11.04  (SD = 0.53 )
+  Lasso CV:             Mean MSE = 0.000239  (SD = 0.000011 )
+                        Mean Support = 8.52  (SD = 0.63 )
+  UniReg:               Mean MSE = 0.000020  (SD = 0.000001 )
+                        Mean Support = 14.77  (SD = 1.13 )
+  Least Squares:        Mean MSE = 0.000001  (SD = 0.000000 )
+                        Mean Support = 20.00  (SD = 0.00 )
+
+  Prediction Interval Summary (95% confidence):
+    uniLasso_loo_true   : Coverage = 0.938, Avg Width = 0.0588 (SD = 0.0045)
+    uniLasso_loo_false  : Coverage = 0.932, Avg Width = 0.0588 (SD = 0.0046)
+    polish_uniLasso     : Coverage = 0.934, Avg Width = 0.0304 (SD = 0.0040)
+    lasso_cv            : Coverage = 0.931, Avg Width = 0.0570 (SD = 0.0050)
+    uniReg              : Coverage = 0.938, Avg Width = 0.0180 (SD = 0.0026)
+    least_squares       : Coverage = 0.937, Avg Width = 0.0030 (SD = 0.0005)
+
+ ================================================================================ 
+Processing dataset: protein_structure ( 11 / 12 )
+Running 100 bootstrap samples on training set in parallel...
+Training ratio: 0.5 
+Test set remains FIXED for all bootstrap samples
+================================================================================ 
+Data dimensions: X = 45730 9 , y = 45730 
+Dataset completed in: 1.777069 mins 
+Computing prediction intervals...
+
+Bootstrap summary statistics for protein_structure ( 100 bootstrap samples):
+  UniLasso (LOO=T):     Mean MSE = 27.634102  (SD = 0.207768 )
+                        Mean Support = 4.27  (SD = 0.76 )
+  UniLasso (LOO=F):     Mean MSE = 27.594749  (SD = 0.234146 )
+                        Mean Support = 4.46  (SD = 0.77 )
+  Polish UniLasso:      Mean MSE = 27.630308  (SD = 0.207820 )
+                        Mean Support = 5.30  (SD = 0.85 )
+  Lasso CV:             Mean MSE = 26.961940  (SD = 0.029776 )
+                        Mean Support = 8.46  (SD = 0.50 )
+  UniReg:               Mean MSE = 27.622720  (SD = 0.213217 )
+                        Mean Support = 4.41  (SD = 0.68 )
+  Least Squares:        Mean MSE = 26.954394  (SD = 0.030961 )
+                        Mean Support = 9.00  (SD = 0.00 )
+
+  Prediction Interval Summary (95% confidence):
+    uniLasso_loo_true   : Coverage = 0.933, Avg Width = 18.0958 (SD = 1.3909)
+    uniLasso_loo_false  : Coverage = 0.933, Avg Width = 18.1010 (SD = 1.3723)
+    polish_uniLasso     : Coverage = 0.934, Avg Width = 18.0781 (SD = 1.3916)
+    lasso_cv            : Coverage = 0.932, Avg Width = 18.0510 (SD = 1.4126)
+    uniReg              : Coverage = 0.934, Avg Width = 18.0959 (SD = 1.3835)
+    least_squares       : Coverage = 0.932, Avg Width = 18.0627 (SD = 1.4027)
+
+ ================================================================================ 
+Processing dataset: qsar ( 12 / 12 )
+Running 100 bootstrap samples on training set in parallel...
+Training ratio: 0.5 
+Test set remains FIXED for all bootstrap samples
+================================================================================ 
+Data dimensions: X = 5742 500 , y = 5742 
+Dataset completed in: 13.11662 mins 
+Computing prediction intervals...
+
+Bootstrap summary statistics for qsar ( 100 bootstrap samples):
+  UniLasso (LOO=T):     Mean MSE = 1.188603  (SD = 0.023587 )
+                        Mean Support = 184.69  (SD = 8.59 )
+  UniLasso (LOO=F):     Mean MSE = 1.173875  (SD = 0.023621 )
+                        Mean Support = 245.46  (SD = 11.59 )
+  Polish UniLasso:      Mean MSE = 1.112517  (SD = 0.026988 )
+                        Mean Support = 335.62  (SD = 47.75 )
+  Lasso CV:             Mean MSE = 1.130807  (SD = 0.033242 )
+                        Mean Support = 395.05  (SD = 19.91 )
+  UniReg:               Mean MSE = 1.189934  (SD = 0.024921 )
+                        Mean Support = 205.14  (SD = 7.29 )
+  Least Squares:        Mean MSE = 1.308217  (SD = 0.049943 )
+                        Mean Support = 500.00  (SD = 0.00 )
+
+  Prediction Interval Summary (95% confidence):
+    uniLasso_loo_true   : Coverage = 0.953, Avg Width = 4.3515 (SD = 0.4379)
+    uniLasso_loo_false  : Coverage = 0.950, Avg Width = 4.3321 (SD = 0.4176)
+    polish_uniLasso     : Coverage = 0.958, Avg Width = 4.2830 (SD = 0.4476)
+    lasso_cv            : Coverage = 0.960, Avg Width = 4.3319 (SD = 0.4463)
+    uniReg              : Coverage = 0.954, Avg Width = 4.3584 (SD = 0.4331)
+    least_squares       : Coverage = 0.968, Avg Width = 4.7267 (SD = 0.5051)
+
+ ================================================================================ 
+BOOTSTRAP ANALYSIS WITH PREDICTION INTERVALS COMPLETE FOR ALL 12 DATASETS!
+Total number of bootstrap experiments: 1200 
+Total time elapsed: 26.17107 mins 
+Average time per dataset: 2.180923 mins 
+================================================================================ 
+All bootstrap results saved to: unilasso_12data_100bootstrap.csv 
+Prediction interval results saved to: unilasso_12data_100bootstrap_pred_int.csv
