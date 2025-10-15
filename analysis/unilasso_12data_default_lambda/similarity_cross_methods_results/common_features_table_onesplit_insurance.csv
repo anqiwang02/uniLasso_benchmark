@@ -1,0 +1,6 @@
+"","UniLasso (support=3)","Polish (support=3)","Lasso (support=8)","UniReg (support=4)","LS (support=8)"
+"UniLasso (support=3)",3,3,3,3,3
+"Polish (support=3)",3,3,3,3,3
+"Lasso (support=8)",3,3,8,4,8
+"UniReg (support=4)",3,3,4,4,4
+"LS (support=8)",3,3,8,4,8

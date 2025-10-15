@@ -1,0 +1,6 @@
+"","UniLasso (support=10)","Polish (support=14)","Lasso (support=17)","UniReg (support=11)","LS (support=16)"
+"UniLasso (support=10)",10,10,10,10,9
+"Polish (support=14)",10,14,14,10,13
+"Lasso (support=17)",10,14,17,11,15
+"UniReg (support=11)",10,10,11,11,9
+"LS (support=16)",9,13,15,9,16
