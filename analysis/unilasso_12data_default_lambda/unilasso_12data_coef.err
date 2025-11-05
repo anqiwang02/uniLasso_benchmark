@@ -1,0 +1,10 @@
+Loading required package: glmnet
+Loading required package: Matrix
+Loaded glmnet 4.1-10
+Loaded uniLasso 2.10
+Loading required package: foreach
+Loading required package: iterators
+There were 12 warnings (use warnings() to see them)
+Warning message:
+In normalizePath("unilasso_12datasets_coefficients_only.RData") :
+  path[1]="unilasso_12datasets_coefficients_only.RData": No such file or directory

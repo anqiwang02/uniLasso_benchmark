@@ -1,0 +1,1222 @@
+
+# Final version for 22 datasets. Oct 22, 2025
+```{r}
+### setup####
+
+if (R.home() != "/scratch/users/aqwang/conda/envs/r_package/lib/R") {
+  system("/scratch/users/aqwang/conda/envs/r_package/bin/Rscript -e 'rmarkdown::render(\"unilasso_22data_graph_final_v2.Rmd\")'")
+  quit("no")
+}
+
+# check the R environment is r_package
+R.home()
+
+# set working directory
+setwd("/accounts/grad/aqwang/unilasso/analysis/unilasso_22data_default_lambda")
+
+# load packages 
+library(uniLasso) # for unilasso 
+library(glmnet) # for cv lasso 
+library(dplyr)
+library(tidyr)
+library(ggtext)
+
+
+
+####################load results: comparing LS, uniReg, unilasso (loo=True) and polish unilasso with loo=TRUE with 50-50 train/test splits updated for 22 datasets (choose one target for datasets with multiple targets )####################
+results_all_splits <- read.csv("/accounts/grad/aqwang/unilasso/analysis/unilasso_22data_default_lambda/unilasso_22datasets_100splits_train50percent_results.csv")
+
+# print the unique names in results_all_splits$dataset to verify
+print(unique(results_all_splits$dataset))
+
+
+# using results_all_splits data frame to graph boxplot of MSE on the left and boxplot of support on the right for each dataset 
+library(ggplot2)
+library(tidyr)
+library(dplyr)
+
+# Reshape data for plotting
+plot_long <- results_all_splits %>%
+  select(dataset, split_id, unilasso_loo_true_mse, polish_unilasso_mse, lasso_cv_mse, unireg_mse, least_squares_mse,
+         unilasso_loo_true_support, polish_unilasso_support, lasso_cv_support,unireg_support, least_squares_support,
+         unilasso_loo_true_sign_diff, polish_unilasso_sign_diff,lasso_cv_sign_diff,unireg_sign_diff, least_squares_sign_diff) %>%
+  pivot_longer(
+    cols = c(unilasso_loo_true_mse, polish_unilasso_mse, lasso_cv_mse, unireg_mse, least_squares_mse,
+             unilasso_loo_true_support, polish_unilasso_support, lasso_cv_support, unireg_support, least_squares_support,
+             unilasso_loo_true_sign_diff, polish_unilasso_sign_diff, lasso_cv_sign_diff, unireg_sign_diff, least_squares_sign_diff),
+    names_to = c("method", ".value"),
+    names_pattern = "(unilasso_loo_true|polish_unilasso|lasso_cv|unireg|least_squares)_(mse|support|sign_diff)"
+  )
+
+# Order datasets for consistent facetting
+plot_long$dataset <- factor(plot_long$dataset, levels = sort(unique(plot_long$dataset)))
+# rename unilasso_loo_true to unilasso
+plot_long$method <- recode(plot_long$method, unilasso_loo_true = "uniLasso", polish_unilasso = "Polish", lasso_cv = "Lasso", unireg = "uniReg", least_squares = "LS")
+plot_long$method <- factor(plot_long$method, levels = c("LS", "Lasso", "uniReg", "uniLasso", "Polish"))
+
+
+dataset_names <- c(
+  "airfoil", "appliances_energy", "auto_mpg", "automobile", "beijing_pm2.5",
+  "bike_sharing", "concrete", "crime", "crime_unnormalized", "daily_demand", "facebook_metrics", "forest_fires", "infrared_thermo_temp",
+   "liver_disorders", "metro_traffic", "parkinsons", "power_consumption", "power_plant", "real_estate",
+  "servo", "stock_portfolio", "superconductivity")
+
+# rename all daasets to have first letter capitalized and underscores replaced with spaces
+plot_long$dataset <- recode(plot_long$dataset,
+                            "airfoil" = "Airfoil",
+                            "appliances_energy" = "Appliances energy",
+                            "auto_mpg" = "Auto MPG",
+                            "automobile" = "Automobile",
+                            "beijing_pm2.5" = "Beijing PM2.5",
+                            "bike_sharing" = "Bike sharing",
+                            "concrete" = "Concrete",
+                            "crime" = "Crime",
+                            "crime_unnormalized" = "Crime unnormalized",
+                            "daily_demand" = "Daily demand",
+                            "facebook_metrics" = "Facebook metrics",
+                            "forest_fires" = "Forest fires",
+                            "infrared_thermo_temp" = "Infrared thermo temp",
+                            "liver_disorders" = "Liver disorders",
+                            "metro_traffic" = "Metro traffic",
+                            "parkinsons" = "Parkinsons",
+                            "power_consumption" = "Power consumption",
+                            "power_plant" = "Power plant",
+                            "real_estate" = "Real estate",
+                            "servo" = "Servo",
+                            "stock_portfolio" = "Stock portfolio",
+                            "superconductivity" = "Superconductivity"
+)
+
+plot_combined_long <- plot_long %>%
+  pivot_longer(
+    cols = c(mse, support, sign_diff),
+    names_to = "metric",
+    values_to = "value"
+  ) %>%
+  mutate(
+    metric = recode(metric, 
+                   "mse" = "MSE", 
+                   "support" = "Support",
+                   "sign_diff" = "Number of violations"),
+    metric = factor(metric, levels = c("MSE", "Support", "Number of violations"))
+  )
+
+######################################2)calculate stabilty using all coeffcients 
+library(dplyr)
+library(utils)  # for combn function
+
+# Function to calculate stability for a given method - returns all pairwise values
+calculate_stability_full <- function(data, method_name) {
+  # Filter data for the specific method
+  method_data <- data %>% filter(method == method_name)
+  
+  # Extract coefficient columns (starting from column 4)
+  coef_matrix <- as.matrix(method_data[, 4:ncol(method_data)])
+  
+  # Number of models for this method
+  n_models <- nrow(coef_matrix)
+  
+  if (n_models < 2) {
+    return(c())  # Return empty vector if not enough models
+  }
+  
+  # Generate all pairs of models (100 choose 2)
+  model_pairs <- combn(1:n_models, 2, simplify = FALSE)
+  
+  # Calculate stability for each pair
+  stability_values <- sapply(model_pairs, function(pair) {
+    model_i <- pair[1]
+    model_j <- pair[2]
+    
+    # Find selected features (non-zero coefficients) for each model. returns the indices (column numbers) where the coefficients are nonzero.
+    features_i <- which(coef_matrix[model_i, ] != 0)
+    features_j <- which(coef_matrix[model_j, ] != 0)
+    
+    # Calculate Jaccard similarity: |intersection| / |union|
+    common_features <- length(intersect(features_i, features_j))
+    total_unique_features <- length(union(features_i, features_j))
+    
+    # Handle case where both models select no features
+    if (total_unique_features == 0) {
+      return(1)  # Perfect stability if both select nothing
+    } else {
+      return(common_features / total_unique_features)
+    }
+  })
+  
+  # Return the entire vector of stability values
+  return(stability_values)
+}
+
+# Get all CSV files in the coef_csv directory
+coef_csv_dir <- "/accounts/grad/aqwang/unilasso/analysis/unilasso_22data_default_lambda/coef_csv_22data"
+csv_files <- list.files(coef_csv_dir, pattern = "coefficients_.*\\.csv$", full.names = TRUE)
+
+# check dataset names from file names
+dataset_names <- gsub("coefficients_(.+)\\.csv", "\\1", basename(csv_files))
+print(dataset_names)  # Verify dataset names
+
+# Initialize storage for all results
+all_stability_results <- data.frame(
+  dataset = character(),
+  method = character(),
+  mean_stability = numeric(),
+  sd_stability = numeric(),
+  min_stability = numeric(),
+  max_stability = numeric(),
+  n_pairs = integer(),
+  stringsAsFactors = FALSE
+)
+
+# Initialize storage for detailed results (optional - if you want all pairwise values)
+all_stability_detailed <- list()
+
+# Loop through all datasets
+for (i in seq_along(csv_files)) {
+  dataset_name <- dataset_names[i]
+  csv_file <- csv_files[i]
+  
+  cat("\n", strrep("=", 60), "\n")
+  cat("Processing dataset:", dataset_name, "(", i, "/", length(csv_files), ")\n")
+  cat(strrep("=", 60), "\n")
+  
+  # Read coefficient data
+  tryCatch({
+    coefficients_data <- read.csv(csv_file)
+    # Remove rows with method=unilasso_loo_false
+    coefficients_data <- coefficients_data[coefficients_data$method != "unilasso_loo_false", ]
+    coefficients_data <- coefficients_data[coefficients_data$method != "uni_loo", ]
+    
+    # Get unique methods in this dataset
+    unique_methods <- unique(coefficients_data$method)
+    cat("Found methods:", paste(unique_methods, collapse = ", "), "\n")
+    
+    # Calculate stability for each method in this dataset
+    dataset_stability_detailed <- list()
+    
+    for (method in unique_methods) {
+      cat("  Processing method:", method, "...")
+      
+      # Calculate full stability vector for this method
+      stability_vector <- calculate_stability_full(coefficients_data, method)
+      
+      if (length(stability_vector) > 0) {
+        # Clean method name
+        clean_method <- recode(method,
+          "unilasso_loo_true" = "uniLasso",
+          "polish_unilasso" = "Polish",
+          "lasso_cv" = "Lasso",
+          "unireg" = "uniReg", 
+          "least_squares" = "LS"
+        )
+        
+        # Calculate summary statistics
+        summary_stats <- data.frame(
+          dataset = dataset_name,
+          method = clean_method,
+          mean_stability = mean(stability_vector, na.rm = TRUE),
+          sd_stability = sd(stability_vector, na.rm = TRUE),
+          min_stability = min(stability_vector, na.rm = TRUE),
+          max_stability = max(stability_vector, na.rm = TRUE),
+          n_pairs = length(stability_vector),
+          stringsAsFactors = FALSE
+        )
+        
+        # Add to main results dataframe
+        all_stability_results <- rbind(all_stability_results, summary_stats)
+        
+        # Store detailed results (optional)
+        dataset_stability_detailed[[clean_method]] <- stability_vector
+        
+        cat(" Done (", length(stability_vector), " pairs)\n")
+        
+      } else {
+        cat(" Skipped (insufficient data)\n")
+      }
+    }
+    
+    # Store detailed results for this dataset
+    all_stability_detailed[[dataset_name]] <- dataset_stability_detailed
+    
+    # Print summary for this dataset
+    dataset_results <- all_stability_results[all_stability_results$dataset == dataset_name, ]
+    if (nrow(dataset_results) > 0) {
+      cat("\nSummary for", dataset_name, ":\n")
+      for (j in 1:nrow(dataset_results)) {
+        row <- dataset_results[j, ]
+        cat(sprintf("  %-10s: Mean = %.3f (SD = %.3f) Range = [%.3f, %.3f] [%d pairs]\n",
+                    row$method, row$mean_stability, row$sd_stability,
+                    row$min_stability, row$max_stability, row$n_pairs))
+      }
+    }
+    
+  }, error = function(e) {
+    cat("ERROR processing", dataset_name, ":", e$message, "\n")
+  })
+}
+
+# Final summary
+cat("\n", strrep("=", 80), "\n")
+cat("STABILITY ANALYSIS COMPLETE!\n")
+cat("Total datasets processed:", length(unique(all_stability_results$dataset)), "\n")
+cat("Total method-dataset combinations:", nrow(all_stability_results), "\n")
+cat(strrep("=", 80), "\n")
+
+# Display overall results
+print(all_stability_results)
+
+# Save results
+write.csv(all_stability_results, "stability_across100ransplits_22_data_summary.csv", row.names = FALSE)
+save(all_stability_results, all_stability_detailed, file = "stability_across100ransplits_22_data_summary.RData")
+
+
+################# prepare stability data #################
+library(ggplot2)
+
+# Build one long data.frame: dataset, method, stability
+make_long <- function(all_stability_detailed) {
+  do.call(rbind, lapply(names(all_stability_detailed), function(ds) {
+    methods <- all_stability_detailed[[ds]]
+    if (length(methods) == 0) return(NULL)
+    do.call(rbind, lapply(names(methods), function(m) {
+      v <- methods[[m]]
+      v <- v[is.finite(v)]                 # drop NA/Inf if present
+      if (length(v) == 0) return(NULL)
+      data.frame(dataset = ds, method = m, stability = v, 
+                 stringsAsFactors = FALSE)
+    }))
+  }))
+}
+
+plot_data <- make_long(all_stability_detailed)
+
+plot_data$dataset <- factor(plot_data$dataset, levels = sort(unique(plot_data$dataset)))
+#rename all datasets to have first letter capitalized and underscores replaced with spaces
+plot_data$dataset <- recode(plot_data$dataset,
+                            "airfoil" = "Airfoil",
+                            "appliances_energy" = "Appliances energy",
+                            "auto_mpg" = "Auto MPG",
+                            "automobile" = "Automobile",
+                            "beijing_pm2.5" = "Beijing PM2.5",
+                            "bike_sharing" = "Bike sharing",
+                            "concrete" = "Concrete",
+                            "crime" = "Crime",
+                            "crime_unnormalized" = "Crime unnormalized",
+                            "daily_demand" = "Daily demand",
+                            "facebook_metrics" = "Facebook metrics",
+                            "forest_fires" = "Forest fires",
+                            "infrared_thermo_temp" = "Infrared thermo temp",
+                            "liver_disorders" = "Liver disorders",
+                            "metro_traffic" = "Metro traffic",
+                            "parkinsons" = "Parkinsons",
+                            "power_consumption" = "Power consumption",
+                            "power_plant" = "Power plant",
+                            "real_estate" = "Real estate",
+                            "servo" = "Servo",
+                            "stock_portfolio" = "Stock portfolio",
+                            "superconductivity" = "Superconductivity"
+)
+
+# Use similar colors for Polish, uniLasso, and uniReg
+method_colors <- c(
+  "uniLasso" = "#e41a1c",  # bright red
+  "Polish"   = "#e75480",  # medium pink
+  "uniReg"   = "#b03060",  # deep rose/magenta
+  "Lasso"    = "#2a6eb1",  # balanced medium blue
+  "LS"       = "#505050"   # darker gray
+)
+
+########################(3) combine stability with mse, support, sign_diff########################
+library(ggh4x)
+
+stability_data_formatted <- plot_data %>%
+  rename(value = stability) %>%
+  mutate(metric = "Stability") %>%
+  mutate(split_id=NA) %>%
+  select(dataset, split_id, method, metric, value)
+
+# Combine all four metrics into one dataset
+plot_combined_long_with_stability <- bind_rows(
+  plot_combined_long,  # This has MSE, Support, and Number of violations
+  stability_data_formatted  # This adds Stability
+) %>%
+  mutate(
+    metric = factor(metric, levels = c("MSE", "Support", "Number of violations", "Stability"))
+  ) %>%
+  mutate(
+    method = factor(method, levels = c("LS", "Lasso", "uniReg", "uniLasso", "Polish"))
+  ) 
+
+```
+
+
+# graph for MSE, support, sign_diff, stability for each dataset
+```{R}
+# select only the MSE 
+plot_combined_long1_mse <- plot_combined_long_with_stability %>% filter(metric == "MSE") %>%
+  group_by(dataset, split_id) %>% 
+  filter(!any(is.na(value))) %>% 
+  ungroup()
+
+# Apply max normalization within each dataset (divide by max)
+plot_combined_long1_mse <- plot_combined_long1_mse %>%
+  group_by(dataset) %>%
+  mutate(
+    max_mse = max(value, na.rm = TRUE),
+    # Max normalization: x / max (makes max = 1, others proportional)
+    normalized_mse = ifelse(max_mse == 0, 0, value / max_mse)
+  ) %>%
+  ungroup()
+
+# Calculate average normalized MSE per split and order
+plot_combined_long1_mse <- plot_combined_long1_mse %>% 
+  group_by(dataset, split_id) %>% 
+  mutate(avg_normalized_mse_per_split = mean(normalized_mse, na.rm = TRUE)) %>% 
+  ungroup() %>% 
+  group_by(dataset) %>% 
+  mutate(id_ordered = dense_rank(avg_normalized_mse_per_split)) %>% 
+  ungroup() %>% 
+  arrange(dataset, id_ordered)
+
+# Custom labeling function for normalized values (0 to 1 scale)
+scientific_if_needed <- function(x) {
+  formatC(x, format = "f", digits = 2)  # Since values are 0-1, just use 2 decimal places
+}
+
+p_mse_ordered_normalized <- ggplot(plot_combined_long1_mse, aes(x = id_ordered, y = normalized_mse, color = method)) +
+  geom_point(alpha = 0.7) +
+  geom_line(alpha = 0.7) +
+  facet_wrap(~ dataset, scales = "free") +  # Changed to "free" to allow both x and y axes to be free
+  # Remove fixed y-axis limits since each panel will have its own scale
+  scale_y_continuous(
+    breaks = scales::pretty_breaks(n = 5),  # Use pretty breaks instead of fixed breaks
+    labels = scientific_if_needed
+  ) +
+  labs(x = "Indices of 100 train/test splits (sorted by average test MSE across methods per split)", 
+       y = "Normalized test MSE", 
+       color = "Method") +
+  scale_color_manual(values = method_colors) +
+  theme_bw() +
+  theme(
+    axis.text.x = element_text(angle = 30, hjust = 1, size = 26, family = "Times New Roman", face = "bold"),
+    axis.text.y = element_text(size = 26, family = "Times New Roman", face = "bold"),  
+    axis.title = element_text(size = 30, family = "Times New Roman", face = "bold"),
+    legend.position = "bottom",
+    legend.text = element_text(size = 25, family = "Times New Roman", face = "bold"),
+    legend.title = element_text(size = 25, family = "Times New Roman", face = "bold"),
+    legend.key.size = unit(6, "lines"),   # << increase dot/line box size
+    legend.key.width = unit(8, "lines"),  # << make lines wider
+    strip.text = element_text(size = 25, family = "Times New Roman", face = "bold"),
+    # Remove grid lines
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank()
+  )
+
+ggsave("/accounts/grad/aqwang/unilasso/figures_22data_default_lambda/app_p_mse_line_22data_normalized.png", 
+       plot = p_mse_ordered_normalized, width = 32, height = 45, dpi = 300)
+print(p_mse_ordered_normalized)
+
+# select first 11 datasets
+plot_combined_long_first11 <-  plot_combined_long_with_stability %>%
+  filter(dataset %in% c("Airfoil", "Appliances energy", "Auto MPG", "Automobile", "Beijing PM2.5", "Bike sharing", "Concrete", "Crime", "Crime unnormalized", "Daily demand", "Facebook metrics"))
+
+# select last 11 datasets
+plot_combined_long_last11 <- plot_combined_long_with_stability %>%
+  filter(dataset %in% c("Forest fires", "Infrared thermo temp", "Liver disorders", "Metro traffic", "Parkinsons", "Power consumption", "Power plant", "Real estate", "Servo", "Stock portfolio", "Superconductivity"))
+
+
+# support bar plot 
+p_support_bar_first11 <- ggplot(plot_combined_long_first11 %>% filter(metric == "Support") , aes(y = as.factor(value), fill = method)) +
+  geom_bar(
+    orientation = "y",
+    #color = "gray",       # Border around bars
+    #linewidth = 0.3,
+    alpha = 0.7
+  ) +
+  facet_grid2(dataset ~ method,
+              scales = "free",
+              independent = "x") +
+  scale_y_discrete(
+    labels = function(x) sprintf("%.0f", as.numeric(as.character(x))),  # Format support as integers
+    breaks = function(x) {
+      # Limit to at most 8 evenly spaced ticks
+      n_ticks <- min(8, length(x))
+      x[seq(1, length(x), length.out = n_ticks)]
+    },
+    expand = expansion(add = 2)  # Add slight space above and below
+  ) +
+  labs(x = "Count", y = "Support", fill = "Method") +
+  scale_fill_manual(values = method_colors) +
+  theme_bw() +
+  theme(
+    axis.text.x = element_text(size = 12, family = "Times New Roman", face = "bold"),
+    axis.text.y = element_text(size = 12, family = "Times New Roman", face = "bold"),
+    axis.title = element_text(size = 18, family = "Times New Roman", face = "bold"),
+    legend.position = "bottom",
+    legend.text = element_text(size = 16, family = "Times New Roman", face = "bold"),
+    legend.title = element_text(size = 16, family = "Times New Roman", face = "bold"),
+    strip.text = element_text(size = 14, family = "Times New Roman", face = "bold"),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank()
+  )
+
+ggsave("/accounts/grad/aqwang/unilasso/figures_22data_default_lambda/app_p_support_bar_first11_22data.png", 
+       plot =p_support_bar_first11,  width = 21, height = 28, dpi = 300)
+
+
+
+p_support_bar_last11 <- ggplot(plot_combined_long_last11 %>% filter(metric == "Support") , aes(y = as.factor(value), fill = method)) +
+  geom_bar(
+    orientation = "y",
+    #color = "gray",       # Border around bars
+    #linewidth = 0.3,
+    alpha = 0.7
+  ) +
+  facet_grid2(dataset ~ method,
+              scales = "free",
+              independent = "x") +
+  scale_y_discrete(
+    labels = function(x) sprintf("%.0f", as.numeric(as.character(x))),  # Format support as integers
+    breaks = function(x) {
+      # Limit to at most 8 evenly spaced ticks
+      n_ticks <- min(8, length(x))
+      x[seq(1, length(x), length.out = n_ticks)]
+    },
+    expand = expansion(add = 2)  # Add slight space above and below
+  ) +
+  labs(x = "Count", y = "Support", fill = "Method") +
+  scale_fill_manual(values = method_colors) +
+  theme_bw() +
+  theme(
+    axis.text.x = element_text(size = 15, family = "Times New Roman", face = "bold"),
+    axis.text.y = element_text(size = 15, family = "Times New Roman", face = "bold"),
+    axis.title = element_text(size = 20, family = "Times New Roman", face = "bold"),
+    legend.position = "bottom",
+    legend.text = element_text(size = 17, family = "Times New Roman", face = "bold"),
+    legend.title = element_text(size = 17, family = "Times New Roman", face = "bold"),
+    strip.text = element_text(size = 15, family = "Times New Roman", face = "bold"),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank()
+  )
+
+ggsave("/accounts/grad/aqwang/unilasso/figures_22data_default_lambda/app_p_support_bar_last11_22data.png", 
+       plot =p_support_bar_last11,  width = 21, height = 28, dpi = 300)
+
+
+# number of violations bar plot
+p_sign_diff_bar_first11 <- ggplot(plot_combined_long_first11 %>% filter(metric == "Number of violations") , aes(y = as.factor(value), fill = method)) +
+  geom_bar(
+    orientation = "y",
+    #color = "gray",       # Border around bars
+    #linewidth = 0.3,
+    alpha = 0.7
+  ) +
+  facet_grid2(dataset ~ method,
+              scales = "free",
+              independent = "x") +
+  scale_y_discrete(
+    labels = function(x) sprintf("%.0f", as.numeric(as.character(x))),  # Format support as integers
+    breaks = function(x) {
+      # Limit to at most 8 evenly spaced ticks
+      n_ticks <- min(8, length(x))
+      x[seq(1, length(x), length.out = n_ticks)]
+    },
+    expand = expansion(add = 2)  # Add slight space above and below
+  ) +
+  labs(x = "Count", y = "Number of violations", fill = "Method") +
+  scale_fill_manual(values = method_colors) +
+  theme_bw() +
+  theme(
+    axis.text.x = element_text(size = 12, family = "Times New Roman", face = "bold"),
+    axis.text.y = element_text(size = 12, family = "Times New Roman", face = "bold"),
+    axis.title = element_text(size = 18, family = "Times New Roman", face = "bold"),
+    legend.position = "bottom",
+    legend.text = element_text(size = 16, family = "Times New Roman", face = "bold"),
+    legend.title = element_text(size = 16, family = "Times New Roman", face = "bold"),
+    strip.text = element_text(size = 14, family = "Times New Roman", face = "bold"),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank()
+  )
+
+ggsave("/accounts/grad/aqwang/unilasso/figures_22data_default_lambda/app_p_sign_diff_bar_first11_22data.png", 
+       plot =p_sign_diff_bar_first11,  width = 21, height = 28, dpi = 300)
+
+
+p_sign_diff_bar_last11 <- ggplot(plot_combined_long_last11 %>% filter(metric == "Number of violations") , aes(y = as.factor(value), fill = method)) +
+  geom_bar(
+    orientation = "y",
+    #color = "gray",       # Border around bars
+    #linewidth = 0.3,
+    alpha = 0.7
+  ) +
+  facet_grid2(dataset ~ method,
+              scales = "free",
+              independent = "x") +
+  scale_y_discrete(
+    labels = function(x) sprintf("%.0f", as.numeric(as.character(x))),  # Format support as integers
+    breaks = function(x) {
+      # Limit to at most 8 evenly spaced ticks
+      n_ticks <- min(8, length(x))
+      x[seq(1, length(x), length.out = n_ticks)]
+    },
+    expand = expansion(add = 2)  # Add slight space above and below
+  ) +
+  labs(x = "Count", y = "Number of violations", fill = "Method") +
+  scale_fill_manual(values = method_colors) +
+  theme_bw() +
+  theme(
+    axis.text.x = element_text(size = 12, family = "Times New Roman", face = "bold"),
+    axis.text.y = element_text(size = 12, family = "Times New Roman", face = "bold"),
+    axis.title = element_text(size = 18, family = "Times New Roman", face = "bold"),
+    legend.position = "bottom",
+    legend.text = element_text(size = 16, family = "Times New Roman", face = "bold"),
+    legend.title = element_text(size = 16, family = "Times New Roman", face = "bold"),
+    strip.text = element_text(size = 14, family = "Times New Roman", face = "bold"),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank()
+  )
+
+ggsave("/accounts/grad/aqwang/unilasso/figures_22data_default_lambda/app_p_sign_diff_bar_last11_22data.png", 
+       plot =p_sign_diff_bar_last11,  width = 21, height = 28, dpi = 300)
+
+
+# stability bar plot
+p_stability_bar_first11 <- ggplot(plot_combined_long_first11 %>% filter(metric == "Stability") , aes(y = as.factor(value), fill = method)) +
+  geom_bar(
+    orientation = "y",
+    #color = "gray",       # Border around bars
+    #linewidth = 0.3,
+    alpha = 0.7
+  ) +
+  facet_grid2(dataset ~ method,
+              scales = "free",
+              independent = "x") +
+  scale_y_discrete(
+    labels = function(x) sprintf("%.2f", as.numeric(as.character(x))),  # Format stability to 2 decimal places
+    breaks = function(x) {
+      # Limit to at most 8 evenly spaced ticks
+      n_ticks <- min(8, length(x))
+      x[seq(1, length(x), length.out = n_ticks)]
+    },
+    expand = expansion(add = 1.5)  # Add slight space above and below
+  ) +
+  labs(x = "Count", y = "Random-split stability", fill = "Method") +
+  scale_fill_manual(values = method_colors) +
+  theme_bw() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust=1, size = 12, family = "Times New Roman", face = "bold"),
+    axis.text.y = element_text(size = 12, family = "Times New Roman", face = "bold"),
+    axis.title = element_text(size = 18, family = "Times New Roman", face = "bold"),
+    legend.position = "bottom",
+    legend.text = element_text(size = 16, family = "Times New Roman", face = "bold"),
+    legend.title = element_text(size = 16, family = "Times New Roman", face = "bold"),
+    strip.text = element_text(size = 14, family = "Times New Roman", face = "bold"),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank()
+  )
+ggsave("/accounts/grad/aqwang/unilasso/figures_22data_default_lambda/app_p_stability_bar_first11_22data.png", 
+       plot =p_stability_bar_first11,  width = 21, height = 28, dpi = 300)
+
+
+
+p_stability_bar_last11 <- ggplot(plot_combined_long_last11 %>% filter(metric == "Stability") , aes(y = as.factor(value), fill = method)) +
+  geom_bar(
+    orientation = "y",
+    #color = "gray",       # Border around bars
+    #linewidth = 0.3,
+    alpha = 0.7
+  ) +
+  facet_grid2(dataset ~ method,
+              scales = "free",
+              independent = "x") +
+  scale_y_discrete(
+    labels = function(x) sprintf("%.2f", as.numeric(as.character(x))),  # Format stability to 2 decimal places
+    breaks = function(x) {
+      # Limit to at most 8 evenly spaced ticks
+      n_ticks <- min(8, length(x))
+      x[seq(1, length(x), length.out = n_ticks)]
+    },
+    expand = expansion(add = 1.5)  # Add slight space above and below
+  ) +
+  labs(x = "Count", y = "Random-split stability", fill = "Method") +
+  scale_fill_manual(values = method_colors) +
+  theme_bw() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust=1, size = 12, family = "Times New Roman", face = "bold"),
+    axis.text.y = element_text(size = 12, family = "Times New Roman", face = "bold"),
+    axis.title = element_text(size = 18, family = "Times New Roman", face = "bold"),
+    legend.position = "bottom",
+    legend.text = element_text(size = 16, family = "Times New Roman", face = "bold"),
+    legend.title = element_text(size = 16, family = "Times New Roman", face = "bold"),
+    strip.text = element_text(size = 14, family = "Times New Roman", face = "bold"),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank()
+  )
+ggsave("/accounts/grad/aqwang/unilasso/figures_22data_default_lambda/app_p_stability_bar_last11_22data.png", 
+       plot =p_stability_bar_last11,  width = 21, height = 28, dpi = 300)
+
+```
+
+
+
+# final version: updated bootstrap results with uniReg for 22 datasets 
+```{r load updated bootstrap results and make some plots}
+library(ggplot2)
+library(tidyr)
+library(dplyr)
+library(ggrepel)
+library(ggh4x)
+
+boot_results <- read.csv("/accounts/grad/aqwang/unilasso/analysis/unilasso_22data_default_lambda/unilasso_22datasets_100bootstrap_train50percent.csv")
+
+# Reshape data for plotting
+plot_long <- boot_results %>%
+  select(dataset, bootstrap_id, unilasso_loo_true_mse, polish_unilasso_mse, lasso_cv_mse, unireg_mse, least_squares_mse,
+         unilasso_loo_true_support, polish_unilasso_support, lasso_cv_support,unireg_support, least_squares_support) %>%
+  pivot_longer(
+    cols = c(unilasso_loo_true_mse, polish_unilasso_mse, lasso_cv_mse, unireg_mse, least_squares_mse,
+             unilasso_loo_true_support, polish_unilasso_support, lasso_cv_support, unireg_support, least_squares_support),
+    names_to = c("method", ".value"),
+    names_pattern = "(unilasso_loo_true|polish_unilasso|lasso_cv|unireg|least_squares)_(mse|support)"
+  )
+
+# Order datasets for consistent facetting (22 datasets)
+desired_order <- c(
+  "airfoil", "appliances_energy", "auto_mpg", "automobile", "beijing_pm2.5",
+  "bike_sharing", "concrete", "crime", "crime_unnormalized", "daily_demand", 
+  "facebook_metrics", "forest_fires", "infrared_thermo_temp", "liver_disorders", 
+  "metro_traffic", "parkinsons", "power_consumption", "power_plant", 
+  "real_estate", "servo", "stock_portfolio", "superconductivity"
+)
+
+plot_long$dataset <- factor(plot_long$dataset, levels = desired_order)
+
+# rename unilasso_loo_true to unilasso
+plot_long$method <- recode(plot_long$method, unilasso_loo_true = "uniLasso", polish_unilasso = "Polish", lasso_cv = "Lasso", unireg = "uniReg", least_squares = "LS")
+
+# After creating plot_long and recoding the method names, add this line:
+plot_long$method <- factor(plot_long$method, levels = c("LS", "Lasso", "uniReg", "uniLasso", "Polish"))
+
+# rename all datasets to have first letter capitalized and underscores replaced with spaces
+plot_long$dataset <- recode(plot_long$dataset,
+                            "airfoil" = "Airfoil",
+                            "appliances_energy" = "Appliances energy",
+                            "auto_mpg" = "Auto MPG",
+                            "automobile" = "Automobile",
+                            "beijing_pm2.5" = "Beijing PM2.5",
+                            "bike_sharing" = "Bike sharing",
+                            "concrete" = "Concrete",
+                            "crime" = "Crime",
+                            "crime_unnormalized" = "Crime unnormalized",
+                            "daily_demand" = "Daily demand",
+                            "facebook_metrics" = "Facebook metrics",
+                            "forest_fires" = "Forest fires",
+                            "infrared_thermo_temp" = "Infrared thermo temp",
+                            "liver_disorders" = "Liver disorders",
+                            "metro_traffic" = "Metro traffic",
+                            "parkinsons" = "Parkinsons",
+                            "power_consumption" = "Power consumption",
+                            "power_plant" = "Power plant",
+                            "real_estate" = "Real estate",
+                            "servo" = "Servo",
+                            "stock_portfolio" = "Stock portfolio",
+                            "superconductivity" = "Superconductivity"
+)
+
+# Create combined long data with metric type
+plot_combined_long <- plot_long %>%
+  pivot_longer(
+    cols = c(mse, support),
+    names_to = "metric",
+    values_to = "value"
+  ) %>%
+  mutate(
+    metric = recode(metric, 
+                   "mse" = "MSE", 
+                   "support" = "Support"),
+    metric = factor(metric, levels = c("MSE", "Support"))
+  )
+
+method_colors <- c(
+  "uniLasso" = "#e41a1c",  # bright red
+  "Polish"   = "#e75480",  # medium pink
+  "uniReg"   = "#b03060",  # deep rose/magenta
+  "Lasso"    = "#2a6eb1",  # balanced medium blue
+  "LS"       = "#505050"   # darker gray
+)
+
+# reorder datasets (you can customize this order as needed for your 22 datasets)
+plot_combined_long$dataset <- factor(plot_combined_long$dataset, levels = c(
+  "Airfoil", "Appliances energy", "Auto MPG", "Automobile", "Beijing PM2.5",
+  "Bike sharing", "Concrete", "Crime", "Crime unnormalized", "Daily demand", 
+  "Facebook metrics", "Forest fires", "Infrared thermo temp", "Liver disorders", 
+  "Metro traffic", "Parkinsons", "Power consumption", "Power plant", 
+  "Real estate", "Servo", "Stock portfolio", "Superconductivity"
+))
+
+
+# Add normalized MSE for each dataset
+plot_combined_long_normalized<- plot_combined_long %>%
+  filter(metric == "MSE") %>%
+  group_by(dataset) %>%
+  mutate(
+    max_mse = max(value, na.rm = TRUE),
+    # Max normalization: x / max (makes max = 1, others proportional)
+    normalized_value = ifelse(max_mse == 0, 0, value / max_mse)
+  ) %>%
+  ungroup() %>%
+  mutate(
+    metric = "Normalized test MSE",
+    value = normalized_value
+  ) %>%
+  select(-max_mse, -normalized_value)
+
+# Combine original data with normalized MSE
+plot_combined_long_with_normalized <- bind_rows(
+  plot_combined_long,
+  plot_combined_long_normalized
+) %>% filter(metric != "MSE")  %>% # Remove original MSE rows
+  mutate(
+    metric = factor(metric, levels = c("Normalized test MSE", "Support"))
+  )
+
+
+
+
+###############################data wrangling DONE#####################################
+
+# Compute mean and ±1 SD for each dataset × metric × method
+plot_bootstrap_summary <- plot_combined_long_with_normalized %>%
+  group_by(dataset, metric, method) %>%
+  summarise(
+    mean_value = mean(value, na.rm = TRUE),
+    sd_value   = sd(value, na.rm = TRUE),
+    lower = mean_value - sd_value,
+    upper = mean_value + sd_value,
+    .groups = "drop"
+  ) 
+
+# only plot for 8 datasets 
+plot_combined_long_first8 <-  plot_combined_long_with_normalized %>%
+  filter(dataset %in% c("Airfoil", "Appliances energy", "Auto MPG", "Automobile", "Beijing PM2.5", "Bike sharing", "Concrete", "Crime"))
+plot_bootstrap_summary_first8 <- plot_bootstrap_summary %>%
+  filter(dataset %in% c("Airfoil", "Appliances energy", "Auto MPG", "Automobile", "Beijing PM2.5", "Bike sharing", "Concrete", "Crime"))
+
+
+plot_bootstrap_points_sd8 <- ggplot(plot_combined_long_first8 , aes(x = method, y = value, color = method)) +
+  geom_jitter(width = 0.3, alpha = 0.4, size = 0.8) +  # Increased jitter width from 0.15 to 0.3
+  geom_errorbar(
+    data = plot_bootstrap_summary_first8,
+    aes(x = method, ymin = lower, ymax = upper),
+    width = 0.4,  # Increased error bar width from 0.25 to 0.4
+    linewidth = 0.8,
+    color = "black",
+    inherit.aes = FALSE
+  ) +
+  geom_point(
+    data = plot_bootstrap_summary_first8,
+    aes(x = method, y = mean_value),
+    shape = 23, size = 3.5, fill = "black", color = "black",
+    inherit.aes = FALSE
+  ) +
+  facet_grid2(
+    dataset ~ metric,
+    switch = "y",
+    scales = "free_y",
+    independent = "y"
+  ) +
+  coord_cartesian(clip = "off") +
+  labs(x = "Method", y = NULL, color = "Method") +
+  scale_color_manual(values = method_colors) +
+  # Add horizontal expansion to spread out the x-axis
+  scale_x_discrete(expand = expansion(add = 0.8)) +  # Add space around x-axis categories
+  scale_y_continuous(expand = expansion(mult = c(0.2, 0.2))) +
+  guides(color = guide_legend(override.aes = list(size = 4))) +
+  theme_bw() +
+  theme(
+    axis.text.x = element_text(angle = 30, hjust = 1, size = 18, family = "Times New Roman", face = "bold"),
+    axis.text.y = element_text(size = 16, family = "Times New Roman", face = "bold"),
+    axis.title = element_text(size = 20, family = "Times New Roman", face = "bold"),
+    legend.position = "bottom",
+    legend.text = element_text(size = 20, family = "Times New Roman", face = "bold"),
+    legend.title = element_text(size = 20, family = "Times New Roman", face = "bold"),
+    legend.key.width = unit(5, "lines"),
+    strip.text = element_text(size = 20, family = "Times New Roman", face = "bold"),
+    strip.placement = "outside",
+    panel.spacing.y = unit(0.7, "cm"),
+    panel.spacing.x = unit(1.2, "cm"),  # Increase horizontal spacing between panels
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank()
+  )
+
+print(plot_bootstrap_points_sd8)
+
+ggsave("/accounts/grad/aqwang/unilasso/figures_22data_default_lambda/app_mse_supp_bootstrap_first8data.png", plot = plot_bootstrap_points_sd8, width = 15, height = 24, dpi = 300)  # Increased width from 12 to 15
+
+
+# second 8 sets of datasets
+plot_combined_long_second8 <-  plot_combined_long_with_normalized %>%
+  filter(dataset %in% c("Crime unnormalized", "Daily demand", "Facebook metrics", "Forest fires", "Infrared thermo temp", "Liver disorders", "Metro traffic", "Parkinsons"))
+plot_bootstrap_summary_second8 <- plot_bootstrap_summary %>%
+  filter(dataset %in% c("Crime unnormalized", "Daily demand", "Facebook metrics", "Forest fires", "Infrared thermo temp", "Liver disorders", "Metro traffic", "Parkinsons"))
+
+
+plot_bootstrap_points_sd8_2 <- ggplot(plot_combined_long_second8, aes(x = method, y = value, color = method)) +
+  geom_jitter(width = 0.3, alpha = 0.4, size = 0.8) +  # Increased jitter width from 0.15 to 0.3
+  geom_errorbar(
+    data = plot_bootstrap_summary_second8,
+    aes(x = method, ymin = lower, ymax = upper),
+    width = 0.4,  # Increased error bar width from 0.25 to 0.4
+    linewidth = 0.8,
+    color = "black",
+    inherit.aes = FALSE
+  ) +
+  geom_point(
+    data = plot_bootstrap_summary_second8,
+    aes(x = method, y = mean_value),
+    shape = 23, size = 3.5, fill = "black", color = "black",
+    inherit.aes = FALSE
+  ) +
+  facet_grid2(
+    dataset ~ metric,
+    switch = "y",
+    scales = "free_y",
+    independent = "y"
+  ) +
+  coord_cartesian(clip = "off") +
+  labs(x = "Method", y = NULL, color = "Method") +
+  scale_color_manual(values = method_colors) +
+  # Add horizontal expansion to spread out the x-axis
+  scale_x_discrete(expand = expansion(add = 0.8)) +  # Add space around x-axis categories
+  scale_y_continuous(expand = expansion(mult = c(0.2, 0.2))) +
+  guides(color = guide_legend(override.aes = list(size = 4))) +
+  theme_bw() +
+  theme(
+    axis.text.x = element_text(angle = 30, hjust = 1, size = 18, family = "Times New Roman", face = "bold"),
+    axis.text.y = element_text(size = 16, family = "Times New Roman", face = "bold"),
+    axis.title = element_text(size = 20, family = "Times New Roman", face = "bold"),
+    legend.position = "bottom",
+    legend.text = element_text(size = 20, family = "Times New Roman", face = "bold"),
+    legend.title = element_text(size = 20, family = "Times New Roman", face = "bold"),
+    legend.key.width = unit(5, "lines"),
+    strip.text = element_text(size = 20, family = "Times New Roman", face = "bold"),
+    strip.placement = "outside",
+    panel.spacing.y = unit(0.7, "cm"),
+    panel.spacing.x = unit(1.2, "cm"),  # Increase horizontal spacing between panels
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank()
+  )
+
+
+print(plot_bootstrap_points_sd8_2)
+
+ggsave("/accounts/grad/aqwang/unilasso/figures_22data_default_lambda/app_mse_supp_bootstrap_second8data.png", plot = plot_bootstrap_points_sd8_2, width = 12, height = 27, dpi = 300)
+
+
+
+# last 6 datasets
+plot_combined_long_last6 <-  plot_combined_long_with_normalized %>%
+  filter(dataset %in% c("Power consumption", "Power plant", "Real estate", "Servo", "Stock portfolio", "Superconductivity"))
+plot_bootstrap_summary_last6 <- plot_bootstrap_summary %>%
+  filter(dataset %in% c("Power consumption", "Power plant", "Real estate", "Servo", "Stock portfolio", "Superconductivity"))
+
+plot_bootstrap_points_sd6 <- ggplot(plot_combined_long_last6, aes(x = method, y = value, color = method)) +
+  geom_jitter(width = 0.3, alpha = 0.4, size = 0.8) +  # Increased jitter width from 0.15 to 0.3
+  geom_errorbar(
+    data = plot_bootstrap_summary_last6,
+    aes(x = method, ymin = lower, ymax = upper),
+    width = 0.4,  # Increased error bar width from 0.25 to 0.4
+    linewidth = 0.8,
+    color = "black",
+    inherit.aes = FALSE
+  ) +
+  geom_point(
+    data = plot_bootstrap_summary_last6,
+    aes(x = method, y = mean_value),
+    shape = 23, size = 3.5, fill = "black", color = "black",
+    inherit.aes = FALSE
+  ) +
+  facet_grid2(
+    dataset ~ metric,
+    switch = "y",
+    scales = "free_y",
+    independent = "y"
+  ) +
+  coord_cartesian(clip = "off") +
+  labs(x = "Method", y = NULL, color = "Method") +
+  scale_color_manual(values = method_colors) +
+  # Add horizontal expansion to spread out the x-axis
+  scale_x_discrete(expand = expansion(add = 0.8)) +  # Add space around x-axis categories
+  scale_y_continuous(expand = expansion(mult = c(0.2, 0.2))) +
+  guides(color = guide_legend(override.aes = list(size = 4))) +
+  theme_bw() +
+  theme(
+    axis.text.x = element_text(angle = 30, hjust = 1, size = 18, family = "Times New Roman", face = "bold"),
+    axis.text.y = element_text(size = 16, family = "Times New Roman", face = "bold"),
+    axis.title = element_text(size = 20, family = "Times New Roman", face = "bold"),
+    legend.position = "bottom",
+    legend.text = element_text(size = 20, family = "Times New Roman", face = "bold"),
+    legend.title = element_text(size = 20, family = "Times New Roman", face = "bold"),
+    legend.key.width = unit(5, "lines"),
+    strip.text = element_text(size = 20, family = "Times New Roman", face = "bold"),
+    strip.placement = "outside",
+    panel.spacing.y = unit(0.7, "cm"),
+    panel.spacing.x = unit(1.2, "cm"),  # Increase horizontal spacing between panels
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank()
+  )
+
+
+print(plot_bootstrap_points_sd6)
+
+ggsave("/accounts/grad/aqwang/unilasso/figures_22data_default_lambda/app_mse_supp_bootstrap_last6data.png", plot = plot_bootstrap_points_sd6, width = 12, height = 22, dpi = 300)
+
+
+
+########################### for prediction interval, make a plot of average width of prediction interval for each dataset with standard error bar
+pred_int <- read.csv("/accounts/grad/aqwang/unilasso/analysis/unilasso_22data_default_lambda/unilasso_22datasets_100bootstrap_pred_int.csv")
+
+
+###############prediction interval coverage#############################
+pred_int_coverage <- pred_int %>%
+  select(dataset, method, coverage) %>%
+  pivot_wider(names_from = method, values_from = coverage) %>%
+  rename(LS = least_squares,
+         Lasso = lasso_cv,
+         uniReg = uniReg,
+         uniLasso = uniLasso_loo_true,
+         Polish = polish_uniLasso) %>%
+  select(dataset, LS, Lasso, uniReg, uniLasso, Polish) %>%
+  mutate(across(-dataset, ~ round(., 3)))
+
+
+# rename the dataset
+pred_int_coverage$dataset <- recode(pred_int_coverage$dataset,
+                          "airfoil" = "Airfoil",
+                            "appliances_energy" = "Appliances energy",
+                            "auto_mpg" = "Auto MPG",
+                            "automobile" = "Automobile",
+                            "beijing_pm2.5" = "Beijing PM2.5",
+                            "bike_sharing" = "Bike sharing",
+                            "concrete" = "Concrete",
+                            "crime" = "Crime",
+                            "crime_unnormalized" = "Crime unnormalized",
+                            "daily_demand" = "Daily demand",
+                            "facebook_metrics" = "Facebook metrics",
+                            "forest_fires" = "Forest fires",
+                            "infrared_thermo_temp" = "Infrared thermo temp",
+                            "liver_disorders" = "Liver disorders",
+                            "metro_traffic" = "Metro traffic",
+                            "parkinsons" = "Parkinsons",
+                            "power_consumption" = "Power consumption",
+                            "power_plant" = "Power plant",
+                            "real_estate" = "Real estate",
+                            "servo" = "Servo",
+                            "stock_portfolio" = "Stock portfolio",
+                            "superconductivity" = "Superconductivity")
+
+
+# Calculate row averages (across methods for each dataset), rounded to 3 decimal places
+pred_int_coverage$row_avg <- round(rowMeans(pred_int_coverage[, c("LS", "Lasso", "uniReg", "uniLasso", "Polish")], na.rm = TRUE), 3)
+
+# Calculate column averages (across datasets for each method)
+col_avgs <- colMeans(pred_int_coverage[, c("LS", "Lasso", "uniReg", "uniLasso", "Polish", "row_avg")], na.rm = TRUE)
+
+# Optionally, print column averages
+print(col_avgs)
+
+pred_int_coverage$dataset <- as.character(pred_int_coverage$dataset)
+
+# add col avg to the bottom of pred_int_coverage
+pred_int_coverage <- rbind(pred_int_coverage, c("Column Average", round(col_avgs, 3)))
+
+# save as csv
+write.csv(pred_int_coverage, "/accounts/grad/aqwang/unilasso/figures_22data_default_lambda/pred_int_coverage_22datasets.csv", row.names = FALSE)
+
+
+
+######################################### prediction interval width plot #####################################
+
+load("/accounts/grad/aqwang/unilasso/analysis/unilasso_22data_default_lambda/unilasso_22datasets_100bootstrap_interval_widths.RData") #named all_interval_widths
+
+# Convert the first one in the list to dataframe
+pred_int_width <- do.call(rbind, lapply(names(all_interval_widths), function(dataset_name) {
+  df <- as.data.frame(all_interval_widths[[dataset_name]])
+  df$dataset <- dataset_name
+  return(df)
+}))
+
+# make long format
+pred_int_width <- pred_int_width %>%
+  select(dataset, uniLasso_loo_true, polish_uniLasso, lasso_cv, uniReg, least_squares) %>%
+  pivot_longer(
+    cols = -dataset,
+    names_to = "method",
+    values_to = "width"
+  ) %>% # recode method names
+  mutate(
+    method = recode(method, uniLasso_loo_true = "uniLasso", polish_uniLasso = "Polish", lasso_cv = "Lasso", uniReg = "uniReg", least_squares = "LS"),
+    method = factor(method, levels = c("LS", "Lasso", "uniReg", "uniLasso", "Polish"))
+  )
+
+# rename all datasets to have first letter capitalized and underscores replaced with spaces
+pred_int_width$dataset <- recode(pred_int_width$dataset ,
+                  "airfoil" = "Airfoil",
+                  "appliances_energy" = "Appliances energy",
+                  "auto_mpg" = "Auto MPG",
+                  "automobile" = "Automobile",
+                  "beijing_pm2.5" = "Beijing PM2.5",
+                  "bike_sharing" = "Bike sharing",
+                  "concrete" = "Concrete",
+                  "crime" = "Crime",
+                  "crime_unnormalized" = "Crime unnormalized",
+                  "daily_demand" = "Daily demand",
+                  "facebook_metrics" = "Facebook metrics",
+                  "forest_fires" = "Forest fires",
+                  "infrared_thermo_temp" = "Infrared thermo temp",
+                  "liver_disorders" = "Liver disorders",
+                  "metro_traffic" = "Metro traffic",
+                  "parkinsons" = "Parkinsons",
+                  "power_consumption" = "Power consumption",
+                  "power_plant" = "Power plant",
+                  "real_estate" = "Real estate",
+                  "servo" = "Servo",
+                  "stock_portfolio" = "Stock portfolio",
+                  "superconductivity" = "Superconductivity")
+
+
+# Use similar colors for Polish, uniLasso, and uniReg
+method_colors <- c(
+  "uniLasso" = "#e41a1c",  # bright red
+  "Polish"   = "#e75480",  # medium pink
+  "uniReg"   = "#b03060",  # deep rose/magenta
+  "Lasso"    = "#2a6eb1",  # balanced medium blue
+  "LS"       = "#505050"   # darker gray
+)
+
+# choose the first 12 datsets to plot
+pred_int_width_first12 <- pred_int_width %>%
+  filter(dataset %in% c("Airfoil", "Appliances energy", "Auto MPG", "Automobile", "Beijing PM2.5", "Bike sharing", "Concrete", "Crime", "Crime unnormalized", "Daily demand", "Facebook metrics", "Forest fires"))
+
+
+# Compute mean and ±1 SD for each dataset × method for prediction interval width
+pred_int_width_summary <- pred_int_width_first12 %>%
+  group_by(dataset, method) %>%
+  summarise(
+    mean_value = mean(width, na.rm = TRUE),
+    sd_value   = sd(width, na.rm = TRUE),
+    lower = mean_value - sd_value,
+    upper = mean_value + sd_value,
+    .groups = "drop"
+  ) 
+
+# Plot prediction interval widths with error bars but no text labels
+plot_pred_int_width_sd <- ggplot(pred_int_width_first12, aes(x = method, y = width, color = method)) +
+  geom_jitter(width = 0.25, alpha = 0.4, size = 0.5) +  # Increased width, reduced alpha and size
+  geom_errorbar(
+    data = pred_int_width_summary,
+    aes(x = method, ymin = lower, ymax = upper),
+    width = 0.4,  # Increased error bar width from 0.25 to 0.4
+    linewidth = 0.8,
+    color = "black",
+    inherit.aes = FALSE
+  ) +
+  geom_point(
+    data = pred_int_width_summary,
+    aes(x = method, y = mean_value),
+    shape = 23, size = 3.5, fill = "black", color = "black",
+    inherit.aes = FALSE
+  ) +
+  facet_wrap(~ dataset, scales = "free_y") +
+  coord_cartesian(clip = "off") +
+  labs(x = "Method", y = "Prediction interval width (nominal 95%)", color = "Method") +
+  scale_color_manual(values = method_colors) +
+  scale_x_discrete(expand = expansion(add = 0.8)) +  # Add more space around x-axis categories
+  scale_y_continuous(expand = expansion(mult = c(0.2, 0.2))) +  # Reduced from 0.3 to 0.2
+  guides(color = guide_legend(override.aes = list(size = 6))) +
+  theme_bw() +
+  theme(
+    axis.text.x = element_text(angle = 30, hjust = 1, size = 18, family = "Times New Roman", face = "bold"),
+    axis.text.y = element_text(size = 16, family = "Times New Roman", face = "bold"),
+    axis.title = element_text(size = 20, family = "Times New Roman", face = "bold"),
+    legend.position = "bottom",
+    legend.text = element_text(size = 20, family = "Times New Roman", face = "bold"),
+    legend.title = element_text(size = 20, family = "Times New Roman", face = "bold"),
+    legend.key.width = unit(5, "lines"),  # make lines wider
+    strip.text = element_text(size = 20, family = "Times New Roman", face = "bold"),  # Changed from 18 to 20
+    strip.placement = "outside",
+    panel.spacing.y = unit(0.7, "cm"),
+    panel.spacing.x = unit(1.2, "cm"),  # Added horizontal spacing between panels
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank()
+  )
+
+print(plot_pred_int_width_sd)
+
+ggsave("/accounts/grad/aqwang/unilasso/figures_22data_default_lambda/pred_int_width_bootstrap_12data.png", 
+       plot = plot_pred_int_width_sd, width = 16, height = 15, dpi = 300)  # Increased width from 14 to 16
+
+
+#choose the last 10 datasets to plot
+pred_int_width_last10 <- pred_int_width %>%
+  filter(dataset %in% c("Infrared thermo temp", "Liver disorders", "Metro traffic", "Parkinsons", "Power consumption", "Power plant", "Real estate", "Servo", "Stock portfolio", "Superconductivity"))
+
+# Compute mean and ±1 SD for each dataset × method for prediction interval width
+pred_int_width_summary_last10 <- pred_int_width_last10 %>%
+ group_by(dataset, method) %>%
+  summarise(
+    mean_value = mean(width, na.rm = TRUE),
+    sd_value   = sd(width, na.rm = TRUE),
+    lower = mean_value - sd_value,
+    upper = mean_value + sd_value,
+    .groups = "drop"
+  ) 
+
+
+# Plot prediction interval widths with error bars but no text labels
+plot_pred_int_width_sd_last10 <- ggplot(pred_int_width_last10, aes(x = method, y = width, color = method)) +
+  geom_jitter(width = 0.25, alpha = 0.4, size = 0.5) +  # Increased width, reduced alpha and size
+  geom_errorbar(
+    data = pred_int_width_summary_last10,
+    aes(x = method, ymin = lower, ymax = upper),
+    width = 0.4,  # Increased error bar width from 0.25 to 0.4
+    linewidth = 0.8,
+    color = "black",
+    inherit.aes = FALSE
+  ) +
+  geom_point(
+    data = pred_int_width_summary_last10,
+    aes(x = method, y = mean_value),
+    shape = 23, size = 3.5, fill = "black", color = "black",
+    inherit.aes = FALSE
+  ) +
+  facet_wrap(~ dataset, scales = "free_y") +
+  coord_cartesian(clip = "off") +
+  labs(x = "Method", y = "Prediction interval width (nominal 95%)", color = "Method") +
+  scale_color_manual(values = method_colors) +
+  scale_x_discrete(expand = expansion(add = 0.8)) +  # Add more space around x-axis categories
+  scale_y_continuous(expand = expansion(mult = c(0.2, 0.2))) +  # Reduced from 0.3 to 0.2
+  guides(color = guide_legend(override.aes = list(size = 6))) +
+  theme_bw() +
+  theme(
+    axis.text.x = element_text(angle = 30, hjust = 1, size = 18, family = "Times New Roman", face = "bold"),
+    axis.text.y = element_text(size = 16, family = "Times New Roman", face = "bold"),
+    axis.title = element_text(size = 20, family = "Times New Roman", face = "bold"),
+    legend.position = "bottom",
+    legend.text = element_text(size = 20, family = "Times New Roman", face = "bold"),
+    legend.title = element_text(size = 20, family = "Times New Roman", face = "bold"),
+    legend.key.width = unit(5, "lines"),  # make lines wider
+    strip.text = element_text(size = 20, family = "Times New Roman", face = "bold"),  # Changed from 18 to 20
+    strip.placement = "outside",
+    panel.spacing.y = unit(0.7, "cm"),
+    panel.spacing.x = unit(1.2, "cm"),  # Added horizontal spacing between panels
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank()
+  )
+
+print(plot_pred_int_width_sd_last10)
+
+ggsave("/accounts/grad/aqwang/unilasso/figures_22data_default_lambda/pred_int_width_bootstrap_last10data.png", 
+       plot = plot_pred_int_width_sd_last10, width = 16, height = 15, dpi = 300)  # Increased width from 14 to 16
+
+```

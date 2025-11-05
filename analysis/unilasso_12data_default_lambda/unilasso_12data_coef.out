@@ -1,0 +1,242 @@
+[1] "/scratch/users/aqwang/conda/envs/r_package/lib/R"
+Setting up parallel processing with 32 cores
+[[1]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[2]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[3]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[4]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[5]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[6]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[7]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[8]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[9]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[10]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[11]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[12]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[13]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[14]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[15]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[16]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[17]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[18]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[19]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[20]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[21]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[22]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[23]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[24]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[25]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[26]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[27]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[28]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[29]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[30]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[31]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+[[32]]
+ [1] "uniLasso"  "glmnet"    "Matrix"    "stats"     "graphics"  "grDevices"
+ [7] "utils"     "datasets"  "methods"   "base"     
+
+
+ ================================================================================ 
+Extracting coefficients for dataset: ca_housing ( 1 / 12 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 20640x8 , y = 20640 
+Dataset completed in: 1.810652 mins 
+Saved per-dataset coefficients to: coef_csv_12datasets_default_lambda/coefficients_ca_housing.csv 
+Coefficients stored - Shape: 700 11 
+
+ ================================================================================ 
+Extracting coefficients for dataset: computer ( 2 / 12 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 8192x21 , y = 8192 
+Dataset completed in: 6.766666 secs 
+Saved per-dataset coefficients to: coef_csv_12datasets_default_lambda/coefficients_computer.csv 
+Coefficients stored - Shape: 700 24 
+
+ ================================================================================ 
+Extracting coefficients for dataset: debutanizer ( 3 / 12 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 2394x7 , y = 2394 
+Dataset completed in: 2.851743 secs 
+Saved per-dataset coefficients to: coef_csv_12datasets_default_lambda/coefficients_debutanizer.csv 
+Coefficients stored - Shape: 700 10 
+
+ ================================================================================ 
+Extracting coefficients for dataset: diamond ( 4 / 12 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 53940x23 , y = 53940 
+Dataset completed in: 9.896513 mins 
+Saved per-dataset coefficients to: coef_csv_12datasets_default_lambda/coefficients_diamond.csv 
+Coefficients stored - Shape: 700 26 
+
+ ================================================================================ 
+Extracting coefficients for dataset: elevator ( 5 / 12 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 16599x18 , y = 16599 
+Dataset completed in: 10.98548 secs 
+Saved per-dataset coefficients to: coef_csv_12datasets_default_lambda/coefficients_elevator.csv 
+Coefficients stored - Shape: 700 21 
+
+ ================================================================================ 
+Extracting coefficients for dataset: energy_efficiency ( 6 / 12 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 768x10 , y = 768 
+Dataset completed in: 2.520614 secs 
+Saved per-dataset coefficients to: coef_csv_12datasets_default_lambda/coefficients_energy_efficiency.csv 
+Coefficients stored - Shape: 700 13 
+
+ ================================================================================ 
+Extracting coefficients for dataset: insurance ( 7 / 12 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 1338x8 , y = 1338 
+Dataset completed in: 2.554123 secs 
+Saved per-dataset coefficients to: coef_csv_12datasets_default_lambda/coefficients_insurance.csv 
+Coefficients stored - Shape: 700 11 
+
+ ================================================================================ 
+Extracting coefficients for dataset: kin8nm ( 8 / 12 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 8192x8 , y = 8192 
+Dataset completed in: 4.910552 secs 
+Saved per-dataset coefficients to: coef_csv_12datasets_default_lambda/coefficients_kin8nm.csv 
+Coefficients stored - Shape: 700 11 
+
+ ================================================================================ 
+Extracting coefficients for dataset: miami_housing ( 9 / 12 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 13932x28 , y = 13932 
+Dataset completed in: 10.80491 secs 
+Saved per-dataset coefficients to: coef_csv_12datasets_default_lambda/coefficients_miami_housing.csv 
+Coefficients stored - Shape: 700 31 
+
+ ================================================================================ 
+Extracting coefficients for dataset: naval_propulsion ( 10 / 12 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 11934x24 , y = 11934 
+Dataset completed in: 7.482392 secs 
+Saved per-dataset coefficients to: coef_csv_12datasets_default_lambda/coefficients_naval_propulsion.csv 
+Coefficients stored - Shape: 700 27 
+
+ ================================================================================ 
+Extracting coefficients for dataset: protein_structure ( 11 / 12 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 45730x9 , y = 45730 
+Dataset completed in: 2.313969 mins 
+Saved per-dataset coefficients to: coef_csv_12datasets_default_lambda/coefficients_protein_structure.csv 
+Coefficients stored - Shape: 700 12 
+
+ ================================================================================ 
+Extracting coefficients for dataset: qsar ( 12 / 12 )
+Running 100 random train/test splits in parallel...
+================================================================================ 
+Data dimensions: X = 5742x500 , y = 5742 
+Dataset completed in: 6.06476 mins 
+Saved per-dataset coefficients to: coef_csv_12datasets_default_lambda/coefficients_qsar.csv 
+Coefficients stored - Shape: 700 503 
+COEFFICIENT EXTRACTION COMPLETE!
+Per-dataset CSVs in: /accounts/grad/aqwang/unilasso/analysis/unilasso_12data_default_lambda/coef_csv_12datasets_default_lambda 
+Dataset summary saved to: dataset_coefficient_summary.csv
+RData saved to: unilasso_12datasets_coefficients_only.RData 
