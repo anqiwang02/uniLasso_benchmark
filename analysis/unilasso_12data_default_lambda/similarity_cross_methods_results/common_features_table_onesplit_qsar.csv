@@ -1,6 +1,0 @@
-"","UniLasso (support=118)","Polish (support=128)","Lasso (support=247)","UniReg (support=184)","LS (support=500)"
-"UniLasso (support=118)",118,118,106,107,118
-"Polish (support=128)",118,128,115,110,128
-"Lasso (support=247)",106,115,247,166,247
-"UniReg (support=184)",107,110,166,184,184
-"LS (support=500)",118,128,247,184,500
